@@ -17,10 +17,10 @@
 <body> 
                       <center>
                          
-                          <a href="servico">Incluir Serviço</a>
+                          <a href="servico">Incluir Serviço</a>&nbsp;&nbsp;&nbsp;
                             
-						<a href="veiculo">Incluir Veículo</a>
-					    <a href="funcao">Incluir Funcão</a>
+						<a href="veiculo">Incluir Veículo</a>&nbsp;&nbsp;&nbsp;
+					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;&nbsp;
 						<a href="listarFuncao">Listar Funcão</a>
 						</center>
 	<div style="text-align: center; color: red;">${funcao}</div>

@@ -34,8 +34,8 @@
 			<tr>
 				<td>${veiculo.descricao}</td>
 					<td>
-					<a href="removerProduto?id=${produto.id}">Remover</a> &nbsp;
-					<a href="exibirAlterarProduto?id=${produto.id}">Alterar</a>
+					<a href="removerProduto?id=${veiculo.id}">Remover</a> &nbsp;
+					<a href="exibirAlterarVeiculo?id=${veiculo.id}">Alterar</a>
 				</td>
 			</tr>
 		</c:forEach>

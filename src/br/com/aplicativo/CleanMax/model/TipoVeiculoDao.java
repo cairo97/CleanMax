@@ -10,6 +10,7 @@ import com.mysql.jdbc.Connection;
 
 import br.com.aplicativo.CleanMax.util.ConnectionFactory;
 
+
 public class TipoVeiculoDao {
    
 	
@@ -67,5 +68,33 @@ public class TipoVeiculoDao {
 			throw new RuntimeException(e);
 		}
 	}
+  
+	
+	 public TipoVeiculo buscarPorId(int id) {
+			
+			try {
+			    
+			    PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoVeiculo WHERE id = ?");
+			    stmt.setInt(1, id);
+			    ResultSet rs = stmt.executeQuery();
+			    
+			    TipoVeiculo veiculo = new TipoVeiculo();
+			    
+			    while (rs.next()) {
 
+				
+			    	veiculo.setDescricao(rs.getString("descricao"));
+				
+			    }
+
+			    rs.close();
+			    stmt.close();
+			    connection.close();
+
+			    return veiculo;
+
+			} catch (SQLException e) {
+			    throw new RuntimeException(e);
+			}
+		    }
 }
