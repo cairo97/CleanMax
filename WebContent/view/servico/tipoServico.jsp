@@ -15,6 +15,12 @@
 </head>
 <body>
                <center>
+                          <a href="servico">Incluir Serviço</a>
+                            
+						<a href="veiculo">Incluir Veículo</a>
+					    <a href="funcao">Incluir Funcão</a>
+						<a href="listarServico">Listar Servico</a>
+               
                 <div style="text-align: center; color: red;"> ${servico} </div>
                
         <form action="incluirServico" method="post"

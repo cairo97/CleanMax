@@ -1,9 +1,12 @@
 package br.com.aplicativo.CleanMax.model;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
 
 import br.com.aplicativo.CleanMax.util.ConnectionFactory;
 
@@ -30,6 +33,36 @@ public class TipoVeiculoDao {
 			stmt.execute();
 			connection.close();
 
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	public List<TipoVeiculo> listar() {
+
+		try {
+			List<TipoVeiculo> listarVeiculo = new ArrayList<TipoVeiculo>();
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoVeiculo ORDER BY descricao");
+
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+
+				TipoVeiculo veiculo = new TipoVeiculo();
+				
+				veiculo.setDescricao(rs.getString("descricao"));
+			
+				
+				
+				listarVeiculo.add(veiculo);
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return listarVeiculo;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.aplicativo.CleanMax.model.Funcao;
 import br.com.aplicativo.CleanMax.model.FuncaoDao;
+import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 
 
 @Controller
@@ -27,5 +28,13 @@ public class FuncaoController {
 		
 		return "forward:funcao";
 
+	}
+	
+	
+	@RequestMapping("listarFuncao")
+	public String listarFuncao(Model model) {
+		FuncaoDao dao = new FuncaoDao();
+		model.addAttribute("listarFuncao", dao.listar());
+		return "servico/listarFuncao";
 	}
 }

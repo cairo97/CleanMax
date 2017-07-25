@@ -21,7 +21,7 @@
                             
 						<a href="veiculo">Incluir Veículo</a>
 					    <a href="funcao">Incluir Funcão</a>
-						
+						<a href="listarFuncao">Listar Funcão</a>
 						</center>
 	<div style="text-align: center; color: red;">${funcao}</div>
 	<center>

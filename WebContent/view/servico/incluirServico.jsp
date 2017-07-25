@@ -23,6 +23,14 @@
 
 <body>
    <center>
+            <a href="servico">Incluir Serviço</a>
+                            
+						<a href="veiculo">Incluir Veículo</a>
+					    <a href="funcao">Incluir Funcão</a>
+   
+   
+   
+    
 	<hr>
 	<h3>Incluir Serviço</h3>
 	<hr>

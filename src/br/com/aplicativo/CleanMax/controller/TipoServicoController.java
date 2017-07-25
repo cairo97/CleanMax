@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
+import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 
 @Controller
 public class TipoServicoController {
@@ -21,8 +22,16 @@ public class TipoServicoController {
 
 		TipoServicoDao dao = new TipoServicoDao();
 		dao.salvar(servico);
-		model.addAttribute("servico", "Serviço cadastrado realizado com sucesso");
+		model.addAttribute("servico", "Serviï¿½o cadastrado realizado com sucesso");
 		
 		return "forward:servico";
 }
+	
+	
+	@RequestMapping("listarServico")
+	public String listarServico(Model model) {
+		TipoServicoDao dao = new TipoServicoDao();
+		model.addAttribute("listarServico", dao.listar());
+		return "servico/listarServico";
+	}
 }
