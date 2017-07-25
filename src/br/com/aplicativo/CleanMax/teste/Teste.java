@@ -18,6 +18,8 @@ public class Teste {
 	ClienteDao c1 = new ClienteDao();
 	
 	c1.salvar(c);
+	
+	System.out.println("Teste");
 	}
 
 }
