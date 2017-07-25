@@ -19,7 +19,7 @@ public class Teste {
 	
 	c1.salvar(c);
 	
-	System.out.println("Teste");
+	
 	}
 
 }
