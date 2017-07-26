@@ -42,18 +42,29 @@ public class ClienteController {
 		dao.remover(cliente);
 		model.addAttribute("remover", "Produto Removido com Sucesso");
 		return "forward:listarCliente";
-	}
+	}	
+		
+		@RequestMapping("alterarCliente")
+		public String alterarCliente(Cliente cliente, Model model) {
 
-	@RequestMapping("alterarCliente")
-	public String alterarCliente(Cliente produto, Model model) {
+			ClienteDao dao = new ClienteDao();
+			Cliente clienteCompleto = dao.buscarPorId(cliente.getId());
 
-		ClienteDao dao = new ClienteDao();
-		List<Cliente> listarCliente = dao.listar();
+			model.addAttribute("cadastro", clienteCompleto);
 
-		model.addAttribute("listaCliente", listarCliente);
+			return "cadastro/alterarCliente";
+	    }
+	    
+	    @RequestMapping("/alterarCliente")
+	    public String alteraCliente(Cliente cliente, Model model) {
 
-		return "cadastro/alterarCliente";
+	    	ClienteDao dao = new ClienteDao();
+		dao.alterarCliente(cliente);
+		model.addAttribute("mensagem", "Cliente Alterado com Sucesso!");
 
+		return "forward:listarCliente";
+		
+		
 	}
 
 }

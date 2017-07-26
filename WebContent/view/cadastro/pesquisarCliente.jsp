@@ -50,7 +50,7 @@
 					<td>${cliente.cpf}</td>
 
 					<td>&nbsp;<a href="removerCliente?id=${cliente.id}">Remover</a>
-						&nbsp;<a href="alterarCliente">Alterar</a>
+						&nbsp;<a href="alterarCliente?id=${cliente.id}">Alterar</a>
 					</td>
 			</c:forEach>
 	</table>
