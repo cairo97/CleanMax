@@ -25,12 +25,14 @@
 	<form action="alterarVeiculo" method="post">
 
 		<input type="hidden" name="id" value="${veiculo.id}" />
+
 	
 		
-		<div class="form-group">
+	     <div class="form-group">
 			<label for="inputDescricao">Descrição</label>
-			<input type="text" id="inputDescricao" class="form-control" name="descricao" style="width: 500px;" maxlength="500" required="required" value="${veiculo.descricao}" />
+			<input type="text" id="inputDescricao" class="form-control" name="descricao" style="width: 200px;" maxlength="100" required="required" value="${veiculo.descricao}" />
 		</div>
+
 		
 		
 

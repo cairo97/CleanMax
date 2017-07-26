@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import br.com.aplicativo.CleanMax.model.TipoVeiculo;
 import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 
@@ -56,13 +57,11 @@ public class TipoVeiculoController {
 	    }
 
 	 @RequestMapping("removerVeiculo")
-	    public String removerVeiculo(TipoVeiculo veiculo, Model model) {
-
+		public String removerVeiculo(TipoVeiculo veiculo, Model model) {
 		 TipoVeiculoDao dao = new TipoVeiculoDao();
-		dao.remover(veiculo.getId());
-		model.addAttribute("veiculo", "Veiculo Removido com Sucesso");
-
-		return "forward:listarVeiculo";
-	    }
+			dao.remover(veiculo);
+			model.addAttribute("remover", "Produto Removido com Sucesso");
+			return "forward:listarVeiculo";
+		}
 
 }

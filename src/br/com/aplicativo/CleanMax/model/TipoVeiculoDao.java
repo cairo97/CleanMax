@@ -1,12 +1,11 @@
 package br.com.aplicativo.CleanMax.model;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mysql.jdbc.Connection;
 
 import br.com.aplicativo.CleanMax.util.ConnectionFactory;
 
@@ -111,13 +110,14 @@ public class TipoVeiculoDao {
 			}
 		    }
 
-	 public void remover(Integer id) {
+	 public void remover(TipoVeiculo veiculo) {
 
 			try {
 
 			    String sql = "DELETE FROM tipoveiculo WHERE id = ?";
 			    PreparedStatement stmt = connection.prepareStatement(sql);
-			    stmt.setInt(1, id);
+			    
+			    stmt.setLong(1, veiculo.getId());
 
 			    stmt.execute();
 			    connection.close();

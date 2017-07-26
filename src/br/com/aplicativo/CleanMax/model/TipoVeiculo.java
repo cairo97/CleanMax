@@ -1,15 +1,15 @@
 package br.com.aplicativo.CleanMax.model;
 
 public class TipoVeiculo {
-	private int id;
+	private Integer id;
 	private String descricao;
 
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
