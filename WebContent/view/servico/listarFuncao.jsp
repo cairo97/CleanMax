@@ -24,10 +24,10 @@
 	
 
 	<table border="1" style="width: 100%">
-		<tr>
+		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			
 			<td>Descrição</td>
-			
+			<td>Acões</td>
 		</tr>
 		
 		<c:forEach var="funcao" items="${listarFuncao}">

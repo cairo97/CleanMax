@@ -27,34 +27,33 @@
 <div style="text-align: center; color: red;"> ${remover} </div>
 
 <table border='1' style='width: 100%;'>
-<tr style='background-color: #E6E6E6; font-weight: bold;'>
-<td> ID </td>
-<td> Nome </td>
-<td> Senha </td>
-<td> Email </td>
-<td> Data de Nascimento </td>
-<td> Celular </td>
-<td> Telefone </td>
-<td> CPF </td>
-<td> Ações </td>
+		<tr style='background-color: #E6E6E6; font-weight: bold;'>
+			<td>ID</td>
+			<td>Nome</td>
+			<td>Senha</td>
+			<td>Email</td>
+			<td>Data de Nascimento</td>
+			<td>Celular</td>
+			<td>Telefone</td>
+			<td>CPF</td>
+			<td>Ações</td>
 
-<c:forEach var="cliente" items="${listarCliente}">
-<tr>
-<td> ${cliente.id} </td>
-<td> ${cliente.nome} </td>
-<td> ${cliente.senha} </td>
-<td> ${cliente.email} </td>
-<td> ${cliente.dataNascimento} </td>
-<td> ${cliente.celular} </td>
-<td> ${cliente.telefone} </td>
-<td> ${cliente.cpf} </td>
+			<c:forEach var="cliente" items="${listarCliente}">
+				<tr>
+					<td>${cliente.id}</td>
+					<td>${cliente.nome}</td>
+					<td>${cliente.senha}</td>
+					<td>${cliente.email}</td>
+					<td>${cliente.dataNascimento}</td>
+					<td>${cliente.celular}</td>
+					<td>${cliente.telefone}</td>
+					<td>${cliente.cpf}</td>
 
-<td>
-&nbsp;<a href="removerCliente?id=${cliente.id}">Remover</a>
-&nbsp;<a href="alterarCliente">Alterar</a>
-</td>
-</c:forEach>
-</table>
+					<td>&nbsp;<a href="removerCliente?id=${cliente.id}">Remover</a>
+						&nbsp;<a href="alterarCliente">Alterar</a>
+					</td>
+			</c:forEach>
+	</table>
 
 </body>
 </html>

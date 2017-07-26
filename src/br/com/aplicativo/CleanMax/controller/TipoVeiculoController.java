@@ -35,13 +35,34 @@ public class TipoVeiculoController {
 		return "servico/listarVeiculo";
 	}
 
-	@RequestMapping("exibirAlterarServico")
-	public String exibirAlterarProduto(TipoVeiculo veiculo, Model model) {
+	@RequestMapping("exibirAlterarVeiculo")
+    public String exibirAlterarVeiculo(TipoVeiculo veiculo, Model model) {
 
-		TipoVeiculoDao dao = new TipoVeiculoDao();
-		TipoVeiculo veiculoCompleto = dao.buscarPorId(veiculo.getId());
-		model.addAttribute("veiculo", veiculoCompleto);
+	TipoVeiculoDao dao = new TipoVeiculoDao();
+	TipoVeiculo veiculoCompleto = dao.buscarPorId(veiculo.getId());
+	model.addAttribute("veiculo", veiculoCompleto);
 
-		return "servico/alterarVeiculo";
-	}
+	return "servico/alterarVeiculo";
+    }
+	
+	 @RequestMapping("/alterarVeiculo")
+	    public String alterarVeiculo(TipoVeiculo veiculo, Model model) {
+
+		 TipoVeiculoDao dao = new TipoVeiculoDao();
+		dao.alterar(veiculo);
+		model.addAttribute("veiculo", "Produto Alterado com Sucesso!");
+
+		return "forward:listarVeiculo";
+	    }
+
+	 @RequestMapping("removerVeiculo")
+	    public String removerVeiculo(TipoVeiculo veiculo, Model model) {
+
+		 TipoVeiculoDao dao = new TipoVeiculoDao();
+		dao.remover(veiculo.getId());
+		model.addAttribute("veiculo", "Veiculo Removido com Sucesso");
+
+		return "forward:listarVeiculo";
+	    }
+
 }

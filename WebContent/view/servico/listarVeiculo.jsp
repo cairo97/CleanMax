@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Listagem de Produtos</title>
+<title>Listagem de Veículos</title>
 
 <link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
@@ -16,17 +16,19 @@
 </head>
 <body style="margin-left: 1%;">
 
-  
+                        <a href="veiculo">Incluir Veículo</a>
 	
+	<div style="text-align: center; color: red;"> ${veiculo} </div>
 	<hr>
-	<h3>Listar Produto</h3>
+	<h3>Listar Veículo</h3>
 	<hr>
 	
 
 	<table border="1" style="width: 100%">
-		<tr>
+		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			
 			<td>Descrição</td>
+			<td>Acões</td>
 			
 		</tr>
 		
@@ -34,7 +36,7 @@
 			<tr>
 				<td>${veiculo.descricao}</td>
 					<td>
-					<a href="removerProduto?id=${veiculo.id}">Remover</a> &nbsp;
+					<a href="removerVeiculo?id=${veiculo.id}">Remover</a> &nbsp;
 					<a href="exibirAlterarVeiculo?id=${veiculo.id}">Alterar</a>
 				</td>
 			</tr>

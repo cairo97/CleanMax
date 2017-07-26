@@ -16,11 +16,11 @@
 </head>
 <body style="margin-left: 1%;">
 
-	<c:import url="/view/comum/menu.jsp" />
+	
 
 	<hr><h3>Alterar Veiculo</h3><hr>
 	
-	<div style="text-align: center; color: red;"> ${veiculo} </div>
+	
 	
 	<form action="alterarVeiculo" method="post">
 

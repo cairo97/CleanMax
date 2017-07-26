@@ -10,10 +10,8 @@ import com.mysql.jdbc.Connection;
 
 import br.com.aplicativo.CleanMax.util.ConnectionFactory;
 
-
 public class TipoVeiculoDao {
-   
-	
+
 	private Connection connection;
 
 	public TipoVeiculoDao() {
@@ -27,10 +25,9 @@ public class TipoVeiculoDao {
 	public void salvar(TipoVeiculo veiculo) {
 		try {
 			String sql = "INSERT INTO tipoVeiculo (descricao) VALUES (?)";
-			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);				
-			stmt.setString(1, veiculo.getDescricao());						
+			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
+			stmt.setString(1, veiculo.getDescricao());
 
-								
 			stmt.execute();
 			connection.close();
 
@@ -38,8 +35,7 @@ public class TipoVeiculoDao {
 			throw new RuntimeException(e);
 		}
 	}
-	
-	
+
 	public List<TipoVeiculo> listar() {
 
 		try {
@@ -51,11 +47,9 @@ public class TipoVeiculoDao {
 			while (rs.next()) {
 
 				TipoVeiculo veiculo = new TipoVeiculo();
-				
+
 				veiculo.setDescricao(rs.getString("descricao"));
-			
-				
-				
+
 				listarVeiculo.add(veiculo);
 			}
 
@@ -68,33 +62,70 @@ public class TipoVeiculoDao {
 			throw new RuntimeException(e);
 		}
 	}
-  
+
+	public TipoVeiculo buscarPorId(int id) {
+
+		try {
+
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoVeiculo WHERE id = ?");
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
+
+			TipoVeiculo veiculo = new TipoVeiculo();
+
+			while (rs.next()) {
+                
+				veiculo.setId(rs.getInt("id"));
+				veiculo.setDescricao(rs.getString("descricao"));
+
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return veiculo;
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
-	 public TipoVeiculo buscarPorId(int id) {
-			
+	 public void alterar(TipoVeiculo veiculo) {
+
+			String sql = "UPDATE tipoVeiculo SET descricao=? WHERE id=?";
+			PreparedStatement stmt;
+
 			try {
-			    
-			    PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoVeiculo WHERE id = ?");
-			    stmt.setInt(1, id);
-			    ResultSet rs = stmt.executeQuery();
-			    
-			    TipoVeiculo veiculo = new TipoVeiculo();
-			    
-			    while (rs.next()) {
+			    stmt = connection.prepareStatement(sql);
 
-				
-			    	veiculo.setDescricao(rs.getString("descricao"));
-				
-			    }
+			    
+			    stmt.setString(2, veiculo.getDescricao());
+			    stmt.setInt(7, veiculo.getId());
 
-			    rs.close();
-			    stmt.close();
+			    stmt.execute();
 			    connection.close();
-
-			    return veiculo;
 
 			} catch (SQLException e) {
 			    throw new RuntimeException(e);
 			}
 		    }
+
+	 public void remover(Integer id) {
+
+			try {
+
+			    String sql = "DELETE FROM tipoveiculo WHERE id = ?";
+			    PreparedStatement stmt = connection.prepareStatement(sql);
+			    stmt.setInt(1, id);
+
+			    stmt.execute();
+			    connection.close();
+
+			} catch (SQLException e) {
+			    throw new RuntimeException(e);
+			}
+		    }
+		    
+
 }
