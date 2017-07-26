@@ -35,7 +35,7 @@ public class TipoVeiculoController {
 		return "servico/listarVeiculo";
 	}
 
-	@RequestMapping("exibirAlterarProduto")
+	@RequestMapping("exibirAlterarServico")
 	public String exibirAlterarProduto(TipoVeiculo veiculo, Model model) {
 
 		TipoVeiculoDao dao = new TipoVeiculoDao();
