@@ -78,7 +78,7 @@ public class Autenticar extends HttpServlet {
 
 			request.getSession().setAttribute("usuario", usuario);
 
-			response.sendRedirect("Inicial/Index");
+			response.sendRedirect("AreaComunidade");
 //
 		}
 
