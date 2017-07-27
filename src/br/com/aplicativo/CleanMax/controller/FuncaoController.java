@@ -9,6 +9,8 @@ import br.com.aplicativo.CleanMax.model.FuncaoDao;
 
 
 
+
+
 @Controller
 public class FuncaoController {
    
@@ -37,4 +39,32 @@ public class FuncaoController {
 		model.addAttribute("listarFuncao", dao.listar());
 		return "servico/listarFuncao";
 	}
+	
+	@RequestMapping("exibirAlterarFuncao")
+    public String exibirAlterarFuncao(Funcao funcao, Model model) {
+
+	FuncaoDao dao = new FuncaoDao();
+	Funcao funcaoCompleto = dao.buscarPorId(funcao.getId());
+	model.addAttribute("funcao", funcaoCompleto);
+
+	return "servico/alterarFuncao";
+    }
+	
+	 @RequestMapping("/alterarFuncao")
+	    public String alterarFuncao(Funcao funcao, Model model) {
+
+		 FuncaoDao dao = new FuncaoDao();
+		dao.alterar(funcao);
+		model.addAttribute("funcao", "Funcão Alterada com Sucesso!");
+
+		return "forward:listarFuncao";
+	    }
+
+	 @RequestMapping("removerFuncao")
+		public String removerFuncao(Funcao funcao, Model model) {
+		 FuncaoDao dao = new FuncaoDao();
+			dao.remover(funcao);
+			model.addAttribute("funcao", "Funcão Removida com Sucesso");
+			return "forward:listarFuncao";
+		}
 }

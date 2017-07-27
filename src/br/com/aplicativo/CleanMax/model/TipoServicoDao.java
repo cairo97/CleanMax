@@ -52,6 +52,7 @@ public class TipoServicoDao {
 
 							TipoServico servico = new TipoServico();
 							
+							servico.setId(rs.getInt("id"));
 							servico.setDescricao(rs.getString("descricao"));
 						
 							

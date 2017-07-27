@@ -47,7 +47,8 @@ public class TipoVeiculoDao {
 
 				TipoVeiculo veiculo = new TipoVeiculo();
 
-				veiculo.setDescricao(rs.getString("descricao"));
+				veiculo.setId(rs.getInt("id"));
+             	veiculo.setDescricao(rs.getString("descricao"));
 
 				listarVeiculo.add(veiculo);
 			}
@@ -99,8 +100,8 @@ public class TipoVeiculoDao {
 			    stmt = connection.prepareStatement(sql);
 
 			    
-			    stmt.setString(2, veiculo.getDescricao());
-			    stmt.setInt(7, veiculo.getId());
+			    stmt.setString(1, veiculo.getDescricao());
+			    stmt.setInt(2, veiculo.getId());
 
 			    stmt.execute();
 			    connection.close();
@@ -114,12 +115,13 @@ public class TipoVeiculoDao {
 
 			try {
 
-			    String sql = "DELETE FROM tipoveiculo WHERE id = ?";
+			    String sql = "DELETE FROM tipoVeiculo WHERE id = ?";
 			    PreparedStatement stmt = connection.prepareStatement(sql);
 			    
 			    stmt.setLong(1, veiculo.getId());
 
 			    stmt.execute();
+			    stmt.close();
 			    connection.close();
 
 			} catch (SQLException e) {

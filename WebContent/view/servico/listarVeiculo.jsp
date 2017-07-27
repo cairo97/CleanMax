@@ -16,6 +16,8 @@
 </head>
 <body style="margin-left: 1%;">
 
+
+        <div style="text-align: center; color: red;"> ${remover} </div> 
                         <a href="veiculo">Incluir Veículo</a>
 	
 	<div style="text-align: center; color: red;"> ${veiculo} </div>

@@ -16,7 +16,7 @@
 </head>
 <body style="margin-left: 1%;">
 
-  
+       <div style="text-align: center; color: red;"> ${funcao} </div> 
 	           <a href="funcao">Incluir Funcão</a>
 	<hr>
 	<h3>Listar Funcao</h3>
@@ -34,8 +34,8 @@
 			<tr>
 				<td>${funcao.descricao}</td>
 					<td>
-					<a href="removerProduto?id=${produto.id}">Remover</a> &nbsp;
-					<a href="exibirAlterarProduto?id=${produto.id}">Alterar</a>
+					<a href="removerFuncao?id=${funcao.id}">Remover</a> &nbsp;
+					<a href="exibirAlterarFuncao?id=${funcao.id}">Alterar</a>
 				</td>
 			</tr>
 		</c:forEach>

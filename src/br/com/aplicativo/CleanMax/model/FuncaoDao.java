@@ -51,6 +51,7 @@ private Connection connection;
 
 				Funcao funcao = new Funcao();
 				
+				funcao.setId(rs.getInt("id"));
 				funcao.setDescricao(rs.getString("descricao"));
 			
 				
@@ -67,4 +68,69 @@ private Connection connection;
 			throw new RuntimeException(e);
 		}
 	}
+	
+	
+	public Funcao buscarPorId(int id) {
+
+		try {
+
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM funcao WHERE id = ?");
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
+
+			Funcao funcao = new Funcao();
+
+			while (rs.next()) {
+                
+				funcao.setId(rs.getInt("id"));
+				funcao.setDescricao(rs.getString("descricao"));
+
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return funcao;
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	 public void alterar(Funcao funcao) {
+
+			String sql = "UPDATE funcao SET descricao=? WHERE id=?";
+			PreparedStatement stmt;
+
+			try {
+			    stmt = connection.prepareStatement(sql);
+
+			    
+			    stmt.setString(1, funcao.getDescricao());
+			    stmt.setInt(2, funcao.getId());
+
+			    stmt.execute();
+			    connection.close();
+
+			} catch (SQLException e) {
+			    throw new RuntimeException(e);
+			}
+		    }
+
+	 public void remover(Funcao funcao) {
+
+			try {
+
+			    String sql = "DELETE FROM funcao WHERE id = ?";
+			    PreparedStatement stmt = connection.prepareStatement(sql);
+			    
+			    stmt.execute();
+			    stmt.close();
+			    connection.close();
+
+			} catch (SQLException e) {
+			    throw new RuntimeException(e);
+			}
+		    }
 }
