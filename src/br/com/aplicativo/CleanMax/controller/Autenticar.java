@@ -78,8 +78,8 @@ public class Autenticar extends HttpServlet {
 
 			request.getSession().setAttribute("usuario", usuario);
 
-			response.sendRedirect("telaInicial/Index");
-
+			response.sendRedirect("Inicial/Index");
+//
 		}
 
 		else {
