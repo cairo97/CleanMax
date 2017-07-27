@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
-import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
+
 
 @Controller
 public class TipoServicoController {

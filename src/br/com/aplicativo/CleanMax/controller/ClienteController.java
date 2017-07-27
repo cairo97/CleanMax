@@ -1,6 +1,5 @@
 package br.com.aplicativo.CleanMax.controller;
 
-import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +11,7 @@ import br.com.aplicativo.CleanMax.model.ClienteDao;
 @Controller
 public class ClienteController {
 
-	@RequestMapping("/cadastro")
+	@RequestMapping("cadastro")
 	public String CadastroCliente() {
 
 		return "cadastro/cadastroCliente";
