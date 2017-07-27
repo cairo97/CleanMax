@@ -43,7 +43,7 @@ public class ClienteController {
 		return "forward:listarCliente";
 	}	
 		
-		@RequestMapping("alterarCliente")
+		@RequestMapping("exibirAlterarCliente")
 		public String alterarCliente(Cliente cliente, Model model) {
 
 			ClienteDao dao = new ClienteDao();

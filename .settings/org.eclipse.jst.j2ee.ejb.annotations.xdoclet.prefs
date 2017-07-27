@@ -1,5 +1,9 @@
 XDOCLETBUILDERACTIVE=true
-XDOCLETHOME=
-XDOCLETUSEGLOBAL=false
+XDOCLETHOME=/home/labnoite/\u00C1rea de Trabalho/xdoclet-1.2.1/lib
+XDOCLETUSEGLOBAL=true
 XDOCLETVERSION=1.2.1
 eclipse.preferences.version=1
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.JBossWebdocletTaskProvider.defaultSelection=false
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.JonasWebdocletTaskProvider.defaultSelection=false
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.WeblogicWebdocletTaskProvider.defaultSelection=false
+org.eclipse.jst.j2ee.xdoclet.runtime.internal.server.WebsphereWebdocletTaskProvider.defaultSelection=false
