@@ -44,7 +44,7 @@
 					<td>${cliente.nome}</td>
 					<td>${cliente.senha}</td>
 					<td>${cliente.email}</td>
-					<td>${cliente.dataNascimento}</td>
+					<td><fmt:formatDate value="${cliente.dataNascimento}" pattern="dd/MM/yyyy" /></td>
 					<td>${cliente.celular}</td>
 					<td>${cliente.telefone}</td>
 					<td>${cliente.cpf}</td>

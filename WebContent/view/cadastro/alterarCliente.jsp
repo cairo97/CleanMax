@@ -32,8 +32,7 @@
 
 	</table>
 
-	<form action="incluirCliente" method="post"
-		enctype="multipart/form-data">
+	<form action="incluirCliente" method="post" enctype="multipart/form-data">
 
 		<input type="hidden" name="id" value="${cadastro.id}" />
 
@@ -95,6 +94,6 @@
 			<button type="submit" class="btn btn-primary">&nbsp; Alterar
 				&nbsp;</button>
 		</p>
-		</
+		</form>
 </body>
 </html>
