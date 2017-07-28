@@ -19,7 +19,7 @@
                        <a href="servico">Incluir Servico</a>
 	
 	<hr>
-	<h3>Listar Servico</h3>
+	<h3>Listar Tipo de Servico</h3>
 	<hr>
 	
 
@@ -35,8 +35,8 @@
 			<tr>
 				<td>${servico.descricao}</td>
 					<td>
-					<a href="removerProduto?id=${produto.id}">Remover</a> &nbsp;
-					<a href="exibirAlterarProduto?id=${produto.id}">Alterar</a>
+					<a href="removerServico?id=${servico.id}">Remover</a> &nbsp;
+					<a href="exibirAlterarServico?id=${servico.id}">Alterar</a>
 				</td>
 			</tr>
 		</c:forEach>

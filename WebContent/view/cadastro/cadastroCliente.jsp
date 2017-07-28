@@ -131,8 +131,8 @@
 						</p>
 						<p>
 							<span>Data de Nascimento</span><input class="contact" type="text"
-								id="inputDataNascimento" name="dataNascimento" value="" required="required" />
-						</p>
+								id="inputDataNascimento" name="dataNascimento" value="" required="required" />				
+										</p>
 						<p>
 							<span>Celular</span><input class="contact" type="text"
 								name="celular" id="inputCelular" value="" required="required" />
