@@ -22,7 +22,7 @@
 	
 	<div style="text-align: center; color: red;"> ${veiculo} </div>
 	<hr>
-	<h3>Listar Veículo</h3>
+	<h3>Listar tipo de veículo</h3>
 	<hr>
 	
 

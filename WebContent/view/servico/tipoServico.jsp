@@ -15,15 +15,15 @@
 </head>
 <body>
                <center>
-                          <a href="servico">Incluir Serviço</a>&nbsp;&nbsp;&nbsp;
+                          <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp;&nbsp;
                             
-						<a href="veiculo">Incluir Veículo</a>&nbsp;&nbsp;&nbsp;
+						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp;&nbsp;
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;&nbsp;
-						<a href="listarServico">Listar Servico</a>
+						<a href="listarServico">Listar tipo servico</a>
                
                 <div style="text-align: center; color: red;"> ${servico} </div>
                
-        <form action="incluirServico" method="post"
+        <form action="tipoServico" method="post"
 					enctype="multipart/form-data">
 					<h1>Cadastro de tipo de Serviço</h1>
 					<div class="form_settings">

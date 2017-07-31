@@ -10,7 +10,7 @@ import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 
 @Controller
 public class TipoServicoController {
-	@RequestMapping("/servico")
+	@RequestMapping("/tipoServico")
 	public String Servico() {
 
 		return "servico/tipoServico";
@@ -24,7 +24,7 @@ public class TipoServicoController {
 		dao.salvar(servico);
 		model.addAttribute("servico", "Servi�o cadastrado realizado com sucesso");
 		
-		return "forward:servico";
+		return "forward:tipoServico";
 }
 	
 	

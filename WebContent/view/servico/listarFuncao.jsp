@@ -19,7 +19,7 @@
        <div style="text-align: center; color: red;"> ${funcao} </div> 
 	           <a href="funcao">Incluir Funcão</a>
 	<hr>
-	<h3>Listar Funcao</h3>
+	<h3>Listar tipo de funcão</h3>
 	<hr>
 	
 

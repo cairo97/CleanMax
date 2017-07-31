@@ -25,7 +25,7 @@ public class TipoVeiculoController {
 		dao.salvar(veiculo);
 		model.addAttribute("veiculo", "Veiculo cadastrado realizado com sucesso");
 
-		return "forward:veiculo";
+		return "forward:tipoVeiculo";
 
 	}
 
@@ -33,7 +33,7 @@ public class TipoVeiculoController {
 	public String listarVeiculo(Model model) {
 		TipoVeiculoDao dao = new TipoVeiculoDao();
 		model.addAttribute("listarVeiculo", dao.listar());
-		return "servico/listarVeiculo";
+		return "servico/listarTipoVeiculo";
 	}
 
 	@RequestMapping("exibirAlterarVeiculo")

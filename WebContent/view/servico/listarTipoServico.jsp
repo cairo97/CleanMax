@@ -19,7 +19,7 @@
                        <a href="servico">Incluir Servico</a>
 	
 	<hr>
-	<h3>Listar Servico</h3>
+	<h3>Listar tipo de servico</h3>
 	<hr>
 	
 
