@@ -32,6 +32,6 @@ public class TipoServicoController {
 	public String listarServico(Model model) {
 		TipoServicoDao dao = new TipoServicoDao();
 		model.addAttribute("listarServico", dao.listar());
-		return "servico/listarServico";
+		return "servico/listarTipoServico";
 	}
 }

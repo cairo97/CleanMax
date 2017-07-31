@@ -53,7 +53,7 @@ public class TipoVeiculoController {
 		dao.alterar(veiculo);
 		model.addAttribute("veiculo", "Produto Alterado com Sucesso!");
 
-		return "forward:listarVeiculo";
+		return "forward:listarTipoVeiculo";
 	    }
 
 	 @RequestMapping("removerVeiculo")
@@ -61,7 +61,7 @@ public class TipoVeiculoController {
 		 TipoVeiculoDao dao = new TipoVeiculoDao();
 			dao.remover(veiculo);
 			model.addAttribute("remover", "Produto Removido com Sucesso");
-			return "forward:listarVeiculo";
+			return "forward:listarTipoVeiculo";
 		}
 
 }
