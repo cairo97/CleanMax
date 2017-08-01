@@ -24,7 +24,7 @@
 	jQuery(function($) {
 		$("#inputDataNascimento").mask("99/99/9999");
 		$("#inputCpf").mask("999.999.999-99");
-		$("#inputCelular").mask("(99)9.9999-9999");
+		$("#inputCelular").mask("(99)9999-9999");
 		$("#inputTelefone").mask("(99) 9999-9999");
 	});
 </script>
@@ -76,8 +76,8 @@
 						<h3>Links</h3>
 						<ul>
 							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="veiculo">Incluir tipo veículo</a></li>
-							<li><a href="tipoServico">Incluir tipo serviço</a></li>
+							<li><a href="veiculo">Incluir tipo de veículo</a></li>
+							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
 							<li><a href="funcao">Incluir Função</a></li>
 							
 						</ul>
@@ -102,7 +102,7 @@
 			</div>
 			<div id="content">
 				 
-  <div style="text-align: center; color: red;"> ${cadastrar} </div>
+  <div style="text-align: center; color: green;"> ${cadastrar} </div>
 				
 					<h1>Cadastro de Cliente</h1>
 					

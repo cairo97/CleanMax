@@ -65,12 +65,13 @@
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
-						<h3>Links Úteis</h3>
+						<h3>Links </h3>
 						<ul>
 							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="veiculo">Incluir Veículo</a></li>
+							<li><a href="tipoVeiculo">Incluir tipo de veiculo</a></li>
+							<li><a href="tipoServico">Incluir tipo de servico</a></li>
 							<li><a href="funcao">Incluir Função</a></li>
-							<li><a href="#">Serviço 4</a></li>
+							
 						</ul>
 					</div>
 					<div class="sidebar_base"></div>

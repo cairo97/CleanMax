@@ -17,6 +17,7 @@
 <body>
 <<<<<<< HEAD
                <center>
+                            <a href="home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                           <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp;&nbsp;
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp;&nbsp;

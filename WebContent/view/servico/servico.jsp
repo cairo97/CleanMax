@@ -22,9 +22,17 @@
 </head>
 
 <body>
+
+
 	<center>
-		<a href="servico">Incluir Serviço</a> <a href="veiculo">Incluir
-			Veículo</a> <a href="funcao">Incluir Funcão</a>
+	
+	  <a href="home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                         <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp;&nbsp;
+                            
+						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp;&nbsp;
+					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;&nbsp; 
+					    
+		
 
 
 
