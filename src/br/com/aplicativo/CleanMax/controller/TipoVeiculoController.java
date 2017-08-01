@@ -43,11 +43,11 @@ public class TipoVeiculoController {
 	TipoVeiculo veiculoCompleto = dao.buscarPorId(veiculo.getId());
 	model.addAttribute("veiculo", veiculoCompleto);
 
-	return "servico/alterarVeiculo";
+	return "servico/alterarTipoVeiculo";
     }
 	
-	 @RequestMapping("/alterarVeiculo")
-	    public String alterarVeiculo(TipoVeiculo veiculo, Model model) {
+	 @RequestMapping("/alterarTipoVeiculo")
+	    public String alterarTipoVeiculo(TipoVeiculo veiculo, Model model) {
 
 		 TipoVeiculoDao dao = new TipoVeiculoDao();
 		dao.alterar(veiculo);

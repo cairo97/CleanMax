@@ -42,11 +42,13 @@
 			</div>
 
 			<div class="form-group">
-				<label for="tipoVeiculo">Tipo da Veículo:</label> <select
+				<label for="veiculo">Tipo da Veículo:</label> 
+				<select
 					style="width: 300px;" maxlength="100" class="form-control"
 					id="tipoVeiculo" name="tipoVeiculo">
+					<option value=""> Selecione </option>
 					<c:forEach items="${listarTipoVeiculo}" var="obj">
-						<option value="${obj.id}">${obj.nome}</option>
+						<option value="${obj.id}">${obj.descricao}</option>
 					</c:forEach>
 					
 				</select>

@@ -32,7 +32,7 @@
 
 	</table>
 
-	<form action="incluirServico" method="post"
+	<form action="incluirTipoServico" method="post"
 		enctype="multipart/form-data">
 
 		<input type="hidden" name="id" value="${servico.id}" />
@@ -54,6 +54,6 @@
 			<button type="submit" class="btn btn-primary">&nbsp; Alterar
 				&nbsp;</button>
 		</p>
-		</
+		</form>
 </body>
 </html>

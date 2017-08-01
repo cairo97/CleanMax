@@ -30,7 +30,7 @@
 					<h1>Cadastro de tipo de Veículo</h1>
 					<div class="form_settings">
 						<p>
-							<span><center>Descrição:</center>  </span><input class="contact" type="text" name="descricao" value="" required="required" />
+                      <span><center>Descrição:</center>  </span><input class="contact" type="text" name="descricao" value="" required="required" />
 						</p>
 						</div>
 		

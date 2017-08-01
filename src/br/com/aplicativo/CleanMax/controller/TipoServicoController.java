@@ -18,7 +18,7 @@ public class TipoServicoController {
 		return "servico/tipoServico";
 	}
 
-	@RequestMapping("incluirServico")
+	@RequestMapping("incluirTipoServico")
 	public String incluirServico(TipoServico servico, Model model) {
 		
 

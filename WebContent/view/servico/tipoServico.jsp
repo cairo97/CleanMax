@@ -29,7 +29,7 @@
 					enctype="multipart/form-data">
 					<h1>Cadastro de tipo de Serviço</h1>
 					<div class="form_settings">
-						<p>
+		                   <p>
 							<span><center>Descrição:</center>  </span><input class="contact" type="text" name="descricao" value="" required="required" />
 						</p>
 						</div>
@@ -39,29 +39,6 @@
 						<button type="submit" class="btn btn-primary">&nbsp; Salvar &nbsp;</button>
 						</form>
                     </center>
-=======
-	<center>
-		<a href="servico">Incluir Serviço</a>&nbsp;&nbsp;&nbsp; <a
-			href="veiculo">Incluir Veículo</a>&nbsp;&nbsp;&nbsp; <a href="funcao">Incluir
-			Funcão</a>&nbsp;&nbsp;&nbsp; <a href="listarServico">Listar Servico</a>
 
-		<div style="text-align: center; color: red;">${servico}</div>
-
-		<form action="incluirServico" method="post"
-			enctype="multipart/form-data">
-			<h1>Cadastro de tipo de Serviço</h1>
-			<div class="form_settings">
-				<p>
-					<span><center>Descrição:</center> </span><input class="contact"
-						type="text" name="descricao" value="" required="required" />
-				</p>
-			</div>
-
-			&nbsp;
-			<button type="submit" class="btn btn-primary">&nbsp; Salvar
-				&nbsp;</button>
-		</form>
-	</center>
->>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
 </body>
 </html>

@@ -76,7 +76,7 @@
 						<h3>Links</h3>
 						<ul>
 							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="tipoVeiculo">Incluir tipo veículo</a></li>
+							<li><a href="veiculo">Incluir tipo veículo</a></li>
 							<li><a href="tipoServico">Incluir tipo serviço</a></li>
 							<li><a href="funcao">Incluir Função</a></li>
 							

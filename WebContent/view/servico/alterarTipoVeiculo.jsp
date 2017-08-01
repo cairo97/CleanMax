@@ -22,7 +22,7 @@
 	
 	
 	
-	<form action="alterarVeiculo" method="post">
+	<form action="alterarTipoVeiculo" method="post">
 
 		<input type="hidden" name="id" value="${veiculo.id}" />
 
