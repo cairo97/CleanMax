@@ -39,7 +39,7 @@ public class TipoServicoDao {
 	public List<TipoServico> listar() {
 
 		try {
-			List<TipoServico> listarServico = new ArrayList<TipoServico>();
+			List<TipoServico> listarTipoServico = new ArrayList<TipoServico>();
 			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoServico ORDER BY descricao");
 
 			ResultSet rs = stmt.executeQuery();
@@ -51,14 +51,14 @@ public class TipoServicoDao {
 				servico.setId(rs.getInt("id"));
 				servico.setDescricao(rs.getString("descricao"));
 
-				listarServico.add(servico);
+				listarTipoServico.add(servico);
 			}
 
 			rs.close();
 			stmt.close();
 			connection.close();
 
-			return listarServico;
+			return listarTipoServico;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
@@ -69,7 +69,7 @@ public class TipoServicoDao {
 	
 	
 
-	public void alterarServico(TipoServico servico) {
+	public void alterarTipoServico(TipoServico servico) {
 		try {
 			String sql = "UPDATE tipoServico set (descricao=?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
