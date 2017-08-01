@@ -48,7 +48,7 @@
 					<c:forEach items="${listarTipoVeiculo}" var="obj">
 						<option value="${obj.id}">${obj.nome}</option>
 					</c:forEach>
-					<option value="grande">Grande Porte</option>
+					
 				</select>
 			</div>
 
