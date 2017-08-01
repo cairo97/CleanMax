@@ -15,20 +15,21 @@
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
+
                <center>
                             <a href="home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                          <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp;&nbsp;
+                          
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp;&nbsp;
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;&nbsp;
-						<a href="listarServico">Listar tipo servico</a>
+						<a href="listarTipoServico">Listar tipo servico</a>
                
                 <div style="text-align: center; color: red;"> ${servico} </div>
                
-        <form action="tipoServico" method="post"
-					enctype="multipart/form-data">
+        <form action="incluirTipoServico" method="post"enctype="multipart/form-data">
+        
 					<h1>Cadastro de tipo de Serviço</h1>
+					
 					<div class="form_settings">
 		                   <p>
 							<span><center>Descrição:</center>  </span><input class="contact" type="text" name="descricao" value="" required="required" />

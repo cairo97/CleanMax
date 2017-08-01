@@ -3,15 +3,13 @@ package br.com.aplicativo.CleanMax.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import br.com.aplicativo.CleanMax.model.Cliente;
-import br.com.aplicativo.CleanMax.model.ClienteDao;
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 
 
 @Controller
 public class TipoServicoController {
+	
 	@RequestMapping("/tipoServico")
 	public String Servico() {
 
@@ -19,7 +17,7 @@ public class TipoServicoController {
 	}
 
 	@RequestMapping("incluirTipoServico")
-	public String incluirServico(TipoServico servico, Model model) {
+	public String incluirTipoServico(TipoServico servico, Model model) {
 		
 
 		TipoServicoDao dao = new TipoServicoDao();
@@ -30,23 +28,23 @@ public class TipoServicoController {
 }
 	
 	
-	@RequestMapping("listarServico")
-	public String listarServico(Model model) {
+	@RequestMapping("listarTipoServico")
+	public String listarTipoServico(Model model) {
 		TipoServicoDao dao = new TipoServicoDao();
-		model.addAttribute("listarServico", dao.listar());
+		model.addAttribute("listarTipoServico", dao.listar());
 		return "servico/listarTipoServico";
 	}
 	
-	@RequestMapping("removerServico")
-	public String removerServico(TipoServico servico, Model model) {
+	@RequestMapping("removerTipoServico")
+	public String removerTipoServico(TipoServico servico, Model model) {
 		TipoServicoDao dao = new TipoServicoDao();
 		dao.remover(servico);
 		model.addAttribute("remover", "Servico Removido com Sucesso");
-		return "forward:listarServico";
+		return "forward:listarTipoServico";
 	}	
 		
-		@RequestMapping("exibirAlterarServico")
-		public String alterarServico(TipoServico servico, Model model) {
+		@RequestMapping("exibirAlterarTipoServico")
+		public String alterarTipoServico(TipoServico servico, Model model) {
 
 			TipoServicoDao dao = new TipoServicoDao();
 			TipoServico servicoCompleto = dao.buscarPorId(servico.getId());
@@ -56,14 +54,14 @@ public class TipoServicoController {
 			return "servico/alterarTipoServico";
 	    }
 	    
-	    @RequestMapping("/alterarServico")
-	    public String alteraServico(TipoServico servico, Model model) {
+	    @RequestMapping("/alterarTipoServico")
+	    public String alteraTipoServico(TipoServico servico, Model model) {
 
 	    	TipoServicoDao dao = new TipoServicoDao();
-		dao.alterarServico(servico);
+		dao.alterarTipoServico(servico);
 		model.addAttribute("mensagem", "Servico Alterado com Sucesso!");
 
-		return "forward:listarServico";
+		return "forward:listarTipoServico";
 		
 		
 	}

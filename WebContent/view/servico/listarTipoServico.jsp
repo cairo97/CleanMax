@@ -16,7 +16,7 @@
 </head>
 <body style="margin-left: 1%;">
 
-                       <a href="servico">Incluir Servico</a>
+      <a href="tipoServico">Incluir Tipo Servico</a>                 
 	
 	<hr>
 	<h3>Listar tipo de servico</h3>
@@ -31,12 +31,12 @@
 			
 		</tr>
 		
-		<c:forEach var="servico" items="${listarServico}">
+		<c:forEach var="servico" items="${listarTipoServico}">
 			<tr>
 				<td>${servico.descricao}</td>
 					<td>
-					<a href="removerProduto?id=${produto.id}">Remover</a> &nbsp;
-					<a href="exibirAlterarProduto?id=${produto.id}">Alterar</a>
+					<a href="removerTipoServico?id=${servico.id}">Remover</a> &nbsp;
+					<a href="exibirAlterarTipoServico?id=${servico.id}">Alterar</a>
 				</td>
 			</tr>
 		</c:forEach>
