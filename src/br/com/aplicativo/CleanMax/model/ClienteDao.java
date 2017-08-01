@@ -31,8 +31,8 @@ public class ClienteDao {
 			stmt.setString(1, cliente.getNome());
 			stmt.setString(2, cliente.getSenha());
 			stmt.setString(3, cliente.getEmail());
-			if (cliente.getData2() != null) {
-				stmt.setDate(4, new java.sql.Date(cliente.getData2().getTime()));
+			if (cliente.getDataNascimento() != null) {
+				stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
 			} else {
 				stmt.setDate(4, null);
 			}
@@ -92,7 +92,6 @@ public class ClienteDao {
 			stmt.setString(2, cliente.getSenha());
 			stmt.setString(3, cliente.getEmail());
 			stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
-			;
 			stmt.setString(5, cliente.getCelular());
 			stmt.setString(6, cliente.getTelefone());
 			stmt.setString(7, cliente.getCpf());

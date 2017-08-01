@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,13 +44,13 @@
 					<td>${cliente.nome}</td>
 					<td>${cliente.senha}</td>
 					<td>${cliente.email}</td>
-					<td>${cliente.dataNascimento}</td>
+					<td><fmt:formatDate value="${cliente.dataNascimento}" pattern="dd/MM/yyyy" /></td>
 					<td>${cliente.celular}</td>
 					<td>${cliente.telefone}</td>
 					<td>${cliente.cpf}</td>
 
 					<td>&nbsp;<a href="removerCliente?id=${cliente.id}">Remover</a>
-						&nbsp;<a href="alterarCliente?id=${cliente.id}">Alterar</a>
+						&nbsp;<a href="exibirAlterarCliente?id=${cliente.id}">Alterar</a>
 					</td>
 			</c:forEach>
 	</table>

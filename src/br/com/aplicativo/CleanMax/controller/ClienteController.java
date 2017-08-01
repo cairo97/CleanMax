@@ -54,7 +54,7 @@ public class ClienteController {
 			return "cadastro/alterarCliente";
 	    }
 	    
-	    @RequestMapping("/alterarCliente")
+	    @RequestMapping("alterarCliente")
 	    public String alteraCliente(Cliente cliente, Model model) {
 
 	    	ClienteDao dao = new ClienteDao();

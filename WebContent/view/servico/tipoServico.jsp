@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
-<link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
                <center>
                           <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp;&nbsp;
                             
@@ -37,5 +39,29 @@
 						<button type="submit" class="btn btn-primary">&nbsp; Salvar &nbsp;</button>
 						</form>
                     </center>
+=======
+	<center>
+		<a href="servico">Incluir Serviço</a>&nbsp;&nbsp;&nbsp; <a
+			href="veiculo">Incluir Veículo</a>&nbsp;&nbsp;&nbsp; <a href="funcao">Incluir
+			Funcão</a>&nbsp;&nbsp;&nbsp; <a href="listarServico">Listar Servico</a>
+
+		<div style="text-align: center; color: red;">${servico}</div>
+
+		<form action="incluirServico" method="post"
+			enctype="multipart/form-data">
+			<h1>Cadastro de tipo de Serviço</h1>
+			<div class="form_settings">
+				<p>
+					<span><center>Descrição:</center> </span><input class="contact"
+						type="text" name="descricao" value="" required="required" />
+				</p>
+			</div>
+
+			&nbsp;
+			<button type="submit" class="btn btn-primary">&nbsp; Salvar
+				&nbsp;</button>
+		</form>
+	</center>
+>>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
 </body>
 </html>

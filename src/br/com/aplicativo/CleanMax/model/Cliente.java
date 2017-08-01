@@ -2,12 +2,15 @@ package br.com.aplicativo.CleanMax.model;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Cliente {
 
 	private Integer id;
 	private String nome;
 	private String senha;
 	private String email;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date dataNascimento;
 	private String celular;
 	private String telefone;

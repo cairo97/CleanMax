@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -23,6 +24,8 @@
 	jQuery(function($) {
 		$("#inputDataNascimento").mask("99/99/9999");
 		$("#inputCpf").mask("999.999.999-99");
+		$("#inputCelular").mask("(99)9.9999-9999");
+		$("#inputTelefone").mask("(99) 9999-9999");
 	});
 </script>
 </head>
@@ -131,8 +134,8 @@
 						</p>
 						<p>
 							<span>Data de Nascimento</span><input class="contact" type="text"
-								id="inputDataNascimento" name="dataNascimento" value="" required="required" />
-						</p>
+								id="inputDataNascimento" name="dataNascimento" value="" required="required" />				
+										</p>
 						<p>
 							<span>Celular</span><input class="contact" type="text"
 								name="celular" id="inputCelular" value="" required="required" />
