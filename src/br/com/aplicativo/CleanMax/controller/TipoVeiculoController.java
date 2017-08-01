@@ -29,10 +29,10 @@ public class TipoVeiculoController {
 
 	}
 
-	@RequestMapping("listarVeiculo")
-	public String listarVeiculo(Model model) {
+	@RequestMapping("listarTipoVeiculo")
+	public String listarTipoVeiculo(Model model) {
 		TipoVeiculoDao dao = new TipoVeiculoDao();
-		model.addAttribute("listarVeiculo", dao.listar());
+		model.addAttribute("listarTipoVeiculo", dao.listar());
 		return "servico/listarTipoVeiculo";
 	}
 

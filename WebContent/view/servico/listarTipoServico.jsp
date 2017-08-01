@@ -16,7 +16,7 @@
 </head>
 <body style="margin-left: 1%;">
 
-                       <a href="servico">Incluir Servico</a>
+                      
 	
 	<hr>
 	<h3>Listar tipo de servico</h3>

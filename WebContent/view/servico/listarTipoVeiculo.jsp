@@ -34,7 +34,7 @@
 			
 		</tr>
 		
-		<c:forEach var="veiculo" items="${listarVeiculo}">
+		<c:forEach var="veiculo" items="${listarTipoVeiculo}">
 			<tr>
 				<td>${veiculo.descricao}</td>
 					<td>

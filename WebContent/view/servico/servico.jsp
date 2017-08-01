@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>s
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -66,8 +67,10 @@
 				<label for="tipoServico">Tipo da Serviço:</label> <select
 					style="width: 300px;" maxlength="100" class="form-control"
 					id="tipoServico" name="tipoServico">
-					<option value="simples">Simples</option>
-					<option value="completo">Completo</option>
+					<option value="selecione">Selecione</option>
+					<c:forEach items="${listarTipoServico}" var="obj">
+						<option value="${obj.id}">${obj.descricao}</option>
+					</c:forEach>
 				</select>
 			</div>
 
