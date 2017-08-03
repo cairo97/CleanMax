@@ -21,11 +21,11 @@ public class TipoVeiculoDao {
 		}
 	}
 
-	public void salvar(TipoVeiculo veiculo) {
+	public void salvar(TipoVeiculo tipoVeiculo) {
 		try {
 			String sql = "INSERT INTO tipoVeiculo (descricao) VALUES (?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
-			stmt.setString(1, veiculo.getDescricao());
+			stmt.setString(1, tipoVeiculo.getDescricao());
 
 			stmt.execute();
 			connection.close();
@@ -45,12 +45,12 @@ public class TipoVeiculoDao {
 
 			while (rs.next()) {
 
-				TipoVeiculo veiculo = new TipoVeiculo();
+				TipoVeiculo tipoVeiculo = new TipoVeiculo();
 
-				veiculo.setId(rs.getInt("id"));
-             	veiculo.setDescricao(rs.getString("descricao"));
+				tipoVeiculo.setId(rs.getInt("id"));
+				tipoVeiculo.setDescricao(rs.getString("descricao"));
 
-				listarVeiculo.add(veiculo);
+				listarVeiculo.add(tipoVeiculo);
 			}
 
 			rs.close();
@@ -71,12 +71,12 @@ public class TipoVeiculoDao {
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
-			TipoVeiculo veiculo = new TipoVeiculo();
+			TipoVeiculo tipoVeiculo = new TipoVeiculo();
 
 			while (rs.next()) {
                 
-				veiculo.setId(rs.getInt("id"));
-				veiculo.setDescricao(rs.getString("descricao"));
+				tipoVeiculo.setId(rs.getInt("id"));
+				tipoVeiculo.setDescricao(rs.getString("descricao"));
 
 			}
 
@@ -84,14 +84,14 @@ public class TipoVeiculoDao {
 			stmt.close();
 			connection.close();
 
-			return veiculo;
+			return tipoVeiculo;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
 	
-	 public void alterar(TipoVeiculo veiculo) {
+	 public void alterar(TipoVeiculo tipoVeiculo) {
 
 			String sql = "UPDATE tipoVeiculo SET descricao=? WHERE id=?";
 			PreparedStatement stmt;
@@ -100,8 +100,8 @@ public class TipoVeiculoDao {
 			    stmt = connection.prepareStatement(sql);
 
 			    
-			    stmt.setString(1, veiculo.getDescricao());
-			    stmt.setInt(2, veiculo.getId());
+			    stmt.setString(1, tipoVeiculo.getDescricao());
+			    stmt.setInt(2, tipoVeiculo.getId());
 
 			    stmt.execute();
 			    connection.close();
@@ -111,15 +111,14 @@ public class TipoVeiculoDao {
 			}
 		    }
 
-	 public void remover(TipoVeiculo veiculo) {
+	 public void remover(TipoVeiculo tipoVeiculo) {
 
 			try {
 
 			    String sql = "DELETE FROM tipoVeiculo WHERE id = ?";
 			    PreparedStatement stmt = connection.prepareStatement(sql);
+			    stmt.setInt(1, tipoVeiculo.getId());
 			    
-			    stmt.setLong(1, veiculo.getId());
-
 			    stmt.execute();
 			    stmt.close();
 			    connection.close();

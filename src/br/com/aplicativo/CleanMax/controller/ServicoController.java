@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import br.com.aplicativo.CleanMax.model.Servico;
+import br.com.aplicativo.CleanMax.model.ServicoDao;
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 import br.com.aplicativo.CleanMax.model.TipoVeiculo;
@@ -40,12 +42,12 @@ public class ServicoController {
 	public String incluirServico(Servico servico, Model model) {
 		
 
+		ServicoDao dao = new ServicoDao();
+		dao.salvar(servico);
+		model.addAttribute("servico", "Serviço cadastrado realizado com sucesso");
 		
-		TipoVeiculoDao dao = new TipoVeiculoDao();
-		List<TipoVeiculo> listarTipoVeiculo = dao.listar();
-		model.addAttribute("listarTipoVeiculo", listarTipoVeiculo);
-
-		
-		return "forward:incluirServico";
+		return "forward:servico";
 }
+	
+	
 }

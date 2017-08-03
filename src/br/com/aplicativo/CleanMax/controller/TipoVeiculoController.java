@@ -19,13 +19,13 @@ public class TipoVeiculoController {
 	}
 
 	@RequestMapping("incluirVeiculo")
-	public String incluirVeiculo(TipoVeiculo veiculo, Model model) {
+	public String incluirVeiculo(TipoVeiculo tipoVeiculo, Model model) {
 
 		TipoVeiculoDao dao = new TipoVeiculoDao();
-		dao.salvar(veiculo);
+		dao.salvar(tipoVeiculo);
 		model.addAttribute("veiculo", "Veiculo cadastrado realizado com sucesso");
-
-		return "forward:tipoVeiculo";
+       
+		return "forward:listarTipoVeiculo";
 
 	}
 
@@ -37,29 +37,29 @@ public class TipoVeiculoController {
 	}
 
 	@RequestMapping("exibirAlterarVeiculo")
-    public String exibirAlterarVeiculo(TipoVeiculo veiculo, Model model) {
+    public String exibirAlterarVeiculo(TipoVeiculo tipoVeiculo, Model model) {
 
 	TipoVeiculoDao dao = new TipoVeiculoDao();
-	TipoVeiculo veiculoCompleto = dao.buscarPorId(veiculo.getId());
+	TipoVeiculo veiculoCompleto = dao.buscarPorId(tipoVeiculo.getId());
 	model.addAttribute("veiculo", veiculoCompleto);
 
 	return "servico/alterarTipoVeiculo";
     }
 	
 	 @RequestMapping("/alterarTipoVeiculo")
-	    public String alterarTipoVeiculo(TipoVeiculo veiculo, Model model) {
+	    public String alterarTipoVeiculo(TipoVeiculo tipoVeiculo, Model model) {
 
 		 TipoVeiculoDao dao = new TipoVeiculoDao();
-		dao.alterar(veiculo);
+		dao.alterar(tipoVeiculo);
 		model.addAttribute("veiculo", "Produto Alterado com Sucesso!");
 
 		return "forward:listarTipoVeiculo";
 	    }
 
 	 @RequestMapping("removerVeiculo")
-		public String removerVeiculo(TipoVeiculo veiculo, Model model) {
+		public String removerVeiculo(TipoVeiculo tipoVeiculo, Model model) {
 		 TipoVeiculoDao dao = new TipoVeiculoDao();
-			dao.remover(veiculo);
+			dao.remover(tipoVeiculo);
 			model.addAttribute("remover", "Produto Removido com Sucesso");
 			return "forward:listarTipoVeiculo";
 		}

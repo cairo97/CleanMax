@@ -32,7 +32,7 @@
 
 	</table>
 
-	<form action="incluirTipoServico" method="post"
+	<form action="alterarTipoServico" method="post"
 		enctype="multipart/form-data">
 
 		<input type="hidden" name="id" value="${servico.id}" />

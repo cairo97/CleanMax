@@ -23,10 +23,12 @@ public class ServicoDao {
 
 	public void salvar(Servico servico) {
 		try {
-			String sql = "INSERT INTO tipoServico (descricao) VALUES (?)";
+			String sql = "INSERT INTO servico (nome,tipoVeiculo_id,tipoServico_id,preco) VALUES (?,?,?,?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 			stmt.setString(1, servico.getNome());
-
+			stmt.setInt(2, servico.getTipoServico().getId());
+			stmt.setInt(3, servico.getTipoVeiculo().getId());
+			stmt.setDouble(4, servico.getPreco());
 			stmt.execute();
 			connection.close();
 
@@ -35,21 +37,21 @@ public class ServicoDao {
 		}
 	}
 
-	public List<TipoServico> listar() {
+	public List<Servico> listar() {
 
 		try {
-			List<TipoServico> listarServico = new ArrayList<TipoServico>();
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoServico ORDER BY descricao");
+			List<Servico> listarServico = new ArrayList<Servico>();
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico ORDER BY descricao");
 
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
 
-				TipoServico servico = new TipoServico();
+				Servico servico = new Servico();
 
 				servico.setId(rs.getInt("id"));
-				servico.setDescricao(rs.getString("descricao"));
-
+				servico.setNome(rs.getString("nome"));
+               // servico.setTipoServico(servico);
 				listarServico.add(servico);
 			}
 
@@ -68,12 +70,12 @@ public class ServicoDao {
 	
 	
 
-	public void alterarServico(TipoServico servico) {
+	public void alterarServico(Servico servico) {
 		try {
 			String sql = "UPDATE tipoServico set (descricao=?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setString(1, servico.getDescricao());
+			stmt.setString(1, servico.getNome());
 			
 
 			stmt.execute();

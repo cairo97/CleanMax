@@ -3,8 +3,25 @@ package br.com.aplicativo.CleanMax.model;
 public class Servico {
 	private int id;
 	private String nome;
-	private TipoVeiculo veiculo;
-	private TipoServico servico;
+	private TipoVeiculo tipoVeiculo;
+	private TipoServico tipoServico;
+	private double preco;
+
+	public TipoVeiculo getTipoVeiculo() {
+		return tipoVeiculo;
+	}
+
+	public void setTipoVeiculo(TipoVeiculo tipoVeiculo) {
+		this.tipoVeiculo = tipoVeiculo;
+	}
+
+	public TipoServico getTipoServico() {
+		return tipoServico;
+	}
+
+	public void setTipoServico(TipoServico tipoServico) {
+		this.tipoServico = tipoServico;
+	}
 
 	public int getId() {
 		return id;
@@ -22,20 +39,14 @@ public class Servico {
 		this.nome = nome;
 	}
 
-	public TipoVeiculo getVeiculo() {
-		return veiculo;
+	public double getPreco() {
+		return preco;
 	}
 
-	public void setVeiculo(TipoVeiculo veiculo) {
-		this.veiculo = veiculo;
+	public void setPreco(double preco) {
+		this.preco = preco;
 	}
 
-	public TipoServico getServico() {
-		return servico;
-	}
 
-	public void setServico(TipoServico servico) {
-		this.servico = servico;
-	}
 
 }

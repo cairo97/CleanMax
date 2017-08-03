@@ -29,8 +29,7 @@
               
               <div style="text-align: center; color: red;"> ${veiculo} </div>
               
-        <form action="incluirVeiculo" method="post"
-					enctype="multipart/form-data">
+        <form action="incluirVeiculo" method="post" enctype="multipart/form-data">
 					<h1>Cadastro de tipo de Veículo</h1>
 					<div class="form_settings">
 						<p>

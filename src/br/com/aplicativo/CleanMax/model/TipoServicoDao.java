@@ -22,11 +22,11 @@ public class TipoServicoDao {
 		}
 	}
 
-	public void salvar(TipoServico servico) {
+	public void salvar(TipoServico tipoServico) {
 		try {
 			String sql = "INSERT INTO tipoServico (descricao) VALUES (?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
-			stmt.setString(1, servico.getDescricao());
+			stmt.setString(1, tipoServico.getDescricao());
 
 			stmt.execute();
 			connection.close();
@@ -46,12 +46,12 @@ public class TipoServicoDao {
 
 			while (rs.next()) {
 
-				TipoServico servico = new TipoServico();
+				TipoServico tipoServico = new TipoServico();
 
-				servico.setId(rs.getInt("id"));
-				servico.setDescricao(rs.getString("descricao"));
+				tipoServico.setId(rs.getInt("id"));
+				tipoServico.setDescricao(rs.getString("descricao"));
 
-				listarTipoServico.add(servico);
+				listarTipoServico.add(tipoServico);
 			}
 
 			rs.close();
@@ -69,12 +69,13 @@ public class TipoServicoDao {
 	
 	
 
-	public void alterarTipoServico(TipoServico servico) {
+	public void alterarTipoServico(TipoServico tipoServico) {
 		try {
-			String sql = "UPDATE tipoServico set (descricao=?)";
+			String sql = "UPDATE tipoServico set descricao=? where id=?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setString(1, servico.getDescricao());
+			stmt.setInt(2, tipoServico.getId());
+			stmt.setString(1, tipoServico.getDescricao());
 			
 
 			stmt.execute();
@@ -93,12 +94,12 @@ public class TipoServicoDao {
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
-			TipoServico servico = new TipoServico();
+			TipoServico tipoServico = new TipoServico();
 
 			while (rs.next()) {
 
-				servico.setId(rs.getInt("id"));
-				servico.setDescricao(rs.getString("descricao"));
+				tipoServico.setId(rs.getInt("id"));
+				tipoServico.setDescricao(rs.getString("descricao"));
 				
 			}
 
@@ -106,7 +107,7 @@ public class TipoServicoDao {
 			stmt.close();
 			connection.close();
 
-			return servico;
+			return tipoServico;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -114,13 +115,13 @@ public class TipoServicoDao {
 
 	}
 
-	public void remover(TipoServico servico) {
+	public void remover(TipoServico tipoServico) {
 
 		try {
 			String sql = "DELETE FROM tipoServico WHERE id = ?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setLong(1, servico.getId());
+			stmt.setLong(1, tipoServico.getId());
 
 			stmt.execute();
 			stmt.close();
