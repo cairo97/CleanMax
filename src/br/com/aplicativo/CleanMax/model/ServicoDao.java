@@ -26,8 +26,8 @@ public class ServicoDao {
 			String sql = "INSERT INTO servico (nome,tipoVeiculo_id,tipoServico_id,preco) VALUES (?,?,?,?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 			stmt.setString(1, servico.getNome());
-			stmt.setInt(2, servico.getTipoServico().getId());
-			stmt.setInt(3, servico.getTipoVeiculo().getId());
+			stmt.setInt(2, servico.getTipoVeiculo().getId());
+			stmt.setInt(3, servico.getTipoServico().getId());
 			stmt.setDouble(4, servico.getPreco());
 			stmt.execute();
 			connection.close();
@@ -41,7 +41,7 @@ public class ServicoDao {
 
 		try {
 			List<Servico> listarServico = new ArrayList<Servico>();
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico ORDER BY descricao");
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico ORDER BY nome");
 
 			ResultSet rs = stmt.executeQuery();
 
@@ -51,7 +51,16 @@ public class ServicoDao {
 
 				servico.setId(rs.getInt("id"));
 				servico.setNome(rs.getString("nome"));
-               // servico.setTipoServico(servico);
+				servico.setPreco(rs.getDouble("preco"));
+				
+				TipoServicoDao dao = new TipoServicoDao();
+				TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
+                servico.setTipoServico(tipoServico);
+                
+                TipoVeiculoDao dao1 = new TipoVeiculoDao();
+                TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
+                servico.setTipoVeiculo(tipoVeiculo);
+                
 				listarServico.add(servico);
 			}
 

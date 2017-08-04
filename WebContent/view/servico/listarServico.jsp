@@ -16,24 +16,32 @@
 </head>
 <body style="margin-left: 1%;">
 
-                       <a href="servico">Incluir Servico</a>
+                       
 	
 	<hr>
-	<h3>Listar Tipo de Servico</h3>
+	<h3>Listar Servico</h3>
 	<hr>
 	
-
+     
 	<table border="1" style="width: 100%">
 		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			
-			<td>Descrição</td>
-			<td>Acões</td>
+			<td>Nome do Serviço:</td>
+			<td>Tipo da Veículo:</td>
+			<td>Tipo da Servico:</td>
+			<td>Preço:</td>
+			<td>Acões:</td>
 			
 		</tr>
 		
 		<c:forEach var="servico" items="${listarServico}">
 			<tr>
-				<td>${servico.descricao}</td>
+			   
+				<td>${servico.nome}</td>
+				<td>${servico.tipoServico.descricao}</td>
+				<td>${servico.tipoVeiculo.descricao}</td>
+				<td>${servico.preco}</td>
+				
 					<td>
 					<a href="removerServico?id=${servico.id}">Remover</a> &nbsp;
 					<a href="exibirAlterarServico?id=${servico.id}">Alterar</a>

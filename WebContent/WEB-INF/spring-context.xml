@@ -13,8 +13,7 @@
 
 
 	<context:component-scan base-package="br.com.aplicativo.CleanMax" />
-   <mvc:annotation-driven conversion-service="conversionTipoServico" />
-   <mvc:annotation-driven conversion-service="conversionTipoVeiculo" />
+   <mvc:annotation-driven conversion-service="conversionservice" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,23 +30,16 @@ class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 arquivos CSS, imagens, JavaScript e etc -->
 <mvc:default-servlet-handler/>
 
-<bean id="conversionTipoServico"
+<bean id="conversionservice"
 class="org.springframework.context.support.ConversionServiceFactoryBean">
 <property name="converters">
 <list>
 <bean class="br.com.aplicativo.CleanMax.controller.TipoServicoConverter" />
-</list>
-</property>
-</bean>
-
-<bean id="conversionTipoVeiculo"
-class="org.springframework.context.support.ConversionServiceFactoryBean">
-<property name="converters">
-<list>
 <bean class="br.com.aplicativo.CleanMax.controller.TipoVeiculoConverter" />
 </list>
 </property>
 </bean>
+
 
 </beans>
 

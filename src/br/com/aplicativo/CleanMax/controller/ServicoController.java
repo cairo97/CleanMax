@@ -49,5 +49,11 @@ public class ServicoController {
 		return "forward:servico";
 }
 	
+	@RequestMapping("listarServico")
+	public String listarServico(Model model) {
+		ServicoDao dao = new ServicoDao();
+		model.addAttribute("listarServico", dao.listar());
+		return "servico/listarServico";
+	}
 	
 }
