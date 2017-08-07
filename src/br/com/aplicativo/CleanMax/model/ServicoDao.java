@@ -79,13 +79,15 @@ public class ServicoDao {
 	
 	
 
-	public void alterarServico(Servico servico) {
+	public void alterar(Servico servico) {
 		try {
-			String sql = "UPDATE tipoServico set (descricao=?)";
+			String sql = "UPDATE servico set (nome=?,tipoVeiculo_id=?,tipoServico_id=?,preco=?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
 			stmt.setString(1, servico.getNome());
-			
+			stmt.setString(2, servico.getNome());
+			stmt.setString(3, servico.getNome());
+			stmt.setString(4, servico.getNome());
 
 			stmt.execute();
 			connection.close();
@@ -95,21 +97,30 @@ public class ServicoDao {
 		}
 	}
 
-	public TipoServico buscarPorId(int id) {
+	public Servico buscarPorId(int id) {
 
 		try {
 
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM tipoServico WHERE id = ?");
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico WHERE id = ?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
-			TipoServico servico = new TipoServico();
+			Servico servico = new Servico();
 
 			while (rs.next()) {
 
-				servico.setId(rs.getInt("id"));
-				servico.setDescricao(rs.getString("descricao"));
+				     servico.setId(rs.getInt("id"));
+				     servico.setNome(rs.getString("nome"));
 				
+				    TipoVeiculoDao dao1 = new TipoVeiculoDao();
+	                TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
+	                servico.setTipoVeiculo(tipoVeiculo);
+	                
+	                TipoServicoDao dao = new TipoServicoDao();
+					TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
+	                servico.setTipoServico(tipoServico);
+				
+	                servico.setPreco(rs.getDouble("preco"));
 			}
 
 			rs.close();
@@ -124,10 +135,10 @@ public class ServicoDao {
 
 	}
 
-	public void remover(TipoServico servico) {
+	public void remover(Servico servico) {
 
 		try {
-			String sql = "DELETE FROM tipoServico WHERE id = ?";
+			String sql = "DELETE FROM servico WHERE id = ?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
 			stmt.setLong(1, servico.getId());
@@ -140,4 +151,3 @@ public class ServicoDao {
 		}
 	}
 }
-
