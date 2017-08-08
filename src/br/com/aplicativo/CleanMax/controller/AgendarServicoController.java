@@ -16,10 +16,10 @@ public class AgendarServicoController {
 		return "agendarServico/agendarServico";
 	}
 
-	@RequestMapping("incluirAgenda")
-	public String incluirAgenda(Agendar agendar, Model model) {
+/*	@RequestMapping("incluirAgenda")
+//	public String incluirAgenda(Agendar agendar, Model model) {
 
-		AgendarDao dao = new AgendarDao();
+//		AgendarDao dao = new AgendarDao();
 		dao.salvar(agendar);
 		model.addAttribute("Agendamento", "Cadastro realizado com sucesso");
 
@@ -27,44 +27,42 @@ public class AgendarServicoController {
 
 	}
 
-	
-	
-	//@RequestMapping("listarCliente")   FALTA CONCLUIR Ass: Sd Rafael
-	public String listarCliente(Model model) {
-		ClienteDao dao = new ClienteDao();
-		model.addAttribute("listarCliente", dao.listar());
-		return "cadastro/pesquisarCliente";
+	@RequestMapping("listarAgendamento")  
+	public String listarAgendamento(Model model) {
+		AgendarDao dao = new AgendarDao();
+		model.addAttribute("listarAgendamento", dao.listar());
+		return "agendarServico/pesquisarAgendamento";
 	}
 
-	@RequestMapping("removerCliente")
-	public String removerCliente(Cliente cliente, Model model) {
-		ClienteDao dao = new ClienteDao();
-		dao.remover(cliente);
-		model.addAttribute("remover", "Produto Removido com Sucesso");
-		return "forward:listarCliente";
+	@RequestMapping("removerAgendamento")
+	public String removerAgendamento(Agendar agendar, Model model) {
+		AgendarDao dao = new AgendarDao();
+		dao.remover(agendar);
+		model.addAttribute("remover", "Agendamento Removido com Sucesso");
+		return "forward:listarAgendamento";
 	}	
 		
-		@RequestMapping("exibirAlterarCliente")
-		public String alterarCliente(Cliente cliente, Model model) {
+		@RequestMapping("exibirAlterarAgendamento")
+		public String alterarAgendamento(Agendar agendar, Model model) {
 
-			ClienteDao dao = new ClienteDao();
-			Cliente clienteCompleto = dao.buscarPorId(cliente.getId());
+			AgendarDao dao = new AgendarDao();
+			Agendar AgendarCompleto = dao.buscarPorId(agendar.getId());
 
-			model.addAttribute("cadastro", clienteCompleto);
+			model.addAttribute("agendarServico", agendarCompleto);
 
-			return "cadastro/alterarCliente";
+			return "agendarServico/alterarAgendamento";
 	    }
 	    
-	    @RequestMapping("alterarCliente")
-	    public String alteraCliente(Cliente cliente, Model model) {
+	    @RequestMapping("alterarAgendamento")
+	    public String alteraAgendamento(Agendar agendar, Model model) {
 
-	    	ClienteDao dao = new ClienteDao();
-		dao.alterarCliente(cliente);
-		model.addAttribute("mensagem", "Cliente Alterado com Sucesso!");
+	    	AgendarDao dao = new AgendarDao();
+		dao.alterarAgendamento(Agendar);
+		model.addAttribute("mensagem", "Agendamento Alterado com Sucesso!");
 
-		return "forward:listarCliente";
+		return "forward:listarAgendamento";*/
 		
 		
 	}
 	
-}
+
