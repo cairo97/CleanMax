@@ -38,29 +38,46 @@
 		<input type="hidden" name="id" value="${servico.id}" />
 
 		<div class="form-group">
-			<label for="inputNome">Nome:</label> <input type="text" id="inputNome"
-				class="form-control" name="nome" style="width: 200px;"
-				maxlength="100" required="required" value="${servico.nome}" />
+			<label for="inputNome">Nome:</label> <input type="text"
+				id="inputNome" class="form-control" name="nome"
+				style="width: 200px;" maxlength="100" required="required"
+				value="${servico.nome}" />
 		</div>
-     
-     
-        <div class="form-group">
-			<label for="inputTipoVeiculo">Tipo de Veículo:</label> <input type="text" id="inputTipoVeiculo"
-				class="form-control" name="tipoVeiculo" style="width: 200px;"
-				maxlength="100" required="required" value="${servico.tipoVeiculo.descricao}" />
-		</div>
-        <div class="form-group">
-			<label for="inputTipoServico">Tipo de Serviço:</label> <input type="text" id="inputTipoServico"
-				class="form-control" name="tipoServico" style="width: 200px;"
-				maxlength="100" required="required" value="${servico.tipoServico.descricao}" />
-		</div>
-        <div class="form-group">
-			<label for="inputPreco">pŕeço:</label> <input type="text" id="inputPreco"
-				class="form-control" name="preco" style="width: 200px;"
-				maxlength="100" required="required" value="${servico.preco}" />
-		</div>
-        
+
+
 		
+		<div class="form-group">
+				<label for="inputTipoVeiculo">Tipo da Serviço:</label> <select
+					style="width: 300px;" maxlength="100" class="form-control"
+					id="inputTipoVeiculo" name="tipoVeiculo">
+					<option value="selecione">Selecione</option>
+					<c:forEach items="${listarTipoVeiculo}" var="obj">
+						<option value="${obj.id}"<c:if test="${obj.id eq servico.tipoVeiculo.id}">selected="selected"</c:if>>
+						${obj.descricao}</option>
+					</c:forEach>
+				</select>	
+			</div>
+		
+		<div class="form-group">
+				<label for="inputTipoServico">Tipo da Serviço:</label> <select
+					style="width: 300px;" maxlength="100" class="form-control"
+					id="tipoServico" name="tipoServico">
+					<option value="selecione">Selecione</option>
+					<c:forEach items="${listarTipoServico}" var="obj">
+						<option value="${obj.id}"<c:if test="${obj.id eq servico.tipoServico.id}">selected="selected"</c:if>>
+						${obj.descricao}</option>
+					</c:forEach>
+				</select>
+			</div>
+			
+		<div class="form-group">
+			<label for="inputPreco">preço:</label> <input type="text"
+				id="inputPreco" class="form-control" name="preco"
+				style="width: 200px;" maxlength="100" required="required"
+				value="${servico.preco}" />
+		</div>
+
+
 		<br /> <br />
 
 		<p>
@@ -71,6 +88,6 @@
 			<button type="submit" class="btn btn-primary">&nbsp; Alterar
 				&nbsp;</button>
 		</p>
-		</form>
+	</form>
 </body>
 </html>

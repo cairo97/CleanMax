@@ -49,9 +49,17 @@ public class ServicoController {
 
 	@RequestMapping("exibirAlterarServico")
 	public String exibirAlterarServico(Servico servico, Model model) {
+		
+		TipoVeiculoDao dao = new TipoVeiculoDao();
+		List<TipoVeiculo> listarTipoVeiculo = dao.listar();
+		model.addAttribute("listarTipoVeiculo", listarTipoVeiculo);
 
-		ServicoDao dao = new ServicoDao();
-		Servico servicoCompleto = dao.buscarPorId(servico.getId());
+		TipoServicoDao dao1 = new TipoServicoDao();
+		List<TipoServico> listarTipoServico = dao1.listar();
+		model.addAttribute("listarTipoServico", listarTipoServico);
+
+		ServicoDao dao2 = new ServicoDao();
+		Servico servicoCompleto = dao2.buscarPorId(servico.getId());
 		model.addAttribute("servico", servicoCompleto);
 
 		return "servico/alterarServico";

@@ -80,15 +80,20 @@ public class ServicoDao {
 	
 
 	public void alterar(Servico servico) {
+		
+		
+		String sql = "UPDATE servico set nome=?,tipoVeiculo_id=?,tipoServico_id=?,preco=? WHERE id=?";
+		PreparedStatement stmt;
+		
 		try {
-			String sql = "UPDATE servico set (nome=?,tipoVeiculo_id=?,tipoServico_id=?,preco=?)";
-			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
-
+			stmt = connection.prepareStatement(sql);
+            
 			stmt.setString(1, servico.getNome());
-			stmt.setString(2, servico.getNome());
-			stmt.setString(3, servico.getNome());
-			stmt.setString(4, servico.getNome());
-
+			stmt.setInt(2, servico.getTipoVeiculo().getId());
+			stmt.setInt(3, servico.getTipoServico().getId());
+			stmt.setDouble(4, servico.getPreco());
+			stmt.setInt(5, servico.getId());
+			
 			stmt.execute();
 			connection.close();
 
