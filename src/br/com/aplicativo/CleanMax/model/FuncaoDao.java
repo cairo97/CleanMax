@@ -125,6 +125,8 @@ private Connection connection;
 			    String sql = "DELETE FROM funcao WHERE id = ?";
 			    PreparedStatement stmt = connection.prepareStatement(sql);
 			    
+			    stmt.setInt(1, funcao.getId());
+			    
 			    stmt.execute();
 			    stmt.close();
 			    connection.close();

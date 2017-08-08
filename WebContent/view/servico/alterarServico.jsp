@@ -20,7 +20,12 @@
 <title>Alterar Serviço</title>
 </head>
 <body>
-	<c:import url="../Index.jsp" />
+	
+	<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
+					    <a href="servico">Incluir Serviço</a>&nbsp;&nbsp; |&nbsp;
+						<a href="listarServico">Listar servico</a>
+	
+	
 	<div style="text-align: center; color: green;">${mensagem}</div>
 
 	<hr>
