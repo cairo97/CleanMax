@@ -27,12 +27,12 @@
 
 	<center>
 	
-	   <a href="home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	   <a href="home">Home</a>&nbsp;&nbsp; |&nbsp;
                           
                             
-						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp;&nbsp;
-					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;&nbsp;
-						<a href="listarServico">Listar tipo servico</a>
+						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
+					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp; |&nbsp;
+						<a href="listarServico">Listar servico</a>
 		
 
 
