@@ -2,8 +2,11 @@ package br.com.aplicativo.CleanMax.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.aplicativo.CleanMax.model.Servico;
@@ -31,11 +34,15 @@ public class ServicoController {
 	}
 
 	@RequestMapping("incluirServico")
-	public String incluirServico(Servico servico, Model model) {
+	public String incluirServico(@Valid Servico servico,BindingResult result, Model model) {
+		
+		if (result.hasErrors()) {
+			return "forward:servico";
+			}
 
 		ServicoDao dao = new ServicoDao();
 		dao.salvar(servico);
-		model.addAttribute("servico", "Serviço cadastrado realizado com sucesso");
+		model.addAttribute("servicoMensagem", "Serviço cadastrado realizado com sucesso");
 
 		return "forward:servico";
 	}
@@ -70,7 +77,7 @@ public class ServicoController {
 
 		ServicoDao dao = new ServicoDao();
 		dao.alterar(servico);
-		model.addAttribute("servico", "Serviço Alterada com Sucesso!");
+		model.addAttribute("servicoMensagem", "Serviço Alterada com Sucesso!");
 
 		return "forward:listarServico";
 	}
@@ -79,7 +86,7 @@ public class ServicoController {
 	public String removerServico(Servico servico, Model model) {
 		ServicoDao dao = new ServicoDao();
 		dao.remover(servico);
-		model.addAttribute("servico", "Serviço Removida com Sucesso");
+		model.addAttribute("servicoMensagem", "Serviço Removida com Sucesso");
 		return "forward:listarServico";
 	}
 }

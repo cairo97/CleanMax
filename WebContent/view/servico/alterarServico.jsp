@@ -26,7 +26,7 @@
 						<a href="listarServico">Listar servico</a>
 	
 	
-	<div style="text-align: center; color: green;">${mensagem}</div>
+	<div style="text-align: center; color: green;">${servicoMensagem}</div>
 
 	<hr>
 	<h3>Alterar Serviço</h3>

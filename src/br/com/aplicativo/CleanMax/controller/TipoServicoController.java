@@ -1,8 +1,11 @@
 package br.com.aplicativo.CleanMax.controller;
 
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.aplicativo.CleanMax.model.TipoServico;
@@ -18,7 +21,11 @@ public class TipoServicoController {
 	}
 
 	@RequestMapping("incluirTipoServico")
-	public String incluirTipoServico(TipoServico tipoServico, Model model) {
+	public String incluirTipoServico(@Valid TipoServico tipoServico,BindingResult result, Model model) {
+		
+		if (result.hasErrors()) {
+			return "forward:tipoServico";
+			}
 
 		TipoServicoDao dao = new TipoServicoDao();
 		dao.salvar(tipoServico);

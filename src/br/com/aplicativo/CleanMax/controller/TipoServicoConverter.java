@@ -7,9 +7,16 @@ import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 
 
 	public class TipoServicoConverter implements Converter<String, TipoServico> {
+		
+		
 		public TipoServico convert(String id) {
+			
+			if (id != null && !id.equals("")) {
 			TipoServicoDao dao = new TipoServicoDao();
 			return dao.buscarPorId(Integer.valueOf(id));
+			} else {
+				return null;
+			}
 		}
 	}
 
