@@ -9,9 +9,23 @@
 <body>
 
 <a href="cadastro">Incluir Cliente</a> &nbsp;
-<a href="listarCliente">Listar Cliente</a>
 <br/> <br/> <br/>
-
+<a href="logout">Logout</a>
+<p >
+Informe seu login e senha para acessar o sistema.
+</p>
+<div style="color: red;" align="center"> <h3> ${msg} </h3> </div>
+<p>
+<form action="efetuarLogin" method="post">
+Login: <br />
+<input type="text" name="login" required="required" />
+<br /> <br />
+Senha: <br />
+<input type="password" name="senha" required="required" />
+<br /><br />
+<input type="submit" value="Entrar" />
+</form>
+</p>
 
 </body>
 </html>

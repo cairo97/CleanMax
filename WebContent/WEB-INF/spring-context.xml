@@ -40,6 +40,9 @@ class="org.springframework.context.support.ConversionServiceFactoryBean">
 </property>
 </bean>
 
+<mvc:interceptors>
+<bean class="br.com.aplicativo.CleanMax.util.AutorizadorInterceptor" />
+</mvc:interceptors>
 
 </beans>
 

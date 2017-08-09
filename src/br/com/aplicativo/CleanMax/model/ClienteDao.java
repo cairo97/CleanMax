@@ -153,4 +153,22 @@ public class ClienteDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public Cliente buscarCliente(Cliente cliente) {
+		try {
+			Cliente usuarioConsultado = null;
+		PreparedStatement stmt = this.connection.prepareStatement("select * from cliente where nome = ? and senha = ?");
+		stmt.setString(1, cliente.getNome());
+		stmt.setString(2, cliente.getSenha());
+		ResultSet rs = stmt.executeQuery();
+		if (rs.next()) {
+		usuarioConsultado = montarObjeto(rs);
+		}
+		rs.close();
+		stmt.close();
+		return usuarioConsultado;
+		} catch (SQLException e) {
+		throw new RuntimeException(e);
+		}
+		}
 }
