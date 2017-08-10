@@ -15,7 +15,7 @@ CREATE TABLE cliente (
 
 
 
-FUNÇÃO
+FUNï¿½ï¿½O
 
 create table funcao (id int(11) not null auto_increment,descricao varchar(200),primary key (id));
 
@@ -37,3 +37,16 @@ ALTER TABLE servico ADD CONSTRAINT fk_tipoVeiculo FOREIGN KEY
 
 ALTER TABLE servico ADD CONSTRAINT fk_tipoServico FOREIGN KEY
 (tipoServico_id) REFERENCES tipoServico(id);
+
+
+CREATE TABLE lavagem (
+
+id int(11) NOT NULL AUTO_INCREMENT,
+placa varchar(10),
+hora date,
+dataLavagem date,
+statusLav varchar(14),
+PRIMARY KEY (`id`)
+);
+
+

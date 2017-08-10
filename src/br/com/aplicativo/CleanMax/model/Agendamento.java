@@ -8,9 +8,9 @@ public class Agendamento {
 
 	private int id;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
-	private Date dateDis;
-	private TipoVeiculo tipoVeiculo;
-	private TipoServico tipoServico;
+	private Date data;
+	private double hora;
+	
 	
 	public int getId() {
 		return id;
@@ -19,22 +19,10 @@ public class Agendamento {
 		this.id = id;
 	}
 	public Date getDateDis() {
-		return dateDis;
+		return data;
 	}
 	public void setDateDis(Date dateDis) {
-		this.dateDis = dateDis;
-	}
-	public TipoVeiculo getTipoVeiculo() {
-		return tipoVeiculo;
-	}
-	public void setTipoVeiculo(TipoVeiculo tipoVeiculo) {
-		this.tipoVeiculo = tipoVeiculo;
-	}
-	public TipoServico getTipoServico() {
-		return tipoServico;
-	}
-	public void setTipoServico(TipoServico tipoServico) {
-		this.tipoServico = tipoServico;
+		this.data = dateDis;
 	}
 	
 	
