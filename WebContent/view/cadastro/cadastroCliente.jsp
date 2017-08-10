@@ -105,7 +105,6 @@
   <div style="text-align: center; color: green;"> ${cadastrar} </div>
 				
 					<h1>Cadastro de Cliente</h1>
-					
 				
 					
 					<div class="form_settings">

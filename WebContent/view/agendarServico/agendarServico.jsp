@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,19 +14,28 @@
 	content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
 <link rel="stylesheet" type="text/css"
-
 	href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 <script>
-$(function() {
-    $( "#calendario" ).datepicker();
-});
+	$(function() {
+		$("#calendario").datepicker();	
+	});
+</script>
+
+<script type="text/javascript">
+	jQuery(function($) {
+		$("#inputHora").mask("99.99");
+	});
 </script>
 </head>
 
@@ -36,19 +45,20 @@ $(function() {
 			<div id="logo">
 				<div id="logo_text">
 
-			
-						<a href="view/telaInicial/Index.jsp">Clean<span class="logo_colour">Max</span></a>
 
-				
-					<h1>Lava Jato  Clean Max</h1>
+					<a href="view/telaInicial/Index.jsp">Clean<span
+						class="logo_colour">Max</span></a>
+
+
+					<h1>Lava Jato Clean Max</h1>
 				</div>
 			</div>
 			<div id="menubar">
 				<ul id="menu">
 
 					<li><a href="home">Home</a></li>
-					
-					
+
+
 					<li class="selected"><a href="cadastro">Cadastro</a></li>
 					<li><a href="#">Contato</a></li>
 				</ul>
@@ -60,7 +70,7 @@ $(function() {
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
-						 
+
 						<h3>Últimas Notícias</h3>
 						<h4>Novo WebSite</h4>
 						<h5>27 de Junho de 2017</h5>
@@ -79,7 +89,7 @@ $(function() {
 							<li><a href="veiculo">Incluir tipo de veículo</a></li>
 							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
 							<li><a href="funcao">Incluir Função</a></li>
-							
+
 						</ul>
 					</div>
 					<div class="sidebar_base"></div>
@@ -101,57 +111,64 @@ $(function() {
 				</div>
 			</div>
 			<div id="content">
-				 
-  <div style="text-align: center; color: green;"> ${cadastrar} </div>
-				
-					<h1>Agendamento</h1>
-					
-					
-					
-					
-					<c:import url="../Index.jsp"/>
-					
-					
-					
-					
-					<div class="form_settings">
-					<form action="incluirAgendamento" method="post" enctype="multipart/form-data">
-									
-						<p>
-							 <p>Data do Agendamento: <input type="text" id="calendario" /></p>
-							 
-							 			
-							</p>
-								
 
-						<a href="view/telaInicial/Index.html" class="btn btn-danger" role="button">Cancelar</a>
-						&nbsp;
+				<div style="text-align: center; color: green;">${cadastrar}</div>
+
+				<h1>Agendamento</h1>
+
+
+
+
+				<div class="form_settings">
+					<form action="incluirAgendamento" method="post"
+						enctype="multipart/form-data">
+
+						<p>
+						<p>
+							Data do Agendamento: <input type="text" id="calendario"
+								name="data" />
+						</p>
+
+						</p>
+
+						<p>
+						<p>
+							Hora do Agendamento: <input type="text" style="width: 100px;"
+								id="inputHora" name="hora" />
+						</p>
+
+						</p>
+
+
+						<a href="view/telaInicial/Index.html" class="btn btn-danger"
+							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
 						&nbsp;
 						<button type="submit" class="btn btn-primary">&nbsp;
-							Salvar &nbsp;</button>
-              </form>
-					</div>
+							Agendar Serviço &nbsp;</button>
+					</form>
+				</div>
 			</div>
 		</div>
-	
 
 
-	
-	<div id="content_footer"></div>
-	<div id="footer">
-	
-		<p>
-			<a href="view/telaInicial/Index.html">Home</a> | <a href="examples.html">Exemplos</a>
-			| <a href="page.html">Pagina</a> | <a href="cadastroCliente.html">Cadastro</a>
-			| <a href="contact.html">Contato</a>
-		</p>
-		<p>
-			Copyright &copy; Clean Max | <a
-				href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-				href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-	</div>
+
+
+		<div id="content_footer"></div>
+		<div id="footer">
+
+			<p>
+				<a href="view/telaInicial/Index.html">Home</a> | <a
+					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
+				| <a href="cadastroCliente.html">Cadastro</a> | <a
+					href="contact.html">Contato</a>
+			</p>
+			<p>
+				Copyright &copy; Clean Max | <a
+					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
+					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+		</div>
 	</div>
 </body>
 </html>

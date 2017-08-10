@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<c:import url="../Index.jsp"/>
+
 
 <div style="text-align: center; color: red;"> ${remover} </div>
 
