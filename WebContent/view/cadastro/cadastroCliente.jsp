@@ -106,12 +106,11 @@
   <div style="text-align: center; color: green;"> ${cadastrar} </div>
 				
 					<h1>Cadastro de Cliente</h1>
-<<<<<<< HEAD
+
 					
 				<a href="listarCliente">Listar cliente</a>
 				
-=======
->>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
+
 				
 					
 					<div class="form_settings">
