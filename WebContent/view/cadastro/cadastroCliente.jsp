@@ -106,13 +106,7 @@
 				
 					<h1>Cadastro de Cliente</h1>
 					
-					
-					
-					
-					<c:import url="../Index.jsp"/>
-					
-					
-					
+				
 					
 					<div class="form_settings">
 					<form action="incluirCliente" method="post" enctype="multipart/form-data">

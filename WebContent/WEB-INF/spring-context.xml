@@ -36,13 +36,11 @@ class="org.springframework.context.support.ConversionServiceFactoryBean">
 <list>
 <bean class="br.com.aplicativo.CleanMax.controller.TipoServicoConverter" />
 <bean class="br.com.aplicativo.CleanMax.controller.TipoVeiculoConverter" />
+<bean class="br.com.aplicativo.CleanMax.controller.FuncaoConverter" />
 </list>
 </property>
 </bean>
 
-<mvc:interceptors>
-<bean class="br.com.aplicativo.CleanMax.util.AutorizadorInterceptor" />
-</mvc:interceptors>
 
 </beans>
 

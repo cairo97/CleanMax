@@ -1,9 +1,15 @@
 package br.com.aplicativo.CleanMax.model;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class Funcao {
 
 	private Integer id;
+	
+	@NotEmpty(message="A função deve ser preenchida")
+	@Size(min = 2, max = 20,message= "O tamanho deve ser entre 2 e 20")
 	private String descricao;
 	
 	public Integer getId() {
