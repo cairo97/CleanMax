@@ -25,6 +25,7 @@
                           
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
+						<a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp; 
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp; |&nbsp;
 						<a href="listarTipoServico">Listar tipo servico</a>
                

@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -106,10 +107,16 @@
 				
 					<h1>Cadastro de Cliente</h1>
 					
+				<a href="listarCliente">Listar cliente</a>
+				
 				
 					
 					<div class="form_settings">
 					<form action="incluirCliente" method="post" enctype="multipart/form-data">
+					
+					<form:errors path="cadastroCliente.nome" cssStyle="color:red" />
+					<form:errors path="cadastroCliente.senha" cssStyle="color:red" />
+					
 						<p>
 							<span>Nome</span><input class="contact" type="text" name="nome"
 								value="" required="required" />

@@ -3,8 +3,11 @@ package br.com.aplicativo.CleanMax.controller;
 
 
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -21,8 +24,12 @@ public class ClienteController {
 	}
 
 	@RequestMapping("incluirCliente")
-	public String incluirCliente(Cliente cliente, Model model) {
+	public String incluirCliente(@Valid Cliente cliente,BindingResult result,  Model model) {
 
+		if (result.hasErrors()) {
+			return "forward:cadastro";
+			}
+		
 		ClienteDao dao = new ClienteDao();
 		dao.salvar(cliente);
 		model.addAttribute("cadastrar", "Cadastro realizado com sucesso");

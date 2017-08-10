@@ -20,7 +20,7 @@
 <title>Alterar Tipo de Serviço</title>
 </head>
 <body>
-	<c:import url="../Index.jsp" />
+
 	<div style="text-align: center; color: green;">${mensagem}</div>
 
 	<hr>

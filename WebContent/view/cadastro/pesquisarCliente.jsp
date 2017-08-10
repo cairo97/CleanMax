@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<c:import url="../Index.jsp"/>
+<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; 
 
 <div style="text-align: center; color: red;"> ${remover} </div>
 
