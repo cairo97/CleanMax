@@ -22,11 +22,9 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; 
-=======
 
->>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
+<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; 
+
 
 <div style="text-align: center; color: red;"> ${remover} </div>
 

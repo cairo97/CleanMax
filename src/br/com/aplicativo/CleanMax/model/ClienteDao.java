@@ -85,7 +85,7 @@ public class ClienteDao {
 
 	public void alterarCliente(Cliente cliente) {
 		try {
-			String sql = "UPDATE cliente set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=?)";
+			String sql = "UPDATE cliente set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=? where id=?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
 			stmt.setString(1, cliente.getNome());
@@ -95,6 +95,7 @@ public class ClienteDao {
 			stmt.setString(5, cliente.getCelular());
 			stmt.setString(6, cliente.getTelefone());
 			stmt.setString(7, cliente.getCpf());
+			stmt.setInt(8, cliente.getId());
 
 			stmt.execute();
 			connection.close();

@@ -20,7 +20,7 @@
 <title>Alterar Cliente</title>
 </head>
 <body>
-	<c:import url="../Index.jsp" />
+	
 	<div style="text-align: center; color: green;">${mensagem}</div>
 
 	<hr>
@@ -32,7 +32,7 @@
 
 	</table>
 
-	<form action="incluirCliente" method="post" enctype="multipart/form-data">
+	<form action="alterarCliente" method="post" enctype="multipart/form-data">
 
 		<input type="hidden" name="id" value="${cadastro.id}" />
 
