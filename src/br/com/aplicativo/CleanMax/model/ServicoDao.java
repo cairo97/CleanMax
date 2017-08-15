@@ -147,6 +147,7 @@ public class ServicoDao {
 			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico WHERE tipoVeiculo_id = ? and tipoServico_id = ?");
 			stmt.setInt(1, tipoVeiculo);
 			stmt.setInt(2, tipoServico);
+			
 			ResultSet rs = stmt.executeQuery();
 
 			Servico servico = new Servico();
