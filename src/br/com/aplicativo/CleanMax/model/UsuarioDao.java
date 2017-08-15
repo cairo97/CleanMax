@@ -32,8 +32,8 @@ public class UsuarioDao {
 	private Usuario montarObjeto(ResultSet rs) throws SQLException {
 
 		Usuario usuario = new Usuario();
-		Usuario.setLogin(rs.getString("login"));
-		Usuario.setSenha(rs.getString("senha"));
+	//	Usuario.setLogin(rs.getString("login"));
+	//	Usuario.setSenha(rs.getString("senha"));
 
 		return usuario;
 	    }
