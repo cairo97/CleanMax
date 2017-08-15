@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.aplicativo.CleanMax.model.Servico;
+import br.com.aplicativo.CleanMax.model.ServicoDao;
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 import br.com.aplicativo.CleanMax.model.TipoVeiculo;
@@ -25,6 +27,18 @@ public class AgendarServicoController {
 		List<TipoServico> listarTipoServico = dao1.listar();
 		model.addAttribute("listarTipoServico", listarTipoServico);
 		
+		return "agendarServico/agendarServico";
+	}
+	
+	
+	@RequestMapping("exibirPreco")
+	public String exibirPreco(Servico tipoVeiculo,Servico tipoServico,Model model) {
+
+		ServicoDao dao = new ServicoDao();
+		Servico ServicoCompleto = dao.buscarPorServico(0, 0);
+
+		model.addAttribute("preco", ServicoCompleto);
+
 		return "agendarServico/agendarServico";
 	}
 

@@ -26,10 +26,21 @@
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 	$(function() {
 		$("#calendario").datepicker();
 	});
+	
+	$( "select" )
+	  .change(function () {
+	    var str = "";
+	    $( "select option:selected" ).each(function() {
+	      str += $( this ).text() + " ";
+	    });
+	    $( "#inputPreço" ).text( str );
+	  })
+	  .change();
 </script>
 
 <script type="text/javascript">
@@ -130,6 +141,7 @@
 						</p>
 
 						</p>
+						
 						<div class="form-group">
 							<label for="veiculo">Tipo da Veículo:</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
@@ -158,6 +170,7 @@
 							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
 						
 						<p>
+					
 							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
 						</p>

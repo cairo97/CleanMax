@@ -140,6 +140,33 @@ public class ServicoDao {
 
 	}
 
+	public Servico buscarPorServico(int tipoVeiculo,int tipoServico) {
+
+		try {
+
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico WHERE tipoVeiculo_id = ? and tipoServico_id = ?");
+			stmt.setInt(1, tipoVeiculo);
+			stmt.setInt(2, tipoServico);
+			ResultSet rs = stmt.executeQuery();
+
+			Servico servico = new Servico();
+
+			while (rs.next()) {
+				  				
+	                servico.setPreco(rs.getDouble("preco"));
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return servico;
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
 	public void remover(Servico servico) {
 
 		try {
