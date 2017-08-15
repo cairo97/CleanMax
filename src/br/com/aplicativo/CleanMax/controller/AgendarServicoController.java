@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import br.com.aplicativo.CleanMax.model.TipoServico;
 import br.com.aplicativo.CleanMax.model.TipoServicoDao;
 import br.com.aplicativo.CleanMax.model.TipoVeiculo;
@@ -27,6 +28,9 @@ public class AgendarServicoController {
 		
 		return "agendarServico/agendarServico";
 	}
+	
+	
+
 
 /*	@RequestMapping("incluirAgenda")
 //	public String incluirAgenda(Agendar agendar, Model model) {

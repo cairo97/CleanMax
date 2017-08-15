@@ -34,10 +34,13 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="home">Home</a></li>
+				<li><a href="home">Home</a></li>
+
+
+					<li><a href="cadastro">Cadastro</a></li>
 					
+					<li><a href="agendar">Agendar Serviço</a></li>
 					
-					<li class="selected"><a href="cadastro">Cadastro</a></li>
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>

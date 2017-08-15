@@ -38,7 +38,15 @@
 				<ul id="menu">
 
 					<li class="selected"><a href="home">Home</a></li>
+<<<<<<< HEAD
 					<li><a href="cadastro">Cadastro</a></li>
+=======
+									<li><a href="cadastro">Cadastro</a>
+									
+									</li>
+									
+									<li><a href="agendar">Agendar Serviço</a></li>
+>>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>

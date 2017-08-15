@@ -59,7 +59,10 @@
 					<li><a href="home">Home</a></li>
 
 
-					<li class="selected"><a href="cadastro">Cadastro</a></li>
+					<li><a href="cadastro">Cadastro</a></li>
+					
+					<li><a href="agendar">Agendar Serviço</a></li>
+					
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
@@ -129,7 +132,9 @@
 							<input type="date" id="calendario" name="data" />
 						</p>
 
-						</p>
+						<form action="valor" method="post"
+						enctype="multipart/form-data">
+					
 						<div class="form-group">
 							<label for="veiculo">Tipo da Veículo:</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
@@ -153,9 +158,15 @@
 							</select>
 						</div>
 						
+						<button style="background:#18B500" type="submit" class="btn btn-primary">&nbsp;
+							Valor &nbsp;</button>
+							
 						<p>
 						<label>Preço:</label> <br>
-							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
+							<input style="background:#8FFB7E" type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
+						</p>
+						
+					</form>
 						
 						<p>
 							<label>Hora do Agendamento:</label> <br>
