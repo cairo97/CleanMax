@@ -152,7 +152,11 @@
 								</c:forEach>
 							</select>
 						</div>
+						
 						<p>
+						<label>Preço:</label> <br>
+							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
+						
 						<p>
 							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
