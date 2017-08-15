@@ -94,34 +94,7 @@
 
 
 				<center>
-					<form action="efetuarLogin" method="post"
-						enctype="multipart/form-data">
-
-						<p>Informe seu login e senha para acessar o sistema.</p>
-						<div style="color: red;" align="center">
-							<h3>${msg}</h3>
-						</div>
-						<p>
-						<h1>Login</h1>
-						<p>
-						<div class="form-group">
-							<label for="inputNome">Usuário:</label> <input type="text"
-								id="inputNome" class="form-control" name="login"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-						<p></p>
-						<p>
-						<div class="form-group">
-							<label for="inputSenha">Senha:</label> <input type="text"
-								id="inputSenha" class="form-control" name="senha"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-
-						</p>
-
-
-						<button type="submit" class="btn btn-primary">&nbsp;
-							Entrar &nbsp;</button>
+					<p>Bem vindo, ${usuarioLogado.nome}</p>
 				</center>
 
 
