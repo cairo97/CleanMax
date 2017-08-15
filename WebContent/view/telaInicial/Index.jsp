@@ -46,6 +46,8 @@
 									<li><a href="cadastro">Cadastro</a>
 									
 									</li>
+									
+									<li><a href="agendar">Agendar Serviço</a></li>
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
