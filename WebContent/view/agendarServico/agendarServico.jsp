@@ -32,15 +32,15 @@
 		$("#calendario").datepicker();
 	});
 	
-	$( "select" )
-	  .change(function () {
-	    var str = "";
-	    $( "select option:selected" ).each(function() {
-	      str += $( this ).text() + " ";
+
+	
+	(document).ready(function(){
+	    $("input").change(function(){
+	    	$( "#inputPreço" ).text( str );
 	    });
-	    $( "#inputPreço" ).text( str );
-	  })
-	  .change();
+	});
+	
+	
 </script>
 
 <script type="text/javascript">
@@ -142,6 +142,8 @@
 
 						</p>
 						
+						<form action="incluirAgendamento" method="post"
+						enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="veiculo">Tipo da Veículo:</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
@@ -170,7 +172,7 @@
 							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
 						
 						<p>
-					
+					</form>
 							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
 						</p>

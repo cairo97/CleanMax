@@ -32,12 +32,12 @@ public class AgendarServicoController {
 	
 	
 	@RequestMapping("exibirPreco")
-	public String exibirPreco(Servico tipoVeiculo,Servico tipoServico,Model model) {
+	public String exibirPreco(TipoVeiculo tipoVeiculo,TipoServico tipoServico,Model model) {
 
 		ServicoDao dao = new ServicoDao();
-		Servico ServicoCompleto = dao.buscarPorServico(0, 0);
+		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo.getId(), tipoServico.getId());
 
-		model.addAttribute("preco", ServicoCompleto);
+		model.addAttribute("preco", ServicoCompleto.getPreco());
 
 		return "agendarServico/agendarServico";
 	}
