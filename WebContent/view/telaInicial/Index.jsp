@@ -112,7 +112,7 @@
 						<p></p>
 						<p>
 						<div class="form-group">
-							<label for="inputSenha">Senha:</label> <input type="text"
+							<label for="inputSenha">Senha:</label> <input type="password"
 								id="inputSenha" class="form-control" name="senha"
 								style="width: 500px;" maxlength="100" required="required" />
 						</div>

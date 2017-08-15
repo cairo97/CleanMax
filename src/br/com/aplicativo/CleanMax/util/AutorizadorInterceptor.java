@@ -14,7 +14,7 @@ Exception {
 	
 	String uri = request.getRequestURI();
 	if (uri.contains("bootstrap") || uri.contains("css") ||
-	uri.contains("img") || uri.contains("js") || uri.endsWith("CleanMax/")
+	uri.contains("img") || uri.contains("js") || uri.endsWith("CleanMax/home")
 	|| uri.endsWith("efetuarLogin")) {
 	return true;
 	}
@@ -22,7 +22,7 @@ Exception {
 	if (request.getSession().getAttribute("usuarioLogado") != null) {
 		return true;
 		}
-response.sendRedirect("/CleanMax");
+response.sendRedirect("/CleanMax/home");
 return false;
 }
 }	

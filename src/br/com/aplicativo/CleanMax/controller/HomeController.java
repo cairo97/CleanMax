@@ -32,10 +32,10 @@ public class HomeController {
    Usuario usuarioLogado = dao.buscarUsuario(usuario);
    if (usuarioLogado != null) {
    session.setAttribute("usuarioLogado", usuarioLogado);
-   return "principal/home";
+   return "telaInicial/home";
    }
    model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
-   return "index";
+   return "telaInicial/index";
    }
    
 }
