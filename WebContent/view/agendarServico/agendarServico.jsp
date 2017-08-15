@@ -125,8 +125,8 @@
 
 						<p>
 						<p>
-							<label>Data do Agendamento: </label>
-							<input type="text" id="calendario" name="data" />
+							<label>Data do Agendamento: </label><br>
+							<input type="date" id="calendario" name="data" />
 						</p>
 
 						</p>
@@ -154,7 +154,7 @@
 						</div>
 						<p>
 						<p>
-							<label>Hora do Agendamento:</label> 
+							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
 						</p>
 
