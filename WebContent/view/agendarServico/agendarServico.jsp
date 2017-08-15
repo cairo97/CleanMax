@@ -28,7 +28,7 @@
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 <script>
 	$(function() {
-		$("#calendario").datepicker();	
+		$("#calendario").datepicker();
 	});
 </script>
 
@@ -125,19 +125,40 @@
 
 						<p>
 						<p>
-							Data do Agendamento: <input type="text" id="calendario"
-								name="data" />
+							<label>Data do Agendamento: </label>
+							<input type="text" id="calendario" name="data" />
 						</p>
 
 						</p>
+						<div class="form-group">
+							<label for="veiculo">Tipo da Veículo:</label> <select
+								style="width: 300px;" maxlength="100" class="form-control"
+								id="tipoVeiculo" name="tipoVeiculo">
+								<option value="">Selecione</option>
+								<c:forEach items="${listarTipoVeiculo}" var="obj">
+									<option value="${obj.id}">${obj.descricao}</option>
+								</c:forEach>
 
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="tipoServico">Tipo da Serviço:</label> <select
+								style="width: 300px;" maxlength="100" class="form-control"
+								id="tipoServico" name="tipoServico">
+								<option value="">Selecione</option>
+								<c:forEach items="${listarTipoServico}" var="obj">
+									<option value="${obj.id}">${obj.descricao}</option>
+								</c:forEach>
+							</select>
+						</div>
 						<p>
 						<p>
-							Hora do Agendamento: <input type="text" style="width: 100px;"
-								id="inputHora" name="hora" />
+							<label>Hora do Agendamento:</label> 
+							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
 						</p>
 
-						</p>
+						
 
 
 						<a href="view/telaInicial/Index.html" class="btn btn-danger"

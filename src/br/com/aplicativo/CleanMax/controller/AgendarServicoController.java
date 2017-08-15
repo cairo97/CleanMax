@@ -1,18 +1,30 @@
 package br.com.aplicativo.CleanMax.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.aplicativo.CleanMax.model.Cliente;
-import br.com.aplicativo.CleanMax.model.ClienteDao;
+import br.com.aplicativo.CleanMax.model.TipoServico;
+import br.com.aplicativo.CleanMax.model.TipoServicoDao;
+import br.com.aplicativo.CleanMax.model.TipoVeiculo;
+import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 
 @Controller
 public class AgendarServicoController {
 
 	@RequestMapping("agendar")
-	public String Agendar() {
+	public String Agendar(Model model) {
+         
+		TipoVeiculoDao dao = new TipoVeiculoDao();
+		List<TipoVeiculo> listarTipoVeiculo = dao.listar();
+		model.addAttribute("listarTipoVeiculo", listarTipoVeiculo);
 
+		TipoServicoDao dao1 = new TipoServicoDao();
+		List<TipoServico> listarTipoServico = dao1.listar();
+		model.addAttribute("listarTipoServico", listarTipoServico);
+		
 		return "agendarServico/agendarServico";
 	}
 
