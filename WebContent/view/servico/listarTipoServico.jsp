@@ -107,7 +107,7 @@
 			
 		</tr>
 		
-		<c:forEach var="servico" items="${listarTipoServico}">
+		<c:forEach var="servico" items="${listarServico}">
 			<tr>
 				<td>${servico.descricao}</td>
 					<td>

@@ -142,8 +142,9 @@
 
 						</p>
 						
-						<form action="incluirAgendamento" method="post"
+						<form action="exibirPreco" method="post"
 						enctype="multipart/form-data">
+						
 						<div class="form-group">
 							<label for="veiculo">Tipo da Veículo:</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
@@ -167,15 +168,15 @@
 							</select>
 						</div>
 						
-						<p>
+						<c:forEach var="servic" items="${listarTipoServico}">
 						<label>Preço:</label> <br>
 							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
-						
-						<p>
+						<a href="exibirPreco?id=${servic.id}">Valor</a>
+							</c:forEach>
 					</form>
 							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
-						</p>
+						
 
 						
 
