@@ -38,15 +38,7 @@
 				<ul id="menu">
 
 					<li class="selected"><a href="home">Home</a></li>
-<<<<<<< HEAD
 					<li><a href="cadastro">Cadastro</a></li>
-=======
-									<li><a href="cadastro">Cadastro</a>
-									
-									</li>
-									
-									<li><a href="agendar">Agendar Serviço</a></li>
->>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
@@ -102,34 +94,7 @@
 
 
 				<center>
-					<form action="efetuarLogin" method="post"
-						enctype="multipart/form-data">
-
-						<p>Informe seu login e senha para acessar o sistema.</p>
-						<div style="color: red;" align="center">
-							<h3>${msg}</h3>
-						</div>
-						<p>
-						<h1>Login</h1>
-						<p>
-						<div class="form-group">
-							<label for="inputNome">Usuário:</label> <input type="text"
-								id="inputNome" class="form-control" name="login"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-						<p></p>
-						<p>
-						<div class="form-group">
-							<label for="inputSenha">Senha:</label> <input type="password"
-								id="inputSenha" class="form-control" name="senha"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-
-						</p>
-
-
-						<button type="submit" class="btn btn-primary">&nbsp;
-							Entrar &nbsp;</button>
+					<p>Bem vindo, ${usuarioLogado.nome}</p>
 				</center>
 
 
