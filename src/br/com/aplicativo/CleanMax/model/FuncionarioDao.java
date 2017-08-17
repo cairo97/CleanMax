@@ -9,11 +9,11 @@ import java.util.List;
 
 import br.com.aplicativo.CleanMax.util.ConnectionFactory;
 
-public class ClienteDao {
-
+public class FuncionarioDao {
+	
 	private Connection connection;
 
-	public ClienteDao() {
+	public FuncionarioDao() {
 		try {
 			this.connection = new ConnectionFactory().getConnection();
 		} catch (SQLException e) {
@@ -21,25 +21,25 @@ public class ClienteDao {
 		}
 	}
 
-	public void salvar(Cliente cliente) {
+	public void salvar(Funcionario funcionario) {
 		try {
 
-			String sql = "INSERT INTO cliente (nome,senha,email,dataNascimento,celular,telefone,cpf) VALUES (?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO funcionario (nome,senha,email,dataNascimento,celular,telefone,cpf,gestor) VALUES (?,?,?,?,?,?,?,?)";
 
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setString(1, cliente.getNome());
-			stmt.setString(2, cliente.getSenha());
-			stmt.setString(3, cliente.getEmail());
-			if (cliente.getDataNascimento() != null) {
-				stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
+			stmt.setString(1, funcionario.getNome());
+			stmt.setString(2, funcionario.getSenha());
+			stmt.setString(3, funcionario.getEmail());
+			if (funcionario.getDataNascimento() != null) {
+				stmt.setDate(4, new java.sql.Date(funcionario.getDataNascimento().getTime()));
 			} else {
 				stmt.setDate(4, null);
 			}
-
-			stmt.setString(5, cliente.getCelular());
-			stmt.setString(6, cliente.getTelefone());
-			stmt.setString(7, cliente.getCpf());
+			stmt.setString(5, funcionario.getCelular());
+			stmt.setString(6, funcionario.getTelefone());
+			stmt.setString(7, funcionario.getCpf());
+			stmt.setBoolean(8, funcionario.isGestor());
 
 			stmt.execute();
 			connection.close();
@@ -49,10 +49,10 @@ public class ClienteDao {
 		}
 	}
 
-	public List<Cliente> listar() {
+	public List<Funcionario> listar() {
 
 		try {
-			List<Cliente> listaCliente = new ArrayList<Cliente>();
+			List<Funcionario> listaCliente = new ArrayList<Cliente>();
 			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM cliente ORDER BY nome");
 
 			ResultSet rs = stmt.executeQuery();

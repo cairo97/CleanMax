@@ -38,15 +38,14 @@
 				<ul id="menu">
 
 					<li class="selected"><a href="home">Home</a></li>
-<<<<<<< HEAD
+
 					<li><a href="cadastro">Cadastro</a></li>
-=======
-									<li><a href="cadastro">Cadastro</a>
+						<li><a href="cadastro">Cadastro</a>
 									
 									</li>
 									
 									<li><a href="agendar">Agendar Serviço</a></li>
->>>>>>> branch 'master' of https://github.com/cairo97/CleanMax.git
+
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
@@ -113,8 +112,8 @@
 						<h1>Login</h1>
 						<p>
 						<div class="form-group">
-							<label for="inputNome">Usuário:</label> <input type="text"
-								id="inputNome" class="form-control" name="login"
+							<label for="inputEmail">E-mail:</label> <input type="text"
+								id="inputEmail" class="form-control" name="email"
 								style="width: 500px;" maxlength="100" required="required" />
 						</div>
 						<p></p>
@@ -133,11 +132,11 @@
 				</center>
 
 
-
+</form>
 
 			</div>
 		</div>
-		</form>
+		
 		<div id="content_footer"></div>
 		<div id="footer">
 			<p>

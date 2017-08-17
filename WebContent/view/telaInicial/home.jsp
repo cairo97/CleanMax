@@ -94,7 +94,7 @@
 
 
 				<center>
-					<p>Bem vindo, ${usuarioLogado.nome}</p>
+					<p>Bem vindo, ${clienteLogado.nome}</p>
 				</center>
 
 

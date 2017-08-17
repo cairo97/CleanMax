@@ -3,6 +3,7 @@ package br.com.aplicativo.CleanMax.controller;
 
 
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -76,6 +77,29 @@ public class ClienteController {
 		
 	}
 
-	  
+	    @RequestMapping("/login")
+		public String LoginCliente() {
+			
+			return "login/login";
+	}
+
+	   @RequestMapping("/home")
+	   public String TelaInicial() {
+		
+		return "telaInicial/Index";
+	}
+	   
+	   @RequestMapping("efetuarLogin")
+	   public String efetuarLogin(Cliente cliente, HttpSession session, Model
+	   model) {
+		   ClienteDao dao = new ClienteDao();
+		   Cliente clienteLogado = dao.buscarCliente(cliente);
+	   if (clienteLogado != null) {
+	   session.setAttribute("clienteLogado", clienteLogado);
+	   return "telaInicial/home";
+	   }
+	   model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+	   return "telaInicial/index";
+	   }  
 	    
 }

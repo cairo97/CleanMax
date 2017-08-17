@@ -19,7 +19,7 @@ Exception {
 	return true;
 	}
 	
-	if (request.getSession().getAttribute("usuarioLogado") != null) {
+	if (request.getSession().getAttribute("clienteLogado") != null) {
 		return true;
 		}
 response.sendRedirect("/CleanMax/home");
