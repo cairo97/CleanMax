@@ -19,6 +19,14 @@
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
+<script type="text/javascript">
+	jQuery(function($) {
+		$("#inputDataNascimento").mask("99/99/9999");
+		$("#inputCpf").mask("999.999.999-99");
+		$("#inputCelular").mask("(99)9999-9999");
+		$("#inputTelefone").mask("(99) 9999-9999");
+	});
+</script>
 <title>Alterar Cliente</title>
 </head>
 <body>

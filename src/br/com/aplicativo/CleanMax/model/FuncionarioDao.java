@@ -52,39 +52,40 @@ public class FuncionarioDao {
 	public List<Funcionario> listar() {
 
 		try {
-			List<Funcionario> listaCliente = new ArrayList<Cliente>();
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM cliente ORDER BY nome");
+			List<Funcionario> listaFuncionario = new ArrayList<Funcionario>();
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM funcionario ORDER BY nome");
 
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
-				listaCliente.add(montarObjeto(rs));
+				listaFuncionario.add(montarObjeto(rs));
 			}
 
 			rs.close();
 			stmt.close();
 			connection.close();
 
-			return listaCliente;
+			return listaFuncionario;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	public void alterarCliente(Cliente cliente) {
+	public void alterarFuncionario(Funcionario funcionario) {
 		try {
-			String sql = "UPDATE cliente set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=? where id=?)";
+			String sql = "UPDATE funcionario set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=?, gestor=? where id=?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setString(1, cliente.getNome());
-			stmt.setString(2, cliente.getSenha());
-			stmt.setString(3, cliente.getEmail());
-			stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
-			stmt.setString(5, cliente.getCelular());
-			stmt.setString(6, cliente.getTelefone());
-			stmt.setString(7, cliente.getCpf());
-			stmt.setInt(8, cliente.getId());
+			stmt.setString(1, funcionario.getNome());
+			stmt.setString(2, funcionario.getSenha());
+			stmt.setString(3, funcionario.getEmail());
+			stmt.setDate(4, new java.sql.Date(funcionario.getDataNascimento().getTime()));
+			stmt.setString(5, funcionario.getCelular());
+			stmt.setString(6, funcionario.getTelefone());
+			stmt.setString(7, funcionario.getCpf());
+			stmt.setInt(8, funcionario.getId());
+			stmt.setBoolean(9, funcionario.isGestor());
 
 			stmt.execute();
 			connection.close();
@@ -94,33 +95,35 @@ public class FuncionarioDao {
 		}
 	}
 
-	public Cliente buscarPorId(int id) {
+	public Funcionario buscarPorId(int id) {
 
 		try {
 
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM cliente WHERE id = ?");
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM funcionario WHERE id = ?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
-			Cliente cliente = new Cliente();
+			Funcionario funcionario = new Funcionario();
 
 			while (rs.next()) {
 
-				cliente.setId(rs.getInt("id"));
-				cliente.setNome(rs.getString("nome"));
-				cliente.setSenha(rs.getString("senha"));
-				cliente.setEmail(rs.getString("email"));
-				cliente.setDataNascimento(rs.getDate("dataNascimento"));
-				cliente.setCelular(rs.getString("celular"));
-				cliente.setTelefone(rs.getString("telefone"));
-				cliente.setCpf(rs.getString("cpf"));
+				funcionario.setId(rs.getInt("id"));
+				funcionario.setNome(rs.getString("nome"));
+				funcionario.setSenha(rs.getString("senha"));
+				funcionario.setEmail(rs.getString("email"));
+				funcionario.setDataNascimento(rs.getDate("dataNascimento"));
+				funcionario.setCelular(rs.getString("celular"));
+				funcionario.setTelefone(rs.getString("telefone"));
+				funcionario.setCpf(rs.getString("cpf"));
+				funcionario.setGestor(rs.getBoolean("gestor"));
+				
 			}
 
 			rs.close();
 			stmt.close();
 			connection.close();
 
-			return cliente;
+			return funcionario;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -128,13 +131,13 @@ public class FuncionarioDao {
 
 	}
 
-	public void remover(Cliente cliente) {
+	public void remover(Funcionario funcionario) {
 
 		try {
-			String sql = "DELETE FROM cliente WHERE id = ?";
+			String sql = "DELETE FROM funcionario WHERE id = ?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
-			stmt.setLong(1, cliente.getId());
+			stmt.setLong(1, funcionario.getId());
 
 			stmt.execute();
 			stmt.close();
@@ -144,42 +147,43 @@ public class FuncionarioDao {
 		}
 	}
 	
-	private Cliente montarObjeto(ResultSet rs) throws SQLException {
+	private Funcionario montarObjeto(ResultSet rs) throws SQLException {
 
-		Cliente clienteConsultado = new Cliente();
+		Funcionario funcionarioConsultado = new Funcionario();
 		
-		clienteConsultado.setId(rs.getInt("id"));
-		clienteConsultado.setNome(rs.getString("nome"));
-		clienteConsultado.setSenha(rs.getString("senha"));
-		clienteConsultado.setEmail(rs.getString("email"));	
-		clienteConsultado.setDataNascimento(rs.getDate("dataNascimento"));
-		clienteConsultado.setCelular(rs.getString("celular"));
-		clienteConsultado.setTelefone(rs.getString("telefone"));
-		clienteConsultado.setCpf(rs.getString("cpf"));
+		funcionarioConsultado.setId(rs.getInt("id"));
+		funcionarioConsultado.setNome(rs.getString("nome"));
+		funcionarioConsultado.setSenha(rs.getString("senha"));
+		funcionarioConsultado.setEmail(rs.getString("email"));	
+		funcionarioConsultado.setDataNascimento(rs.getDate("dataNascimento"));
+		funcionarioConsultado.setCelular(rs.getString("celular"));
+		funcionarioConsultado.setTelefone(rs.getString("telefone"));
+		funcionarioConsultado.setCpf(rs.getString("cpf"));
+		funcionarioConsultado.setGestor(rs.getBoolean("gestor"));
 		
 		
-		return clienteConsultado;
+		return funcionarioConsultado;
 	}
 
-	public Cliente buscarCliente(Cliente cliente) {
+	public Funcionario buscarFuncionario(Funcionario funcionario) {
 		try {
-			Cliente clienteConsultado = null;
+			Funcionario funcionarioConsultado = null;
 			PreparedStatement stmt = this.connection
-					.prepareStatement("select * from cliente where email = ? and senha = ?");
+					.prepareStatement("select * from funcionario where email = ? and senha = ?");
 
 			
-			stmt.setString(2, cliente.getSenha());
-			stmt.setString(1, cliente.getEmail());
+			stmt.setString(2, funcionario.getSenha());
+			stmt.setString(1, funcionario.getEmail());
 			
 			
 			
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) {
-				clienteConsultado = montarObjeto(rs);
+				funcionarioConsultado = montarObjeto(rs);
 			}
 			rs.close();
 			stmt.close();
-			return clienteConsultado;
+			return funcionarioConsultado;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
