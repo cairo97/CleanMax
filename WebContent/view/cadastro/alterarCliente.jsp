@@ -36,13 +36,8 @@
 	<hr>
 	<h3>Alterar Cliente</h3>
 	<hr>
-	<table>
-		<jsp:useBean id="dao"
-			class="br.com.aplicativo.CleanMax.model.ClienteDao" />
 
-	</table>
-
-	<form action="alterarCliente" method="post" enctype="multipart/form-data">
+	<form action="alterarCliente" method="post">
 
 		<input type="hidden" name="id" value="${cadastro.id}" />
 

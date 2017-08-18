@@ -31,7 +31,7 @@ public class ClienteDao {
 			stmt.setString(1, cliente.getNome());
 			stmt.setString(2, cliente.getSenha());
 			stmt.setString(3, cliente.getEmail());
-			
+
 			if (cliente.getDataNascimento() != null) {
 				stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
 			} else {
@@ -75,20 +75,19 @@ public class ClienteDao {
 
 	public void alterarCliente(Cliente cliente) {
 		try {
-			String sql = "UPDATE cliente set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=? where id=?)";
+			String sql = "UPDATE cliente set nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=? where id=?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
 			stmt.setString(1, cliente.getNome());
 			stmt.setString(2, cliente.getSenha());
 			stmt.setString(3, cliente.getEmail());
-			
-			if(cliente.getDataNascimento()!=null){
-			stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
-			}else{
+
+			if (cliente.getDataNascimento() != null) {
+				stmt.setDate(4, new java.sql.Date(cliente.getDataNascimento().getTime()));
+			} else {
 				stmt.setDate(4, null);
 			}
-			
-			
+
 			stmt.setString(5, cliente.getCelular());
 			stmt.setString(6, cliente.getTelefone());
 			stmt.setString(7, cliente.getCpf());
@@ -151,21 +150,20 @@ public class ClienteDao {
 			throw new RuntimeException(e);
 		}
 	}
-	
+
 	private Cliente montarObjeto(ResultSet rs) throws SQLException {
 
 		Cliente clienteConsultado = new Cliente();
-		
+
 		clienteConsultado.setId(rs.getInt("id"));
 		clienteConsultado.setNome(rs.getString("nome"));
 		clienteConsultado.setSenha(rs.getString("senha"));
-		clienteConsultado.setEmail(rs.getString("email"));	
+		clienteConsultado.setEmail(rs.getString("email"));
 		clienteConsultado.setDataNascimento(rs.getDate("dataNascimento"));
 		clienteConsultado.setCelular(rs.getString("celular"));
 		clienteConsultado.setTelefone(rs.getString("telefone"));
 		clienteConsultado.setCpf(rs.getString("cpf"));
-		
-		
+
 		return clienteConsultado;
 	}
 
@@ -175,12 +173,9 @@ public class ClienteDao {
 			PreparedStatement stmt = this.connection
 					.prepareStatement("select * from cliente where email = ? and senha = ?");
 
-			
 			stmt.setString(2, cliente.getSenha());
 			stmt.setString(1, cliente.getEmail());
-			
-			
-			
+
 			ResultSet rs = stmt.executeQuery();
 			if (rs.next()) {
 				clienteConsultado = montarObjeto(rs);

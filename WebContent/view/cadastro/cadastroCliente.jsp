@@ -115,10 +115,10 @@
 				
 					
 					<div class="form_settings">
-					<form action="incluirCliente" method="post" enctype="multipart/form-data">
+					<form action="incluirCliente" method="post">
 					
-					<form:errors path="cadastroCliente.nome" cssStyle="color:red" />
-					<form:errors path="cadastroCliente.senha" cssStyle="color:red" />
+					<form:errors path="cliente.nome" cssStyle="color:red" />
+					<form:errors path="cliente.senha" cssStyle="color:red" />
 					
 						<p>
 							<span>Nome</span><input class="contact" type="text" name="nome"

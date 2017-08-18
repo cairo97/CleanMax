@@ -1,8 +1,5 @@
 package br.com.aplicativo.CleanMax.controller;
 
-
-
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -10,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 
 import br.com.aplicativo.CleanMax.model.Cliente;
 import br.com.aplicativo.CleanMax.model.ClienteDao;
@@ -25,12 +21,12 @@ public class ClienteController {
 	}
 
 	@RequestMapping("incluirCliente")
-	public String incluirCliente(@Valid Cliente cliente,BindingResult result,  Model model) {
+	public String incluirCliente(@Valid Cliente cliente, BindingResult result, Model model) {
 
 		if (result.hasErrors()) {
 			return "forward:cadastro";
-			}
-		
+		}
+
 		ClienteDao dao = new ClienteDao();
 		dao.salvar(cliente);
 		model.addAttribute("cadastrar", "Cadastro realizado com sucesso");
@@ -52,54 +48,52 @@ public class ClienteController {
 		dao.remover(cliente);
 		model.addAttribute("remover", "Produto Removido com Sucesso");
 		return "forward:listarCliente";
-	}	
-		
-		@RequestMapping("exibirAlterarCliente")
-		public String alterarCliente(Cliente cliente, Model model) {
+	}
 
-			ClienteDao dao = new ClienteDao();
-			Cliente clienteCompleto = dao.buscarPorId(cliente.getId());
+	@RequestMapping("exibirAlterarCliente")
+	public String exibirAlterarCliente(Cliente cliente, Model model) {
 
-			model.addAttribute("cadastro", clienteCompleto);
+		ClienteDao dao = new ClienteDao();
+		Cliente clienteCompleto = dao.buscarPorId(cliente.getId());
 
-			return "cadastro/alterarCliente";
-	    }
-	    
-	    @RequestMapping("alterarCliente")
-	    public String alteraCliente(Cliente cliente, Model model) {
+		model.addAttribute("cadastro", clienteCompleto);
 
-	    	ClienteDao dao = new ClienteDao();
+		return "cadastro/alterarCliente";
+	}
+
+	@RequestMapping("alterarCliente")
+	public String alterarCliente(Cliente cliente, Model model) {
+
+		ClienteDao dao = new ClienteDao();
 		dao.alterarCliente(cliente);
 		model.addAttribute("mensagem", "Cliente Alterado com Sucesso!");
 
 		return "forward:listarCliente";
-		
-		
+
 	}
 
-	    @RequestMapping("/login")
-		public String LoginCliente() {
-			
-			return "login/login";
+	@RequestMapping("/login")
+	public String LoginCliente() {
+
+		return "login/login";
 	}
 
-	   @RequestMapping("/home")
-	   public String TelaInicial() {
-		
+	@RequestMapping("/home")
+	public String TelaInicial() {
+
 		return "telaInicial/Index";
 	}
-	   
-	   @RequestMapping("efetuarLogin")
-	   public String efetuarLogin(Cliente cliente, HttpSession session, Model
-	   model) {
-		   ClienteDao dao = new ClienteDao();
-		   Cliente clienteLogado = dao.buscarCliente(cliente);
-	   if (clienteLogado != null) {
-	   session.setAttribute("clienteLogado", clienteLogado);
-	   return "telaInicial/home";
-	   }
-	   model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
-	   return "telaInicial/index";
-	   }  
-	    
+
+	@RequestMapping("efetuarLogin")
+	public String efetuarLogin(Cliente cliente, HttpSession session, Model model) {
+		ClienteDao dao = new ClienteDao();
+		Cliente clienteLogado = dao.buscarCliente(cliente);
+		if (clienteLogado != null) {
+			session.setAttribute("clienteLogado", clienteLogado);
+			return "telaInicial/home";
+		}
+		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+		return "telaInicial/index";
+	}
+
 }
