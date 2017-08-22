@@ -168,12 +168,13 @@
 							</select>
 						</div>
 						
-						<c:forEach var="servic" items="${listarTipoServico}">
+						
 						<label>Preço:</label> <br>
 							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
 						<a href="exibirPreco?id=${servic.id}">Valor</a>
-							</c:forEach>
+							
 					</form>
+					
 							<label>Hora do Agendamento:</label> <br>
 							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
 						
