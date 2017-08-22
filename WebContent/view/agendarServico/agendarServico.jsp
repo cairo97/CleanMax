@@ -31,16 +31,19 @@
 	$(function() {
 		$("#calendario").datepicker();
 	});
-	
 
 	
-	(document).ready(function(){
-	    $("input").change(function(){
-	    	$( "#inputPreço" ).text( str );
-	    });
+	
+	(document).ready(function() {
+		$("#tipoServico").change(function() {
+			var idTipoServico = $('#tipoServico').val();
+			var idTipoVeiculo = $('#tipoVeiculo').val();
+			
+			 $.post("exibirPreco", {'tipoServico' : idTipoServico, 'tipoVeiculo' : idTipoVeiculo}, function(dados) {
+		           $('#inputPreco').html(dados);
+		        });
+		});
 	});
-	
-	
 </script>
 
 <script type="text/javascript">
@@ -136,53 +139,47 @@
 
 						<p>
 						<p>
-							<label>Data do Agendamento: </label><br>
-							<input type="date" id="calendario" name="data" />
+							<label>Data do Agendamento: </label><br> <input type="date"
+								id="calendario" name="data" />
 						</p>
 
 						</p>
-						
+
 						<form action="exibirPreco" method="post"
-						enctype="multipart/form-data">
-						
-						<div class="form-group">
-							<label for="veiculo">Tipo da Veículo:</label> <select
-								style="width: 300px;" maxlength="100" class="form-control"
-								id="tipoVeiculo" name="tipoVeiculo">
-								<option value="">Selecione</option>
-								<c:forEach items="${listarTipoVeiculo}" var="obj">
-									<option value="${obj.id}">${obj.descricao}</option>
-								</c:forEach>
+							enctype="multipart/form-data">
 
-							</select>
-						</div>
+							<div class="form-group">
+								<label for="veiculo">Tipo da Veículo:</label> <select
+									style="width: 300px;" maxlength="100" class="form-control"
+									id="tipoVeiculo" name="tipoVeiculo">
+									<option value="">Selecione</option>
+									<c:forEach items="${listarTipoVeiculo}" var="obj">
+										<option value="${obj.id}">${obj.descricao}</option>
+									</c:forEach>
 
-						<div class="form-group">
-							<label for="tipoServico">Tipo da Serviço:</label> <select
-								style="width: 300px;" maxlength="100" class="form-control"
-								id="tipoServico" name="tipoServico">
-								<option value="">Selecione</option>
-								<c:forEach items="${listarTipoServico}" var="obj">
-									<option value="${obj.id}">${obj.descricao}</option>
-								</c:forEach>
-							</select>
-						</div>
-						
-						
-						<label>Preço:</label> <br>
-							<input type="text" style="width: 100px;" id="inputPreco" name="preco" value =""/>
-						<a href="exibirPreco?id=${servic.id}">Valor</a>
-							
-					</form>
-					
-							<label>Hora do Agendamento:</label> <br>
-							<input type="text" style="width: 100px;" id="inputHora" name="hora" />
-						
+								</select>
+							</div>
 
-						
+							<div class="form-group">
+								<label for="tipoServico">Tipo da Serviço:</label> <select
+									style="width: 300px;" maxlength="100" class="form-control"
+									id="tipoServico" name="tipoServico">
+									<option value="">Selecione</option>
+									<c:forEach items="${listarTipoServico}" var="obj">
+										<option value="${obj.id}">${obj.descricao}</option>
+									</c:forEach>
+								</select>
+							</div>
 
 
-						<a href="view/telaInicial/Index.html" class="btn btn-danger"
+							<label>Preço:</label> <br> <input type="text"
+								style="width: 100px;" id="inputPreco" name="preco" value="" />
+
+						</form>
+
+						<label>Hora do Agendamento:</label> <br> <input type="text"
+							style="width: 100px;" id="inputHora" name="hora" /> <a
+							href="view/telaInicial/Index.html" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>

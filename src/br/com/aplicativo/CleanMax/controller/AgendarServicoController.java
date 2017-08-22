@@ -1,10 +1,16 @@
 package br.com.aplicativo.CleanMax.controller;
 
+import java.net.ResponseCache;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -32,14 +38,14 @@ public class AgendarServicoController {
 	
 	
 	@RequestMapping("exibirPreco")
-	public String exibirPreco(TipoVeiculo tipoVeiculo,TipoServico tipoServico,Model model) {
+	public @ResponseBody String exibirPreco(@RequestParam Integer tipoVeiculo,@RequestParam Integer tipoServico,HttpServletResponse response) {
 
 		ServicoDao dao = new ServicoDao();
-		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo.getId(), tipoServico.getId());
-
-		model.addAttribute("preco", ServicoCompleto.getPreco());
-
-		return "agendarServico/agendarServico";
+		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo, tipoServico);
+		
+        
+		response.setStatus(200);
+		return ServicoCompleto.getPreco()+"";
 	}
 
 /*	@RequestMapping("incluirAgenda")
