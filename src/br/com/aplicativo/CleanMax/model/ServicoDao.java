@@ -52,15 +52,15 @@ public class ServicoDao {
 				servico.setId(rs.getInt("id"));
 				servico.setNome(rs.getString("nome"));
 				servico.setPreco(rs.getDouble("preco"));
-				
+
 				TipoServicoDao dao = new TipoServicoDao();
 				TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
-                servico.setTipoServico(tipoServico);
-                
-                TipoVeiculoDao dao1 = new TipoVeiculoDao();
-                TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
-                servico.setTipoVeiculo(tipoVeiculo);
-                
+				servico.setTipoServico(tipoServico);
+
+				TipoVeiculoDao dao1 = new TipoVeiculoDao();
+				TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
+				servico.setTipoVeiculo(tipoVeiculo);
+
 				listarServico.add(servico);
 			}
 
@@ -74,26 +74,20 @@ public class ServicoDao {
 		}
 	}
 
-
-	
-	
-	
-
 	public void alterar(Servico servico) {
-		
-		
+
 		String sql = "UPDATE servico set nome=?,tipoVeiculo_id=?,tipoServico_id=?,preco=? WHERE id=?";
 		PreparedStatement stmt;
-		
+
 		try {
 			stmt = connection.prepareStatement(sql);
-            
+
 			stmt.setString(1, servico.getNome());
 			stmt.setInt(2, servico.getTipoVeiculo().getId());
 			stmt.setInt(3, servico.getTipoServico().getId());
 			stmt.setDouble(4, servico.getPreco());
 			stmt.setInt(5, servico.getId());
-			
+
 			stmt.execute();
 			connection.close();
 
@@ -114,18 +108,18 @@ public class ServicoDao {
 
 			while (rs.next()) {
 
-				     servico.setId(rs.getInt("id"));
-				     servico.setNome(rs.getString("nome"));
-				
-				    TipoVeiculoDao dao1 = new TipoVeiculoDao();
-	                TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
-	                servico.setTipoVeiculo(tipoVeiculo);
-	                
-	                TipoServicoDao dao = new TipoServicoDao();
-					TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
-	                servico.setTipoServico(tipoServico);
-				
-	                servico.setPreco(rs.getDouble("preco"));
+				servico.setId(rs.getInt("id"));
+				servico.setNome(rs.getString("nome"));
+
+				TipoVeiculoDao dao1 = new TipoVeiculoDao();
+				TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
+				servico.setTipoVeiculo(tipoVeiculo);
+
+				TipoServicoDao dao = new TipoServicoDao();
+				TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
+				servico.setTipoServico(tipoServico);
+
+				servico.setPreco(rs.getDouble("preco"));
 			}
 
 			rs.close();
@@ -140,21 +134,21 @@ public class ServicoDao {
 
 	}
 
-	public Servico buscarPorServico(int tipoVeiculo,int tipoServico) {
+	public Servico buscarPorServico(int tipoVeiculo, int tipoServico) {
 
 		try {
 
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM servico WHERE tipoVeiculo_id = ? and tipoServico_id = ?");
+			PreparedStatement stmt = this.connection
+					.prepareStatement("SELECT * FROM servico WHERE tipoVeiculo_id = ? and tipoServico_id = ?");
 			stmt.setInt(1, tipoVeiculo);
 			stmt.setInt(2, tipoServico);
-			
+
 			ResultSet rs = stmt.executeQuery();
 
 			Servico servico = new Servico();
 
 			while (rs.next()) {
-				  				
-	                servico.setPreco(rs.getDouble("preco"));
+				servico.setPreco(rs.getDouble("preco"));
 			}
 
 			rs.close();
@@ -168,6 +162,7 @@ public class ServicoDao {
 		}
 
 	}
+
 	public void remover(Servico servico) {
 
 		try {

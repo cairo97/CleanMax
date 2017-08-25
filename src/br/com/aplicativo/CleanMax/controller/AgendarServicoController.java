@@ -38,11 +38,10 @@ public class AgendarServicoController {
 	
 	
 	@RequestMapping("exibirPreco")
-	public @ResponseBody String exibirPreco(@RequestParam Integer tipoVeiculo,@RequestParam Integer tipoServico,HttpServletResponse response) {
+	public @ResponseBody String exibirPreco(@RequestParam Integer tipoVeiculo, @RequestParam Integer tipoServico, HttpServletResponse response) {
 
 		ServicoDao dao = new ServicoDao();
 		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo, tipoServico);
-		
         
 		response.setStatus(200);
 		return ServicoCompleto.getPreco()+"";

@@ -1,7 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,47 +11,40 @@
 <meta charset="utf-8" />
 <meta name="description" content="website description" />
 <meta name="keywords" content="website keywords, website keywords" />
-<meta http-equiv="content-type"
-	content="text/html; charset=windows-1252" />
+<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
-<link rel="stylesheet" type="text/css"
-	href="view/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
-<script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 <script>
-	$(function() {
-		$("#calendario").datepicker();
-	});
 
-	
-	
-	(document).ready(function() {
+	$(document).ready(function() {	
+	    				
 		$("#tipoServico").change(function() {
-			var idTipoServico = $('#tipoServico').val();
-			var idTipoVeiculo = $('#tipoVeiculo').val();
 			
-			 $.post("exibirPreco", {'tipoServico' : idTipoServico, 'tipoVeiculo' : idTipoVeiculo}, function(dados) {
-		           $('#inputPreco').html(dados);
-		        });
-		});
-	});
+			var idTipoVeiculo = $('#tipoVeiculo').val();
+	      	var idTipoServico = $('#tipoServico').val();
+	      	
+	      	$.post("exibirPreco", {'tipoServico' : idTipoServico, 'tipoVeiculo' : idTipoVeiculo}, function(dados) {
+	    	  	$('#inputPreco').val(dados)
+	     	});
+	   	});
+		
+		
+		$("#calendario").datepicker();
+		$("#inputHora").mask("99.99");
+		
+	 });
+	
 </script>
 
-<script type="text/javascript">
-	jQuery(function($) {
-		$("#inputHora").mask("99.99");
-	});
-</script>
 </head>
 
 <body>
@@ -178,8 +172,9 @@
 						</form>
 
 						<label>Hora do Agendamento:</label> <br> <input type="text"
-							style="width: 100px;" id="inputHora" name="hora" /> <a
-							href="view/telaInicial/Index.html" class="btn btn-danger"
+							style="width: 100px;" id="inputHora" name="hora" /> <br><br>
+							
+							<a href="view/telaInicial/Index.html" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
