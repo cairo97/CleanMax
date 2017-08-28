@@ -114,7 +114,7 @@
 	<center>
 
 
-		<form style="margin-right: 40%;" action="incluirFuncao" method="post" enctype="multipart/form-data">
+		<form  action="incluirFuncao" method="post" enctype="multipart/form-data">
 		
      <form:errors path="funcao.descricao" cssStyle="color:red" />
 

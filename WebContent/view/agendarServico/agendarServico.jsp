@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -11,38 +12,41 @@
 <meta charset="utf-8" />
 <meta name="description" content="website description" />
 <meta name="keywords" content="website keywords, website keywords" />
-<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+<meta http-equiv="content-type"
+	content="text/html; charset=windows-1252" />
 
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
-<link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 
 <script>
+	$(document).ready(function() {
 
-	$(document).ready(function() {	
-	    				
 		$("#tipoServico").change(function() {
-			
+
 			var idTipoVeiculo = $('#tipoVeiculo').val();
-	      	var idTipoServico = $('#tipoServico').val();
-	      	
-	      	$.post("exibirPreco", {'tipoServico' : idTipoServico, 'tipoVeiculo' : idTipoVeiculo}, function(dados) {
-	    	  	$('#inputPreco').val(dados)
-	     	});
-	   	});
-		
-		
+			var idTipoServico = $('#tipoServico').val();
+
+			$.post("exibirPreco", {
+				'tipoServico' : idTipoServico,
+				'tipoVeiculo' : idTipoVeiculo
+			}, function(dados) {
+				$('#inputPreco').val(dados)
+			});
+		});
+
 		$("#calendario").datepicker();
 		$("#inputHora").mask("99.99");
-		
-	 });
-	
+
+	});
 </script>
 
 </head>
@@ -77,15 +81,7 @@
 			<div id="sidebar_container">
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-
-						<h3>Últimas Notícias</h3>
-						<h4>Novo WebSite</h4>
-						<h5>27 de Junho de 2017</h5>
-						<p>
-							Testando WebSite<br /> <a href="#">Leia Mais</a>
-						</p>
-					</div>
+					<div class="sidebar_item"></div>
 					<div class="sidebar_base"></div>
 				</div>
 				<div class="sidebar">
@@ -131,13 +127,7 @@
 					<form action="incluirAgendamento" method="post"
 						enctype="multipart/form-data">
 
-						<p>
-						<p>
-							<label>Data do Agendamento: </label><br> <input type="date"
-								id="calendario" name="data" />
-						</p>
 
-						</p>
 
 						<form action="exibirPreco" method="post"
 							enctype="multipart/form-data">
@@ -165,16 +155,35 @@
 								</select>
 							</div>
 
+							<div id="sidebar_container">
+								<div class="sidebar">
+									<div class="sidebar_top"></div>
+									<div class="sidebar_item">
 
+										<table border='1' style='width: 100%;'>
+											<tr style='background-color: #E6E6E6; font-weight: bold;'>
+
+												<h3>Horários disponíveis</h3>
+												<td>Horas:</td>
+										</table>
+									</div>
+								</div>
+							</div>
+							
 							<label>Preço:</label> <br> <input type="text"
 								style="width: 100px;" id="inputPreco" name="preco" value="" />
 
 						</form>
 
+						<p>
+							<label>Data do Agendamento: </label><br> <input type="date"
+								id="calendario" name="data" />
+						</p>
+
+
 						<label>Hora do Agendamento:</label> <br> <input type="text"
-							style="width: 100px;" id="inputHora" name="hora" /> <br><br>
-							
-							<a href="view/telaInicial/Index.html" class="btn btn-danger"
+							style="width: 100px;" id="inputHora" name="hora" /> <br> <br>
+						<a href="view/telaInicial/Index.html" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
