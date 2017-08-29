@@ -34,7 +34,7 @@
 
 			var idTipoVeiculo = $('#tipoVeiculo').val();
 			var idTipoServico = $('#tipoServico').val();
-
+               
 			$.post("exibirPreco", {
 				'tipoServico' : idTipoServico,
 				'tipoVeiculo' : idTipoVeiculo
@@ -58,7 +58,7 @@
 				<div id="logo_text">
 
 
-					<a href="view/telaInicial/Index.jsp">Clean<span
+					<a href="telaIncial">Clean<span
 						class="logo_colour">Max</span></a>
 
 
@@ -68,7 +68,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="home">Home</a></li>
+					<li><a href="telaIncial">Home</a></li>
 
 
 					<li class="selected"><a href="cadastro">Cadastro</a></li>
@@ -155,35 +155,31 @@
 								</select>
 							</div>
 
-							<div id="sidebar_container">
-								<div class="sidebar">
-									<div class="sidebar_top"></div>
-									<div class="sidebar_item">
 
-										<table border='1' style='width: 100%;'>
-											<tr style='background-color: #E6E6E6; font-weight: bold;'>
-
-												<h3>Horários disponíveis</h3>
-												<td>Horas:</td>
-										</table>
-									</div>
-								</div>
-							</div>
-							
 							<label>Preço:</label> <br> <input type="text"
 								style="width: 100px;" id="inputPreco" name="preco" value="" />
 
 						</form>
-
-						<p>
-							<label>Data do Agendamento: </label><br> <input type="date"
-								id="calendario" name="data" />
-						</p>
-
-
-						<label>Hora do Agendamento:</label> <br> <input type="text"
-							style="width: 100px;" id="inputHora" name="hora" /> <br> <br>
-						<a href="view/telaInicial/Index.html" class="btn btn-danger"
+                            
+                            <label>Data:</label> <br> <input type="date"
+								style="width: 150px;" id="inputData" name="preco" value="" />
+                            
+                            
+						<div class="form-group">
+								<label for="horario">Horario de Agendamento</label> <select
+									style="width: 300px;" maxlength="100" class="form-control"
+									id="horario" name="horario">
+									<option value="">Selecione</option>
+									<c:forEach items="${horarios}" var="obj">
+										<option value="${obj.codigo}">${obj.labelHorario}</option>
+									</c:forEach>
+								</select>
+							</div>
+							
+							<label>Placa:</label> <br> <input type="placa"
+								style="width: 150px;" id="inputData" name="data" value="" /><br><br>
+							
+							<a href="view/telaInicial/Index.html" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>

@@ -96,4 +96,10 @@ public class ClienteController {
 		return "telaInicial/index";
 	}
 
+	@RequestMapping("/telaIncial")
+	public String Tela() {
+
+		return "telaInicial/home";
+	}
+	
 }

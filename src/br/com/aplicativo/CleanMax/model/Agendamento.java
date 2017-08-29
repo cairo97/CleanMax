@@ -9,42 +9,49 @@ public class Agendamento {
 	private int id;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date data;
-	private double hora;
-	private TipoVeiculo tipoveiculo;
-	private TipoVeiculo tiposervico;
+	private int hora;
+	private  Servico servico;
+	private  String placa;
+	private String status;
 	
-	
-	
-	public double getHora() {
-		return hora;
-	}
-	public void setHora(double hora) {
-		this.hora = hora;
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Date getDateDis() {
+	public Date getData() {
 		return data;
 	}
-	public void setDateDis(Date dateDis) {
-		this.data = dateDis;
+	public void setData(Date data) {
+		this.data = data;
 	}
-	public TipoVeiculo getTipoveiculo() {
-		return tipoveiculo;
+	public int getHora() {
+		return hora;
 	}
-	public void setTipoveiculo(TipoVeiculo tipoveiculo) {
-		this.tipoveiculo = tipoveiculo;
+	public void setHora(int hora) {
+		this.hora = hora;
 	}
-	public TipoVeiculo getTiposervico() {
-		return tiposervico;
+	public Servico getServico() {
+		return servico;
 	}
-	public void setTiposervico(TipoVeiculo tiposervico) {
-		this.tiposervico = tiposervico;
+	public void setServico(Servico servico) {
+		this.servico = servico;
 	}
+	public String getPlaca() {
+		return placa;
+	}
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
 	
 	
 }

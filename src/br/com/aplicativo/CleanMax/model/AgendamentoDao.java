@@ -19,14 +19,21 @@ public class AgendamentoDao {
 	}
 	
 	
-	public void salvar(Servico servico) {
+	public void salvar(Agendamento agendamento) {
 		try {
-			String sql = "INSERT INTO servico (data,hora,tipoVeiculo_id,tipoServico_id,preco) VALUES (?,?,?,?)";
+			String sql = "INSERT INTO servico (data,hora,servico_id,placa,status) VALUES (?,?,?,?,?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
-			stmt.setString(1, servico.getNome());
-			stmt.setInt(2, servico.getTipoVeiculo().getId());
-			stmt.setInt(3, servico.getTipoServico().getId());
-			stmt.setDouble(4, servico.getPreco());
+			if (agendamento.getData() != null) {
+				stmt.setDate(1, new java.sql.Date(agendamento.getData().getTime()));
+			} else {
+				stmt.setDate(1, null);
+			}
+			stmt.setDouble(2, agendamento.getHora());
+			stmt.setInt(3, agendamento.getServico().getId());
+			
+			stmt.setString(4, agendamento.getPlaca());
+			stmt.setString(5, agendamento.getStatus());
+			
 			stmt.execute();
 			connection.close();
 

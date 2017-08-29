@@ -25,7 +25,7 @@
 				<div id="logo_text">
 
 			
-						<a href="view/telaInicial/Index.jsp">Clean<span class="logo_colour">Max</span></a>
+						<a href="telaIncial">Clean<span class="logo_colour">Max</span></a>
 
 				
 					<h1>Lava Jato  Clean Max</h1>
@@ -34,7 +34,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="home">Home</a></li>
+					<li><a href="telaIncial">Home</a></li>
 					
 					
 					<li class="selected"><a href="cadastro">Cadastro</a></li>
@@ -49,12 +49,7 @@
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
 						 
-						<h3>Últimas Notícias</h3>
-						<h4>Novo WebSite</h4>
-						<h5>27 de Junho de 2017</h5>
-						<p>
-							Testando WebSite<br /> <a href="#">Leia Mais</a>
-						</p>
+						
 					</div>
 					<div class="sidebar_base"></div>
 				</div>

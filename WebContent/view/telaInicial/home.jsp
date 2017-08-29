@@ -37,7 +37,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="home">Home</a></li>
+					<li class="selected"><a href="telaIncial">Home</a></li>
 					<li><a href="cadastro">Cadastro</a></li>
 					<li><a href="#">Contato</a></li>
 				</ul>
@@ -51,12 +51,7 @@
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
 
-						<h3>Últimas Notícias</h3>
-						<h4>Novo WebSite</h4>
-						<h5>27 de Junho de 2017</h5>
-						<p>
-							Testando WebSite<br /> <a href="#">Leia Mais</a>
-						</p>
+						
 					</div>
 					<div class="sidebar_base"></div>
 				</div>
@@ -106,7 +101,7 @@
 		<div id="content_footer"></div>
 		<div id="footer">
 			<p>
-				<a href="view/telaInicial/Index.jsp">Home</a> | <a
+				<a href="telaIncial">Home</a> | <a
 					href="examples.html">Examples</a> | <a href="page.html">A Page</a>
 				| <a href="cadastro1.html">Another Page</a> | <a href="contact.html">Contact
 					Us</a>
