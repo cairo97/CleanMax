@@ -12,39 +12,49 @@ public class Agendamento {
 	private double hora;
 	private TipoVeiculo tipoveiculo;
 	private TipoVeiculo tiposervico;
+	private String preco;
 	
 	
-	
-	public double getHora() {
-		return hora;
-	}
-	public void setHora(double hora) {
-		this.hora = hora;
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Date getDateDis() {
+	public Date getData() {
 		return data;
 	}
-	public void setDateDis(Date dateDis) {
-		this.data = dateDis;
+	public void setData(Date data) {
+		this.data = data;
 	}
-	public TipoVeiculo getTipoveiculo() {
+	public double getHora() {
+		return hora;
+	}
+	public void setHora(double hora) {
+		this.hora = hora;
+	}
+	public TipoVeiculo getTipoVeiculo() {
 		return tipoveiculo;
 	}
-	public void setTipoveiculo(TipoVeiculo tipoveiculo) {
+	public void setTipoVeiculo(TipoVeiculo tipoveiculo) {
 		this.tipoveiculo = tipoveiculo;
 	}
-	public TipoVeiculo getTiposervico() {
+	public TipoVeiculo getTipoServico() {
 		return tiposervico;
 	}
-	public void setTiposervico(TipoVeiculo tiposervico) {
+	public void setTipoServico(TipoVeiculo tiposervico) {
 		this.tiposervico = tiposervico;
 	}
+	public String getPreco() {
+		return preco;
+	}
+	public void setPreco(String preco) {
+		this.preco = preco;
+	}
+	
+	
+	
+
 	
 	
 }

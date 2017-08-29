@@ -47,8 +47,10 @@
 		$("#inputHora").mask("99.99");
 
 	});
+	
+	
 </script>
-
+  
 </head>
 
 <body>
@@ -161,10 +163,17 @@
 									<div class="sidebar_item">
 
 										<table border='1' style='width: 100%;'>
+										
+										<td>Horas:</td>
 											<tr style='background-color: #E6E6E6; font-weight: bold;'>
 
 												<h3>Horários disponíveis</h3>
-												<td>Horas:</td>
+												
+												<p>De 8:00 ás 18:00</p>
+												
+												<th>8:00</th><th>8:30</th><th>9:00</th><th>11:00</th><th>18:00</th>
+												
+										</tr>
 										</table>
 									</div>
 								</div>
