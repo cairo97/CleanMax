@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,7 +16,6 @@
 	content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
 <link rel="stylesheet" type="text/css"
-
 	href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
@@ -50,12 +49,10 @@
 
 					<li class="selected"><a href="home">Home</a></li>
 
-					
-						<li><a href="cadastro">Cadastro</a>
-									
-									</li>
-									
-									<li><a href="agendar">Agendar Serviço</a></li>
+
+					<li><a href="cadastro">Cadastro</a></li>
+
+					<li><a href="agendar">Agendar Serviço</a></li>
 
 					<li><a href="#">Contato</a></li>
 				</ul>
@@ -67,16 +64,13 @@
 			<div id="sidebar_container">
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-
-						
-					</div>
+					<div class="sidebar_item"></div>
 					<div class="sidebar_base"></div>
 				</div>
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
-						 
+
 						<h3>Últimas Notícias</h3>
 						<h4>Novo WebSite</h4>
 						<h5>27 de Junho de 2017</h5>
@@ -95,7 +89,7 @@
 							<li><a href="veiculo">Incluir tipo de veículo</a></li>
 							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
 							<li><a href="funcao">Incluir Função</a></li>
-							
+
 						</ul>
 					</div>
 					<div class="sidebar_base"></div>
@@ -117,26 +111,26 @@
 				</div>
 			</div>
 			<div id="content">
-				 
-  <div style="text-align: center; color: green;"> ${cadastrar} </div>
-				
-					<h1>Cadastro de Cliente</h1>
 
-					
+				<div style="text-align: center; color: green;">${cadastrar}</div>
+
+				<h1>Cadastro de Cliente</h1>
+
+
 				<a href="listarCliente">Listar cliente</a>
-				
 
-				
-					
-					<div class="form_settings">
+
+
+
+				<div class="form_settings">
 					<form action="incluirCliente" method="post">
-					
-					<form:errors path="cliente.nome" cssStyle="color:red" />
-					<form:errors path="cliente.senha" cssStyle="color:red" />
-					
+
+						<form:errors path="cliente.nome" cssStyle="color:red" />
+						<form:errors path="cliente.senha" cssStyle="color:red" />
+
 						<p>
 							<span>Nome</span><input class="contact" type="text" name="nome"
-								value=""  />
+								value="" />
 						</p>
 						<p>
 							<span>Senha</span><input class="contact" type="password"
@@ -152,8 +146,9 @@
 						</p>
 						<p>
 							<span>Data de Nascimento</span><input class="contact" type="text"
-								id="inputDataNascimento" name="dataNascimento" value="" required="required" />				
-										</p>
+								id="inputDataNascimento" name="dataNascimento" value=""
+								required="required" />
+						</p>
 						<p>
 							<span>Celular</span><input class="contact" type="text"
 								name="celular" id="inputCelular" value="" required="required" />
@@ -166,35 +161,38 @@
 							<span>CPF</span><input class="contact" type="text" name="cpf"
 								id="inputCpf" value="" required="required" />
 						</p>
-
-						<a href="view/telaInicial/Index.html" class="btn btn-danger" role="button">Cancelar</a>
-						&nbsp;
+						
+							
+							 <a
+							href="view/telaInicial/Index.html" class="btn btn-danger"
+							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
 						&nbsp;
 						<button type="submit" class="btn btn-primary">&nbsp;
 							Salvar &nbsp;</button>
-              </form>
-					</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	
 
 
-	
-	<div id="content_footer"></div>
-	<div id="footer">
-	
-		<p>
-			<a href="view/telaInicial/Index.html">Home</a> | <a href="examples.html">Exemplos</a>
-			| <a href="page.html">Pagina</a> | <a href="cadastroCliente.html">Cadastro</a>
-			| <a href="contact.html">Contato</a>
-		</p>
-		<p>
-			Copyright &copy; Clean Max | <a
-				href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-				href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-	</div>
+
+
+		<div id="content_footer"></div>
+		<div id="footer">
+
+			<p>
+				<a href="view/telaInicial/Index.html">Home</a> | <a
+					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
+				| <a href="cadastroCliente.html">Cadastro</a> | <a
+					href="contact.html">Contato</a>
+			</p>
+			<p>
+				Copyright &copy; Clean Max | <a
+					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
+					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+		</div>
 	</div>
 </body>
 </html>
