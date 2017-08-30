@@ -84,9 +84,11 @@
 					<div class="sidebar_item"></div>
 					<div class="sidebar_base"></div>
 				</div>
+				<div id="sidebar_container">
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
+					<div class="sidebar_item"></div>
+					<div class="sidebar_base"></div>
 						<h3>Links</h3>
 						<ul>
 							<li><a href="servico">Incluir Serviço</a></li>
@@ -96,21 +98,12 @@
 
 						</ul>
 					</div>
+					
 					<div class="sidebar_base"></div>
 				</div>
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						<h3>Pesquisar</h3>
-						<form method="post" action="#" id="search_form">
-							<p>
-								<input class="search" type="text" name="search_field"
-									value="Insira as palavras..." /> <input name="search"
-									type="image" style="border: 0; margin: 0 0 -9px 5px;"
-									src="view/style/search.png" alt="Search" title="Search" />
-							</p>
-						</form>
-					</div>
+					
 					<div class="sidebar_base"></div>
 				</div>
 			</div>
@@ -118,7 +111,10 @@
 
 				<div style="text-align: center; color: green;">${cadastrar}</div>
 
-				<h1>Agendamento</h1>
+
+           
+
+				<h1>Agendar Lavagem</h1>
 
 
 

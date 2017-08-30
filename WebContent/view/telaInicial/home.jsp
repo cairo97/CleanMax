@@ -38,7 +38,7 @@
 				<ul id="menu">
 
 					<li class="selected"><a href="telaIncial">Home</a></li>
-					<li><a href="cadastro">Cadastro</a></li>
+					<li><a href="agendar">Agendar lavagem</a></li>
 					<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
@@ -92,7 +92,7 @@
 					<p>Bem vindo, ${clienteLogado.nome}</p>
 				</center>
 
-
+     <img src="<c:url value="view/imagens/clean1.png"/>" alt="descrição da imagem" />
 
 
 			</div>
