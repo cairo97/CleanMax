@@ -54,54 +54,10 @@
 			</div>
 		</div>
 		<div id="content_header"></div>
-		<div id="site_content">
-			<div id="sidebar_container">
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						 
-						<h3>Últimas Notícias</h3>
-						<h4>Novo WebSite</h4>
-						<h5>27 de Junho de 2017</h5>
-						<p>
-							Testando WebSite<br /> <a href="#">Leia Mais</a>
-						</p>
+		
 					</div>
-					<div class="sidebar_base"></div>
-				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						<h3>Links</h3>
-						<ul>
-							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="veiculo">Incluir tipo de veículo</a></li>
-							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
-							<li><a href="funcao">Incluir Função</a></li>
-							
-						</ul>
-					</div>
-					<div class="sidebar_base"></div>
-				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						<h3>Pesquisar</h3>
-						<form method="post" action="#" id="search_form">
-							<p>
-								<input class="search" type="text" name="search_field"
-									value="Insira as palavras..." /> <input name="search"
-									type="image" style="border: 0; margin: 0 0 -9px 5px;"
-									src="view/style/search.png" alt="Search" title="Search" />
-							</p>
-						</form>
-					</div>
-					<div class="sidebar_base"></div>
-				</div>
-			</div>
-
-            
-                      <center style="margin-right: 40%;">
+					<div class="sidebar_base"></div>			          
+                      <center  >
                             
                              <a href="telaIncial">Home</a>&nbsp;&nbsp; |&nbsp;
                          <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
@@ -109,9 +65,9 @@
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;|&nbsp;
 						<a href="listarFuncao">Listar Funcão</a>
-						</center>
+						
 	<div style="text-align: center; color: red;">${funcao}</div>
-	<center>
+	
 
 
 		<form  action="incluirFuncao" method="post" enctype="multipart/form-data">

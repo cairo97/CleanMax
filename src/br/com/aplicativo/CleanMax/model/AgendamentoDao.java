@@ -29,7 +29,7 @@ public class AgendamentoDao {
 			} else {
 				stmt.setDate(1, null);
 			}
-			stmt.setDouble(2, agendamento.getHora());
+			stmt.setInt(2, agendamento.getHora());
 			stmt.setInt(3, agendamento.getServico().getId());
 			
 			stmt.setString(4, agendamento.getPlaca());
@@ -57,20 +57,25 @@ public class AgendamentoDao {
 			while (rs.next()) {
 
 				agendamento.setId(rs.getInt("id"));
-				agendamento.setNome(rs.getString("nome"));
+				agendamento.setData(rs.getDate("data"));
+				agendamento.setHora(rs.getInt("hora"));
+				
+				TipoServicoDao dao = new TipoServicoDao();
+				TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
+			//	agendamento.setTipoServico(tipoServico);
+				
+				
+				agendamento.setPlaca(rs.getString("placa"));
+				agendamento.setStatus(rs.getString("status"));
 
-				TipoVeiculoDao dao1 = new TipoVeiculoDao();
-				TipoVeiculo tipoVeiculo = dao1.buscarPorId(rs.getInt("tipoVeiculo_id"));
-				agendamento.setTipoVeiculo(tipoVeiculo);
-
-				agendamento.setPreco(rs.getDouble("preco"));
+				
 			}
 
 			rs.close();
 			stmt.close();
 			connection.close();
 
-			return servico;
+			return agendamento;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

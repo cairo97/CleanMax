@@ -102,4 +102,10 @@ public class ClienteController {
 		return "telaInicial/home";
 	}
 	
+	@RequestMapping("/tabelaPreco")
+	public String tabelaPreco() {
+
+		return "servico/tabelaPreco";
+	}
+	
 }
