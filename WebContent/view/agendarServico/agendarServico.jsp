@@ -125,8 +125,7 @@
 
 
 
-						<form action="exibirPreco" method="post"
-							enctype="multipart/form-data">
+						<form action="exibirPreco" method="post" enctype="multipart/form-data">
 
 							<div class="form-group">
 								<label for="veiculo">Tipo da Veículo:</label> <select
@@ -153,9 +152,9 @@
 
 
 							<label>Preço:</label> <br> <input type="text"
-								style="width: 100px;" id="inputPreco" name="preco" value="" />
+								style="width: 100px;" id="inputPreco" name="preco" value="" /><br>
 
-						</form>
+						
                             
                             <label>Data:</label> <br> <input type="date"
 								style="width: 150px;" id="inputData" name="preco" value="" />
@@ -182,6 +181,7 @@
 						&nbsp;
 						<button type="submit" class="btn btn-primary">&nbsp;
 							Agendar Serviço &nbsp;</button>
+							</form>
 					</form>
 				</div>
 			</div>

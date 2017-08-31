@@ -69,17 +69,13 @@ public class AgendarServicoController {
 
 	
 	@RequestMapping("incluirAgendamento")
-	public String incluirAgendamento(@Valid Agendamento agendamento,BindingResult result, Model model) {
+	public String incluirAgendamento(Agendamento agendamento, Model model) {
 		
-		if (result.hasErrors()) {
-			return "forward:servico";
-			}
-
 		AgendamentoDao dao = new AgendamentoDao();
 		dao.salvar(agendamento);
-		model.addAttribute("servicoMensagem", "Serviço cadastrado realizado com sucesso");
+		model.addAttribute("agendar", "Agendamento cadastrado com sucesso");
 
-		return "forward:servico";
+		return "forward:agendarServico";
 	}
 
 	
