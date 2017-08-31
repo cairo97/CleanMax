@@ -194,7 +194,7 @@
 		<div id="footer">
 
 			<p>
-				<a href="view/telaInicial/Index.html">Home</a> | <a
+				<a href="telaIncial">Home</a> | <a
 					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
 				| <a href="cadastroCliente.html">Cadastro</a> | <a
 					href="contact.html">Contato</a>

@@ -45,7 +45,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="home">Home</a></li>
+					<li><a href="telaIncial">Home</a></li>
 					
 					
 					<li class="selected"><a href="cadastro">Cadastro</a></li>
@@ -103,7 +103,7 @@
             
                       <center style="margin-right: 40%;">
                             
-                             <a href="home">Home</a>&nbsp;&nbsp; |&nbsp;
+                             <a href="telaIncial">Home</a>&nbsp;&nbsp; |&nbsp;
                          <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
