@@ -47,7 +47,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="home">Home</a></li>
+					<li class="selected"><a href="telaIncial">Home</a></li>
 
 
 					<li><a href="cadastro">Cadastro</a></li>
@@ -164,7 +164,7 @@
 						
 							
 							 <a
-							href="view/telaInicial/Index.html" class="btn btn-danger"
+							href="telaIncial" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
@@ -183,7 +183,7 @@
 		<div id="footer">
 
 			<p>
-				<a href="view/telaInicial/Index.html">Home</a> | <a
+				<a href="telaIncial">Home</a> | <a
 					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
 				| <a href="cadastroCliente.html">Cadastro</a> | <a
 					href="contact.html">Contato</a>

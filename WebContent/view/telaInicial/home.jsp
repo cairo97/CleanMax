@@ -39,7 +39,7 @@
 
 					<li class="selected"><a href="telaIncial">Home</a></li>
 					<li><a href="agendar">Agendar lavagem</a></li>
-					<li><a href="#">Contato</a></li>
+							<li><a href="#">Contato</a></li>
 				</ul>
 			</div>
 		</div>
