@@ -57,15 +57,15 @@
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;|&nbsp;
 						<a href="listarFuncao">Listar Funcão</a>&nbsp;&nbsp;|&nbsp;
 						<a href="servico">Listar Funcão</a>
+						<a href="logout">Logout</a>
 		
 		
 		<div id="site_content">
 
-			
+	
 
 				<center>
 					<p>Bem vindo, ${clienteLogado.nome}</p>
-				</center>
 
      <img src="<c:url value="view/imagens/clean1.png"/>" alt="descrição da imagem" />
 

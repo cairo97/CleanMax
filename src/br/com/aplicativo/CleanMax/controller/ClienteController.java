@@ -93,7 +93,7 @@ public class ClienteController {
 			return "telaInicial/home";
 		}
 		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
-		return "telaInicial/index";
+		return "telaInicial/Index";
 	}
 
 	@RequestMapping("/telaIncial")
@@ -108,4 +108,9 @@ public class ClienteController {
 		return "servico/tabelaPreco";
 	}
 	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+	session.invalidate();
+	return "telaInicial/Index";
+	}
 }
