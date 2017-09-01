@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,7 +48,7 @@
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
-            <h3>Últimas Notícias</h3>
+            <h3>�ltimas Not�cias</h3>
             <h4>Novo WebSite</h4>
             <h5>27 de Junho de 2017</h5>
             <p>Testando WebSite<br/><a href="#">Leia Mais</a></p>
@@ -55,12 +58,12 @@
         <div class="sidebar">
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
-            <h3>Links Úteis</h3>
+            <h3>Links �teis</h3>
             <ul>
-              <li><a href="#">Serviço 1</a></li>
-              <li><a href="#">Serviço 2</a></li>
-              <li><a href="#">Serviço 3</a></li>
-              <li><a href="#">Serviço 4</a></li>
+              <li><a href="#">Servi�o 1</a></li>
+              <li><a href="#">Servi�o 2</a></li>
+              <li><a href="#">Servi�o 3</a></li>
+              <li><a href="#">Servi�o 4</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
@@ -79,55 +82,46 @@
           <div class="sidebar_base"></div>
         </div>
       </div>
-      <div id="content">
-        <!-- insert the page content here -->
-        <h1>Tabela de Preços</h1>
-<html>
-<head>
-<title>Tabela de Preços de produtos</title>
-</head>
-<body>
-<p>Tabela de Preços de produtos:</p>
-<table border="1">
-<tr>
-<td>Serviço</td>
-<td>Valor</td>
-<td>Descrição</td>
-</tr>
-<tr>
-<td>Lavagem Rápida</td>
-<td>R$ 25,00</td>
-<td>Lavagem rápida com mais ou menos 30m de duração apenas com os serviços básicos (Lavagem externa e aspiração)</td>
-</tr>
-<tr>
-<td>Lavagem Completa (c/ Polimento)</td>
-<td>R$ 35,00</td>
-<td>Lavagem completa de veículo com todos os serviços inclusos (Lavagem externa, polimento, aspiração)</td>
-</tr>
-<tr>
-<td>Lavagem de Motor</td>
-<td>R$ 50,00</td>
-<td>Lavagem de Motor Completa</td>
-</tr>
-<tr>
-<td>Higiênização de Bancos</td>
-<td>R$ 150,00</td>
-<td>Remoção de todas as manchas e limpeza completa dos bancos do veículo.</td>
-</tr>
-<tr>
-<td>Lavagem de Moto</td>
-<td>R$ 15,00</td>
-<td>Lavagem completa de moto com todos os serviços inclusos.</td>
-</tr>
-</table>
-</body>
-
-        
-      </div>
+      
+      
+      <div style="text-align: center; color: red;">${servicoMensagem}</div>
+	<table border="1" style="width: 100%">
+		<tr style='background-color: #E6E6E6; font-weight: bold;'>
+			
+			<td>Nome do Servi�o:</td>
+			<td>Tipo da Ve�culo:</td>
+			<td>Tipo da Servico:</td>
+			<td>Pre�o:</td>
+			<td>Ac�es:</td>
+			
+		</tr>
+		
+		<c:forEach var="servico" items="${listarServico}">
+			<tr>
+			   
+				<td>${servico.nome}</td>
+				<td>${servico.tipoServico.descricao}</td>
+				<td>${servico.tipoVeiculo.descricao}</td>
+				<td>${servico.preco}</td>
+				
+					<td>
+					<a href="removerServico?id=${servico.id}">Remover</a> &nbsp;
+					<a href="exibirAlterarServico?id=${servico.id}">Alterar</a>
+				</td>
+			</tr>
+		</c:forEach>
+		
+	</table>
+	</div>
+	
+	
+	
+	
+	
     </div>
     <div id="content_footer"></div>
     <div id="footer">
-      <p><a href="index.html">Home</a> | <a href="#">Acesso</a> | <a href="tabeladeprecos.html">Tabela De Preços</a> | <a href="cadastro1.html">Cadastro de Usuário</a> | <a href="contato.html">Contato</a></p>
+      <p><a href="index.html">Home</a> | <a href="#">Acesso</a> | <a href="tabeladeprecos.html">Tabela De Pre�os</a> | <a href="cadastro1.html">Cadastro de Usu�rio</a> | <a href="contato.html">Contato</a></p>
       <p>Copyright &copy; Clean Max | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
     </div>
   </div>

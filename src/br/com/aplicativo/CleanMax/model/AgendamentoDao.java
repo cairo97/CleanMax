@@ -60,9 +60,9 @@ public class AgendamentoDao {
 				agendamento.setData(rs.getDate("data"));
 				agendamento.setHora(rs.getInt("hora"));
 				
-				TipoServicoDao dao = new TipoServicoDao();
-				TipoServico tipoServico = dao.buscarPorId(rs.getInt("tipoServico_id"));
-			//	agendamento.setTipoServico(tipoServico);
+				ServicoDao dao = new ServicoDao();
+				Servico servico = dao.buscarPorId(rs.getInt("Servico_id"));
+		      	agendamento.setServico(servico);
 				
 				
 				agendamento.setPlaca(rs.getString("placa"));
