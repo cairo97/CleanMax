@@ -67,7 +67,7 @@
 				<center>
 					<p>Bem vindo, ${clienteLogado.nome}</p>
 
-     <img src="<c:url value="view/imagens/clean1.png"/>" alt="descrição da imagem" />
+         <img src="<c:url value="view/style/ima.jpg"/>" alt="descrição da imagem" />
 
 
 	
