@@ -86,12 +86,15 @@ public class ClienteController {
 
 	@RequestMapping("efetuarLogin")
 	public String efetuarLogin(Cliente cliente, HttpSession session, Model model) {
+		
 		ClienteDao dao = new ClienteDao();
 		Cliente clienteLogado = dao.buscarCliente(cliente);
+		
 		if (clienteLogado != null) {
 			session.setAttribute("clienteLogado", clienteLogado);
 			return "telaInicial/home";
 		}
+		
 		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
 		return "telaInicial/Index";
 	}
@@ -101,16 +104,21 @@ public class ClienteController {
 
 		return "telaInicial/home";
 	}
-	
+
 	@RequestMapping("/tabelaPreco")
 	public String tabelaPreco() {
 
 		return "servico/tabelaPreco";
 	}
-	
+
 	@RequestMapping("logout")
 	public String logout(HttpSession session) {
-	session.invalidate();
-	return "telaInicial/Index";
+		session.invalidate();
+		return "telaInicial/Index";
+	}
+	@RequestMapping("apresentacao")
+	public String apresentacao() {
+
+		return "telaInicial/TelaApresentacao";
 	}
 }

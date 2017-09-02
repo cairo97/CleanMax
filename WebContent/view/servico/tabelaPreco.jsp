@@ -32,7 +32,7 @@
       <div id="menubar">
         <ul id="menu">
          
-          <li ><a href="telaIncial">Home</a></li>
+          <li ><a href="apresentacao">Home</a></li>
           <li ><a href="telaIncial">Volta</a></li>
         </ul>
       </div>
@@ -127,7 +127,7 @@
     </div>
     <div id="content_footer"></div>
     <div id="footer">
-      <p><a href="index.html">Home</a> | <a href="#">Acesso</a> | <a href="tabeladeprecos.html">Tabela De Preços</a> | <a href="cadastro1.html">Cadastro de Usuário</a> | <a href="contato.html">Contato</a></p>
+      <p><a href="apresentacao">Home</a> | <a href="#">Acesso</a> | <a href="tabeladeprecos.html">Tabela De Preços</a> | <a href="cadastro1.html">Cadastro de Usuário</a> | <a href="contato.html">Contato</a></p>
       <p>Copyright &copy; Clean Max | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
     </div>
   </div>

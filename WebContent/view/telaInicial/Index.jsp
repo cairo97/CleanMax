@@ -27,7 +27,7 @@
 			<div id="logo">
 				<div id="logo_text">
 
-					<a href="home">Clean<span class="logo_colour">Max</span></a>
+					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
 
 
 					<h1>Lava Jato Clean Max</h1>
@@ -37,7 +37,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="telaIncial">Home</a></li>
+					<li ><a href="apresentacao">Home</a></li>
 
 
 					<li><a href="cadastro">Cadastro</a></li>
@@ -54,11 +54,13 @@
 
 
 			<div id="content">
-
+<div style="text-align: center; color: red;"> ${msg} </div>
 
 				<center>
 					<form action="efetuarLogin" method="post"
 						enctype="multipart/form-data">
+						
+						
 
 						<h3>Informe seu login e senha para acessar o sistema.</h3>
 
@@ -98,7 +100,7 @@
 				<p>
 
 
-					<a href="view/telaInicial/Index.jsp">Home</a> | <a
+					<a href="apresentacao">Home</a> | <a
 						href="examples.html">Examples</a> | <a href="page.html">A Page</a>
 					| <a href="cadastro1.html">Another Page</a> | <a
 						href="contact.html">Contact Us</a> Copyright &copy; Clean Max

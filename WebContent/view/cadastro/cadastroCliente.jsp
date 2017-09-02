@@ -47,7 +47,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="telaIncial">Home</a></li>
+					<li class="selected"><a href="apresentacao">Home</a></li>
 
 
 					<li><a href="cadastro">Cadastro</a></li>
@@ -183,7 +183,7 @@
 		<div id="footer">
 
 			<p>
-				<a href="telaIncial">Home</a> | <a
+				<a href="apresentacao">Home</a> | <a
 					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
 				| <a href="cadastroCliente.html">Cadastro</a> | <a
 					href="contact.html">Contato</a>

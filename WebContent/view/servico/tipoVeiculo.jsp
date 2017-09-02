@@ -24,7 +24,7 @@
 			<div id="logo">
 				<div id="logo_text">
 
-					<a href="home">Clean<span class="logo_colour">Max</span></a>
+					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
 
 
 					<h1>Lava Jato Clean Max</h1>
@@ -34,7 +34,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="telaIncial">Home</a></li>
+					<li class="selected"><a href="apresentacao">Home</a></li>
 
 					
 						<li><a href="cadastro">Cadastro</a>
@@ -54,7 +54,7 @@
 			
 
               <center>
-               <a href="telaIncial">Home</a>&nbsp;&nbsp; |&nbsp;
+               <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
                <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;

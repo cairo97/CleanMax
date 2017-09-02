@@ -34,7 +34,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="telaIncial">Home</a></li>
+					<li class="selected"><a href="apresentacao">Home</a></li>
 
 					
 						<li><a href="cadastro">Cadastro</a>

@@ -96,7 +96,7 @@ ol li
   margin-right: auto;}
 
 #header
-{ background: #000000 url(pattern.png) repeat;
+{ background: #000000 url(logo1.jpg) repeat;
   border-bottom: 2px solid #6fa6e7;
   height: 177px;}
   
@@ -330,3 +330,11 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+  
+#imagem1
+{ background: url(style/logo1.jgp) 
+  width: 870px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 5px solid #6fa6e7;}
+

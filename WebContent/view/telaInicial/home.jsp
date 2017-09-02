@@ -27,7 +27,7 @@
 			<div id="logo">
 				<div id="logo_text">
 
-					<a href="home">Clean<span class="logo_colour">Max</span></a>
+					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
 
 
 					<h1>Lava Jato Clean Max</h1>
@@ -39,9 +39,11 @@
 			
 				<ul id="menu">
 
-					<li ><a href="telaIncial">Home</a></li>
+					<li ><a href="apresentacao">Home</a></li>
 					<li><a href="agendar">Agendar lavagem</a></li>
 							<li><a href="#">Contato</a></li>
+							<li><a href="logout">Logout</a></li>
+							<li><p>Bem vindo, ${clienteLogado.nome}</p></li>
 				</ul>
 			</div>
 		</div>
@@ -50,14 +52,14 @@
 		<br>
 		 <center  >
                             
-                             <a href="telaIncial">Home</a>&nbsp;&nbsp; |&nbsp;
+                             <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
                          <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
                             
 						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
 					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;|&nbsp;
 						<a href="listarFuncao">Listar Funcão</a>&nbsp;&nbsp;|&nbsp;
-						<a href="servico">Listar Funcão</a>
-						<a href="logout">Logout</a>
+						<a href="servico">Listar Funcão</a>&nbsp;&nbsp;|&nbsp;
+						
 		
 		
 		<div id="site_content">
@@ -67,7 +69,7 @@
 				<center>
 					<p>Bem vindo, ${clienteLogado.nome}</p>
 
-     <img src="<c:url value="view/imagens/clean1.png"/>" alt="descrição da imagem" />
+     <img src="<c:url value="view/imagens/ima.jpg"/>" alt="descrição da imagem" />
 
 
 	
@@ -76,7 +78,7 @@
 		<div id="content_footer"></div>
 		<div id="footer">
 			<p>
-				<a href="telaIncial">Home</a> | <a
+				<a href="apresentacao">Home</a> | <a
 					href="examples.html">Examples</a> | <a href="page.html">A Page</a>
 				| <a href="cadastro1.html">Another Page</a> | <a href="contact.html">Contact
 					Us</a>
