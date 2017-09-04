@@ -2,19 +2,13 @@ package br.com.aplicativo.CleanMax.model;
 
 import java.util.Date;
 
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class Funcionario {
 
 	private Integer id;
-	@NotEmpty(message = "O nome deve ser preenchido")
-	@Size(min = 4, max = 20, message = "O tamanho deve ser entre 4 e 20")
 	private String nome;
-	@NotEmpty(message = "O senha deve ser preenchido")
-	@Size(min = 4, max = 20, message = "O tamanho deve ser entre 4 e 20")
 	private String senha;
 	private String email;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
@@ -23,7 +17,6 @@ public class Funcionario {
 	private String telefone;
 	private String cpf;
 	private boolean gestor;
-	
 	
 	public Integer getId() {
 		return id;

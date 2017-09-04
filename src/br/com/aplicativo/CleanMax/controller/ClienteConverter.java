@@ -5,7 +5,7 @@ import org.springframework.core.convert.converter.Converter;
 import br.com.aplicativo.CleanMax.model.Cliente;
 import br.com.aplicativo.CleanMax.model.ClienteDao;
 
-;
+
 
 public class ClienteConverter implements Converter<String, Cliente>{
 

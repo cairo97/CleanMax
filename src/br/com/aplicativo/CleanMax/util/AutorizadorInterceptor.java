@@ -14,11 +14,11 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("img") || uri.contains("js")
 				|| uri.endsWith("CleanMax/home") || uri.endsWith("efetuarLogin") || uri.endsWith("cadastro")
 				|| uri.endsWith("incluirCliente") || uri.endsWith("cadastro/cadastroCliente")
-<<<<<<< HEAD
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco")|| uri.endsWith("apresentacao")) {
-=======
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco")|| uri.endsWith("servico")|| uri.endsWith("listarServico")) {
->>>>>>> branch 'branch-1508' of https://github.com/cairo97/CleanMax.git
+
+				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao") 
+
+				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("servico")|| uri.endsWith("listarServico")) {
+
 			return true;
 		}
 

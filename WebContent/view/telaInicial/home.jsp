@@ -69,11 +69,10 @@
 				<center>
 					<p>Bem vindo, ${clienteLogado.nome}</p>
 
-<<<<<<< HEAD
-     <img src="<c:url value="view/imagens/ima.jpg"/>" alt="descrição da imagem" />
-=======
+
+    
          <img src="<c:url value="view/style/ima.jpg"/>" alt="descrição da imagem" />
->>>>>>> branch 'branch-1508' of https://github.com/cairo97/CleanMax.git
+
 
 
 	
