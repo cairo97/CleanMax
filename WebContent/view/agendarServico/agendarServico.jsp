@@ -157,7 +157,7 @@
 						
                             
                             <label>Data:</label> <br> <input type="date"
-								style="width: 150px;" id="inputData" name="preco" value="" />
+								style="width: 150px;" id="inputData" name="data" value="" />
                             
                             
 						<div class="form-group">
@@ -171,8 +171,8 @@
 								</select>
 							</div>
 							
-							<label>Placa:</label> <br> <input type="placa"
-								style="width: 150px;" id="inputData" name="data" value="" /><br><br>
+							<label>Placa:</label> <br> <input type="text"
+								style="width: 150px;" id="inputPlaca" name="placa" value="" /><br><br>
 							
 							<a href="view/telaInicial/Index.html" class="btn btn-danger"
 							role="button">Cancelar</a> &nbsp;

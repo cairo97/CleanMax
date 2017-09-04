@@ -1,22 +1,21 @@
 package br.com.aplicativo.CleanMax.controller;
 
-import java.net.ResponseCache;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
-import javax.xml.ws.Response;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
-import br.com.aplicativo.CleanMax.model.ClienteDao;
+
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -26,7 +25,7 @@ import br.com.aplicativo.CleanMax.model.TipoVeiculo;
 import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 
 @Controller
-public class AgendarServicoController {
+public class AgendamentoController {
 
 	@RequestMapping("agendar")
 	public String Agendar(Model model) {

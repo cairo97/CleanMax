@@ -7,7 +7,7 @@ import br.com.aplicativo.CleanMax.model.AgendamentoDao;
 
 
 
-public class AgendarServicoConverter implements Converter<String, Agendamento>{
+public class AgendamentoConverter implements Converter<String, Agendamento>{
 
 		
 		
