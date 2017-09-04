@@ -2,20 +2,35 @@ package br.com.aplicativo.CleanMax.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
-
+@Entity
+@Table(name = "funcionario")
 public class Funcionario {
 
+	@Id
 	private Integer id;
+	@Column
 	private String nome;
+	@Column
 	private String senha;
+	@Column
 	private String email;
+	@Column
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date dataNascimento;
+	@Column
 	private String celular;
+	@Column
 	private String telefone;
+	@Column
 	private String cpf;
+	@Column
 	private boolean gestor;
 	
 	public Integer getId() {

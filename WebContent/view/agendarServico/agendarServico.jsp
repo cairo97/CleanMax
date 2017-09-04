@@ -30,14 +30,14 @@
 <script>
 	$(document).ready(function() {
 
-		$("#tipoServico").change(function() {
+		$("#servico").change(function() {
 
-			var idTipoVeiculo = $('#tipoVeiculo').val();
-			var idTipoServico = $('#tipoServico').val();
+			var idServico = $('#servico').val();
+			
                
 			$.post("exibirPreco", {
-				'tipoServico' : idTipoServico,
-				'tipoVeiculo' : idTipoVeiculo
+				'servico' : idServico,
+				
 			}, function(dados) {
 				$('#inputPreco').val(dados)
 			});
@@ -127,25 +127,14 @@
 
 						<form action="exibirPreco" method="post" enctype="multipart/form-data">
 
-							<div class="form-group">
-								<label for="veiculo">Tipo da Veículo:</label> <select
-									style="width: 300px;" maxlength="100" class="form-control"
-									id="tipoVeiculo" name="tipoVeiculo">
-									<option value="">Selecione</option>
-									<c:forEach items="${listarTipoVeiculo}" var="obj">
-										<option value="${obj.id}">${obj.descricao}</option>
-									</c:forEach>
-
-								</select>
-							</div>
 
 							<div class="form-group">
-								<label for="tipoServico">Tipo da Serviço:</label> <select
+								<label for="servico">Serviço:</label> <select
 									style="width: 300px;" maxlength="100" class="form-control"
-									id="tipoServico" name="tipoServico">
+									id="servico" name="servico">
 									<option value="">Selecione</option>
-									<c:forEach items="${listarTipoServico}" var="obj">
-										<option value="${obj.id}">${obj.descricao}</option>
+									<c:forEach items="${listarServico}" var="obj">
+										<option value="${obj.id}">${obj.nome}</option>
 									</c:forEach>
 								</select>
 							</div>

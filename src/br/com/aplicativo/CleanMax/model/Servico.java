@@ -18,7 +18,6 @@ public class Servico {
 	@NotNull(message = "O tipo de serviço deve ser preenchido")
 	private TipoServico tipoServico;
 	
-	
 	private double preco;
 
 	public TipoVeiculo getTipoVeiculo() {

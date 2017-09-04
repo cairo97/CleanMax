@@ -5,38 +5,28 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
-
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
-import br.com.aplicativo.CleanMax.model.TipoServico;
-import br.com.aplicativo.CleanMax.model.TipoServicoDao;
-import br.com.aplicativo.CleanMax.model.TipoVeiculo;
-import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 
 @Controller
 public class AgendamentoController {
 
 	@RequestMapping("agendar")
 	public String Agendar(Model model) {
-         
-		TipoVeiculoDao dao = new TipoVeiculoDao();
-		List<TipoVeiculo> listarTipoVeiculo = dao.listar();
-		model.addAttribute("listarTipoVeiculo", listarTipoVeiculo);
+     
 
-		TipoServicoDao dao1 = new TipoServicoDao();
-		List<TipoServico> listarTipoServico = dao1.listar();
-		model.addAttribute("listarTipoServico", listarTipoServico);
+		ServicoDao dao1 = new ServicoDao();
+		List<Servico> listarServico = dao1.listar();
+		model.addAttribute("listarServico", listarServico);
 		
 		model.addAttribute("horarios", Horario.obterHorarios() );
 		
