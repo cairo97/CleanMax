@@ -77,37 +77,19 @@
 				</ul>
 			</div>
 		</div>
-		<div id="content_header"></div>
-		<div id="site_content">
-			<div id="sidebar_container">
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item"></div>
-					<div class="sidebar_base"></div>
-				</div>
+			<div id="content_header"></div>
+			<div id="site_content">
 				<div id="sidebar_container">
 					<div class="sidebar">
-						<div class="sidebar_top"></div>
-						<div class="sidebar_item"></div>
-						<div class="sidebar_base"></div>
-						<h3>Links</h3>
-						<ul>
-							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="veiculo">Incluir tipo de veículo</a></li>
-							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
-							<li><a href="funcao">Incluir Função</a></li>
-
-						</ul>
+					
+					
 					</div>
-
-					<div class="sidebar_base"></div>
+					<div id="sidebar_container">
+					
+	
+						
+					</div>
 				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-
-					<div class="sidebar_base"></div>
-				</div>
-			</div>
 			<div id="content">
 
 				<div style="text-align: center; color: green;">${agendar}</div>
@@ -177,7 +159,7 @@
 		</div>
 
 
-
+<br><br><br>
 
 		<div id="content_footer"></div>
 		<div id="footer">
