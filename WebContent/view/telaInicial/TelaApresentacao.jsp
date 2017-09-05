@@ -38,7 +38,9 @@
 				<ul id="menu">
 
 					<li><a href="apresentacao">Tela Inicial</a></li>
-					<li><a href="telaIncial">Escolher Serviço</a></li>
+					<li><a href="agendar">Agendar Lavagem</a></li>
+					<li><a>Bem vindo, ${clienteLogado.nome} </a></li>
+					<li><a href="logout">Sair</a></li>
 
 				</ul>
 			</div>
@@ -69,7 +71,7 @@
 						<h3>Conheça nossos Pacotes:</h3>
 						<ul>
 							<li><a href="cadastro">Faça seu Cadastro</a></li>
-							<li><a href="login">Agendar Lavagem</a></li>
+							
 							<li><a href="#">Nossa Localização</a></li>
 
 						</ul>

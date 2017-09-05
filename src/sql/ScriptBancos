@@ -7,13 +7,23 @@ CREATE TABLE cliente (
   senha varchar(20),
   email varchar(50),
   dataNascimento date,
-  celular varchar(11),
-  telefone varchar(11),
+  celular varchar(20),
+  telefone varchar(20),
   cpf varchar(14),
   PRIMARY KEY (`id`)
 )
 
-
+CREATE TABLE funcionario (
+  id int(11) NOT NULL AUTO_INCREMENT,
+ nome varchar(70),
+  senha varchar(20),
+  email varchar(50),
+  dataNascimento date,
+  celular varchar(20),
+  telefone varchar(20),
+  cpf varchar(14),
+  PRIMARY KEY (`id`)
+);
 
 FUN��O
 

@@ -92,10 +92,10 @@ public class ClienteController {
 		
 		if (clienteLogado != null) {
 			session.setAttribute("clienteLogado", clienteLogado);
-			return "telaInicial/home";
+			return "telaInicial/TelaApresentacao";
 		}
 		
-		model.addAttribute("msg", "Não foi encontrado um usuario com o login e senha informados.");
+		model.addAttribute("msg", "NÃ£o foi encontrado um usuario com o login e senha informados.");
 		return "telaInicial/Index";
 	}
 
@@ -120,5 +120,17 @@ public class ClienteController {
 	public String apresentacao() {
 
 		return "telaInicial/TelaApresentacao";
+	}
+	
+	
+	@RequestMapping("/acesso")
+	public String acesso() {
+
+		return "telaInicial/acesso";
+	}
+	@RequestMapping("/acesso2")
+	public String acesso2() {
+
+		return "telaInicial/Index2";
 	}
 }

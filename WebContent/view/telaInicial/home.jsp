@@ -54,7 +54,7 @@
 		<br>
 		 <center  >
                       
-<h1>Administrador</h1>
+
   <form>
     <div class="form-group">
     <br>

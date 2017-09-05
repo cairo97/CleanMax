@@ -42,7 +42,7 @@ class="org.springframework.context.support.ConversionServiceFactoryBean">
 <bean class="br.com.aplicativo.CleanMax.controller.TipoVeiculoConverter" />
 <bean class="br.com.aplicativo.CleanMax.controller.FuncaoConverter" />
 <bean class="br.com.aplicativo.CleanMax.controller.ClienteConverter" />
-<bean class="br.com.aplicativo.CleanMax.controller.AgendamentoConverter" />
+<bean class="br.com.aplicativo.CleanMax.controller.ServicoConverter" />
 
 </list>
 </property>

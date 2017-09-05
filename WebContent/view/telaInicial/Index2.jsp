@@ -84,15 +84,15 @@
 
 							<button type="reset" class="btn btn-default">&nbsp;
 								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-								<a href="apresentacao" class="btn btn-danger" 
-							role="button">Alterar Senha</a>
+									<a href="apresentacao" class="btn btn-danger" 
+						role="button">Alterar Senha</a>
 							&nbsp;&nbsp;
 								
+								
+								<button type="submit" class="btn btn-primary">&nbsp;
+								Entrar como Funcionário &nbsp;</button>&nbsp;&nbsp;&nbsp;
 							
-							<a href="apresentacao" class="btn btn-danger" 
-							role="button">Entrar como Funcionário</a>
-							&nbsp;&nbsp;
+							
 								
 				</center>
 				<p>

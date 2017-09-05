@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
+import br.com.aplicativo.CleanMax.model.ClienteDao;
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -37,20 +38,20 @@ public class AgendamentoController {
 	
 	
 	@RequestMapping("exibirPreco")
-	public @ResponseBody String exibirPreco(@RequestParam Integer tipoVeiculo, @RequestParam Integer tipoServico, HttpServletResponse response) {
+	public @ResponseBody String exibirPreco(@RequestParam Integer id, HttpServletResponse response) {
 
 		ServicoDao dao = new ServicoDao();
-		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo, tipoServico);
+		Servico ServicoCompleto = dao.buscarPorServico(id);
         
 		response.setStatus(200);
 		return ServicoCompleto.getPreco()+"";
 	}
 	
 	@RequestMapping("exibirCodigo")
-	public @ResponseBody String exibirCodigo(@RequestParam Integer tipoVeiculo, @RequestParam Integer tipoServico, HttpServletResponse response) {
+	public @ResponseBody String exibirCodigo(@RequestParam Integer id, HttpServletResponse response) {
 
 		ServicoDao dao = new ServicoDao();
-		Servico ServicoCompleto = dao.buscarPorServico(tipoVeiculo, tipoServico);
+		Servico ServicoCompleto = dao.buscarPorServico(id);
         
 		response.setStatus(200);
 		return ServicoCompleto.getId()+"";
@@ -61,10 +62,20 @@ public class AgendamentoController {
 	public String incluirAgendamento(Agendamento agendamento, Model model) {
 		
 		AgendamentoDao dao = new AgendamentoDao();
+	    agendamento.setStatus("Pendente");
 		dao.salvar(agendamento);
 		model.addAttribute("agendar", "Agendamento cadastrado com sucesso");
 
-		return "forward:agendarServico";
+		return "agendarServico/agendarServico";
+	}
+	
+	
+
+	@RequestMapping("listarAgendamento")
+	public String listarAgendamento(Model model) {
+		AgendamentoDao dao = new AgendamentoDao();
+		model.addAttribute("listarAgendamento", dao.listar());
+		return "agendarServico/listarAgendamento";
 	}
 
 	

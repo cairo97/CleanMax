@@ -134,14 +134,14 @@ public class ServicoDao {
 
 	}
 
-	public Servico buscarPorServico(int tipoVeiculo, int tipoServico) {
+	public Servico buscarPorServico(int id) {
 
 		try {
 
 			PreparedStatement stmt = this.connection
-					.prepareStatement("SELECT * FROM servico WHERE tipoVeiculo_id = ? and tipoServico_id = ?");
-			stmt.setInt(1, tipoVeiculo);
-			stmt.setInt(2, tipoServico);
+					.prepareStatement("SELECT * FROM servico WHERE id = ?");
+			stmt.setInt(1, id);
+			
 
 			ResultSet rs = stmt.executeQuery();
 

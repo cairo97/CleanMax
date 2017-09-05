@@ -18,36 +18,38 @@
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
 <link rel="stylesheet" type="text/css"
 	href="view/bootstrap/css/bootstrap.min.css" />
-<script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
+
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	jQuery(function($) {
+		$("#inputData").mask("99/99/9999");
+		
+	});
+</script>
 
 <script>
 	$(document).ready(function() {
-
 		$("#servico").change(function() {
-
 			var idServico = $('#servico').val();
-			
-               
 			$.post("exibirPreco", {
-				'servico' : idServico,
-				
+				'id' : idServico,
 			}, function(dados) {
 				$('#inputPreco').val(dados)
 			});
 		});
-
 		$("#calendario").datepicker();
-		$("#inputHora").mask("99.99");
-
+		$("#inputData").mask("99/99/9999");
 	});
 </script>
+
+
 
 </head>
 
@@ -58,8 +60,7 @@
 				<div id="logo_text">
 
 
-					<a href="telaIncial">Clean<span
-						class="logo_colour">Max</span></a>
+					<a href="telaIncial">Clean<span class="logo_colour">Max</span></a>
 
 
 					<h1>Lava Jato Clean Max</h1>
@@ -85,10 +86,10 @@
 					<div class="sidebar_base"></div>
 				</div>
 				<div id="sidebar_container">
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item"></div>
-					<div class="sidebar_base"></div>
+					<div class="sidebar">
+						<div class="sidebar_top"></div>
+						<div class="sidebar_item"></div>
+						<div class="sidebar_base"></div>
 						<h3>Links</h3>
 						<ul>
 							<li><a href="servico">Incluir Serviço</a></li>
@@ -98,21 +99,21 @@
 
 						</ul>
 					</div>
-					
+
 					<div class="sidebar_base"></div>
 				</div>
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					
+
 					<div class="sidebar_base"></div>
 				</div>
 			</div>
 			<div id="content">
 
-				<div style="text-align: center; color: green;">${cadastrar}</div>
+				<div style="text-align: center; color: green;">${agendar}</div>
 
-
-           
+            
+<a href="listarAgendamento">Listar Agendamento</a>
 
 				<h1>Agendar Lavagem</h1>
 
@@ -125,53 +126,52 @@
 
 
 
-						<form action="exibirPreco" method="post" enctype="multipart/form-data">
 
 
-							<div class="form-group">
-								<label for="servico">Serviço:</label> <select
-									style="width: 300px;" maxlength="100" class="form-control"
-									id="servico" name="servico">
-									<option value="">Selecione</option>
-									<c:forEach items="${listarServico}" var="obj">
-										<option value="${obj.id}">${obj.nome}</option>
-									</c:forEach>
-								</select>
-							</div>
-
-
-							<label>Preço:</label> <br> <input type="text"
-								style="width: 100px;" id="inputPreco" name="preco" value="" /><br>
-
-						
-                            
-                            <label>Data:</label> <br> <input type="date"
-								style="width: 150px;" id="inputData" name="data" value="" />
-                            
-                            
 						<div class="form-group">
-								<label for="horario">Horario de Agendamento</label> <select
-									style="width: 300px;" maxlength="100" class="form-control"
-									id="horario" name="horario">
-									<option value="">Selecione</option>
-									<c:forEach items="${horarios}" var="obj">
-										<option value="${obj.codigo}">${obj.labelHorario}</option>
-									</c:forEach>
-								</select>
-							</div>
-							
-							<label>Placa:</label> <br> <input type="text"
-								style="width: 150px;" id="inputPlaca" name="placa" value="" /><br><br>
-							
-							<a href="view/telaInicial/Index.html" class="btn btn-danger"
-							role="button">Cancelar</a> &nbsp;
+							<label for="servico">Serviço:</label> <select
+								style="width: 300px;" maxlength="100" class="form-control"
+								id="servico" name="servico">
+								<option value="">Selecione</option>
+								<c:forEach items="${listarServico}" var="obj">
+									<option value="${obj.id}">${obj.nome}</option>
+								</c:forEach>
+							</select>
+						</div>
+
+
+						<label>Preço:</label> <br> <input type="text"
+							style="width: 100px;" id="inputPreco" name="preco" value="" /><br>
+
+
+
+						<label>Data:</label> <br> <input type="text"
+							style="width: 150px;" id="inputData" name="data" value="" />
+
+
+						<div class="form-group">
+							<label for="hora">Horario de Agendamento</label> <select
+								style="width: 300px;" maxlength="100" class="form-control"
+								id="hora" name="hora">
+								
+								<option value="">Selecione</option>
+								<c:forEach items="${horarios}" var="obj">
+									<option value="${obj.codigo}">${obj.labelHorario}</option>
+								</c:forEach>
+							</select>
+						</div>
+
+						<label>Placa:</label> <br> <input type="text"
+							style="width: 150px;" id="inputPlaca" name="placa" value="" /><br>
+						<br> <a href="view/telaInicial/Index.html"
+							class="btn btn-danger" role="button">Cancelar</a> &nbsp;
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
 						&nbsp;
 						<button type="submit" class="btn btn-primary">&nbsp;
 							Agendar Serviço &nbsp;</button>
-							</form>
 					</form>
+
 				</div>
 			</div>
 		</div>
@@ -183,10 +183,9 @@
 		<div id="footer">
 
 			<p>
-				<a href="apresentacao">Home</a> | <a
-					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
-				| <a href="cadastroCliente.html">Cadastro</a> | <a
-					href="contact.html">Contato</a>
+				<a href="apresentacao">Home</a> | <a href="examples.html">Exemplos</a>
+				| <a href="page.html">Pagina</a> | <a href="cadastroCliente.html">Cadastro</a>
+				| <a href="contact.html">Contato</a>
 			</p>
 			<p>
 				Copyright &copy; Clean Max | <a

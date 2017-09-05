@@ -25,8 +25,8 @@
 	jQuery(function($) {
 		$("#inputDataNascimento").mask("99/99/9999");
 		$("#inputCpf").mask("999.999.999-99");
-		$("#input#").mask("(99)9999-9999");
-		$("#input#").mask("(99) 9999-9999");
+		$("#inputCelular").mask("(99)9999-9999");
+		$("#inputTelefone").mask("(99) 9999-9999");
 	});
 </script>
 </head>

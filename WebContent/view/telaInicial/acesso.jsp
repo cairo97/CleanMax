@@ -42,8 +42,7 @@
 
 					<li><a href="cadastro">Cadastro</a></li>
 
-					<li><a href="acesso">Acesso</a></li>
-					
+					<li><a href="agendar">Agendar Serviço</a></li>
 
 					<li><a href="tabelaPreco">Tabela de Preço</a></li>
 					<li><a href="#">Contato</a></li>
@@ -54,67 +53,15 @@
 		<div id="site_content">
 
 
-			<div id="content">
-				<div style="text-align: center; color: red;">${msg}</div>
 
-				<center>
-					<form action="efetuarLogin" method="post"
-						enctype="multipart/form-data">
+    <a href="home">Acesso Cliente</a>&nbsp;&nbsp; &nbsp; 
+     <a href="acesso2">Acesso Funcionário</a>&nbsp;&nbsp; &nbsp; 
 
 
-
-						<h3>Informe seu login e senha para acessar o sistema.</h3>
-
-
-						<h1>Login</h1>
-
-						<div class="form-group">
-							<label for="inputEmail">E-mail:</label> <input type="text"
-								id="inputEmail" class="form-control" name="email"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
+						
 
 
-						<div class="form-group">
-							<label for="inputSenha">Senha:</label> <input type="password"
-								id="inputSenha" class="form-control" name="senha"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-
-						<p>
-
-							<button type="reset" class="btn btn-default">&nbsp;
-								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-								<a href="apresentacao" class="btn btn-danger" 
-							role="button">Alterar Senha</a>
-							&nbsp;&nbsp;
-								
-								<button type="submit" class="btn btn-primary">&nbsp;
-								Entrar como Cliente &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-							
-								
-								
-							
-							
-				</center>
-				<p>
-				<p>
-			</div>
-		</div>
-
-		<div id="content_footer"></div>
-		<div id="footer">
-			<p>
-
-
-				<a href="apresentacao">Home</a> | <a href="examples.html">Examples</a>
-				| <a href="page.html">A Page</a> | <a href="cadastro1.html">Another
-					Page</a> | <a href="contact.html">Contact Us</a> Copyright &copy; Clean
-				Max
-		</div>
-	</div>
+				
 </body>
 </html>
 

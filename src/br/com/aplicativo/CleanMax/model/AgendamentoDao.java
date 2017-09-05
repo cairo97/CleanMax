@@ -3,6 +3,8 @@ package br.com.aplicativo.CleanMax.model;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.mysql.jdbc.Connection;
 
@@ -82,4 +84,50 @@ public class AgendamentoDao {
 		}
 
 	}
-}
+	
+	public List<Agendamento> listar() {
+
+		try {
+			List<Agendamento> listarAgendamento = new ArrayList<Agendamento>();
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM agendamento ORDER BY data");
+
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+
+				Agendamento agendamento = new Agendamento();
+				
+				agendamento.setId(rs.getInt("id"));
+				
+				
+				
+				agendamento.setData(rs.getDate("data"));
+				agendamento.setHora(rs.getInt("hora"));
+				ServicoDao dao = new ServicoDao();
+				Servico Servico = dao.buscarPorId(rs.getInt("servico_id"));
+				agendamento.setServico(Servico);
+		
+				agendamento.setPlaca(rs.getString("placa"));
+				agendamento.setStatus(rs.getString("status"));
+			
+				
+				
+				listarAgendamento.add(agendamento);
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return listarAgendamento;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	
+	
+	}
+
+

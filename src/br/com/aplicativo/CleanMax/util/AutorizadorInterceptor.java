@@ -16,7 +16,7 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 				|| uri.endsWith("cadastroFuncionario") || uri.endsWith("incluirFuncionario") || uri.endsWith("cadastro")
 				|| uri.endsWith("incluirCliente") || uri.endsWith("cadastro/cadastroCliente")
 				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao")
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("servico")
+				|| uri.endsWith("acesso") || uri.endsWith("acesso2") || uri.endsWith("servico")
 				|| uri.endsWith("listarServico")) {
 
 			return true;

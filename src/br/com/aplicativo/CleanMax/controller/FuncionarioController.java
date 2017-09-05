@@ -96,8 +96,8 @@ public class FuncionarioController {
 				return "telaInicial/home";
 			}
 			
-			model.addAttribute("msg", "Não foi encontrado um usuario com o login e senha informados.");
-			return "telaInicial/Index";
+			model.addAttribute("msg", "NÃ£o foi encontrado um usuario com o login e senha informados.");
+			return "telaInicial/Index2";
 		}
 
 		

@@ -5,8 +5,11 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+
 <meta name="description" content="website description" />
 <meta name="keywords" content="website keywords, website keywords" />
 <meta http-equiv="content-type"
@@ -19,69 +22,32 @@
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
 
-  
-
 </head>
-
 <body>
 
-		<div id="header">
-			<div id="logo">
-				<div id="logo_text">
 
-					<a>Clean<span class="logo_colour">Max</span></a>
-
-
-					<h1>Lava Jato Clean Max</h1>
-
-				</div>
-			</div>
-			<div id="menubar">
-			
-			
-				<ul id="menu">
-
-					<li ><a href="apresentacao">Tela Inicial</a></li>
-							<li><a href="#">Contato</a></li>
-							<li><a>Bem vindo, ${clienteLogado.nome} ${funcionarioLogado.nome}</a></li>
-							<li><a href="logout">Sair</a></li>
-							
-				</ul>
-			</div>
-		</div>
-		<div id="content_header"></div>
-		<div class="container">
-		<br>
-		 <center  >
-
-
-<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; 
-
-
-<div style="text-align: center; color: red;"> ${remover} </div>
 
 <table border='1' style='width: 100%;'>
 		<tr style='background-color: #E6E6E6; font-weight: bold;'>
-			<td>ID</td>
-			<td>Nome</td>
-			<td>Senha</td>
-			<td>Email</td>
-			<td>Data de Nascimento</td>
-			<td>Celular</td>
-			<td>Telefone</td>
-			<td>CPF</td>
-			<td>Ações</td>
+			<td>Serviço</td>
+			<td>Preço</td>
+			<td>Data</td>
+			<td>Horário</td>
+			<td>Placa</td>
+			<td>Status</td>
+			<td>Acões</td>
+			
 
-			<c:forEach var="cliente" items="${listarCliente}">
+			<c:forEach var="agendar" items="${listarAgendamento}">
 				<tr>
-					<td>${cliente.id}</td>
-					<td>${cliente.nome}</td>
-					<td>${cliente.senha}</td>
-					<td>${cliente.email}</td>
-					<td><fmt:formatDate value="${cliente.dataNascimento}" pattern="dd/MM/yyyy" /></td>
-					<td>${cliente.celular}</td>
-					<td>${cliente.telefone}</td>
-					<td>${cliente.cpf}</td>
+		
+				
+					<td>${agendar.servico.nome}</td>
+					<td>${agendar.servico.preco}</td>
+						<td><fmt:formatDate value="${agendar.data}" pattern="dd/MM/yyyy" /></td>
+					<td>${agendar.hora}</td>
+					<td>${agendar.placa}</td>
+					<td>${agendar.status}</td>
 
 					<td>&nbsp;<a href="removerCliente?id=${cliente.id}">Remover</a>
 						&nbsp;<a href="exibirAlterarCliente?id=${cliente.id}">Alterar</a>
