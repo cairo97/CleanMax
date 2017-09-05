@@ -34,10 +34,11 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li> <a href="apresentacao">Home</a></li>
-					<li><a href="cadastro">Cadastro</a></li>
-					<li><a href="agendar">Agendar Serviço</a></li>
+					<li><a href="apresentacao">Pagina Inicial</a></li>
 					<li><a href="#">Contato</a></li>
+					<li><a href="telaIncial">Voltar</a></li>
+					<li><a>Bem vindo, ${clienteLogado.nome}</a></li>
+					<li><a href="logout">Sair</a></li>
 				</ul>
 			</div>
 		</div>
@@ -48,9 +49,7 @@
 
 
 	<center>
-		<a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp; <a href="veiculo">Incluir
-			tipo Veículo</a>&nbsp;&nbsp; |&nbsp; <a href="tipoServico">Incluir
-			tipo Serviço</a>&nbsp;&nbsp; |&nbsp; <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;
+		<a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp; <a href="telaIncial">Voltar</a>&nbsp;&nbsp;
 		|&nbsp; <a href="listarTipoServico">Listar tipo servico</a>
 
 		<div style="text-align: center; color: red;">${servico}</div>

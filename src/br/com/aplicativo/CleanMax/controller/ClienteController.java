@@ -95,7 +95,7 @@ public class ClienteController {
 			return "telaInicial/home";
 		}
 		
-		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+		model.addAttribute("msg", "N�o foi encontrado um usuario com o login e senha informados.");
 		return "telaInicial/Index";
 	}
 

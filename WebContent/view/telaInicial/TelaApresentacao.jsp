@@ -37,8 +37,8 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
-					<li><a href="telaIncial">Volta</a></li>
+					<li><a href="apresentacao">Tela Inicial</a></li>
+					<li><a href="telaIncial">Escolher Serviço</a></li>
 
 				</ul>
 			</div>
@@ -86,24 +86,19 @@
 
 
 
-
+ 
 
 
 				<p>
 					<input name="search" type="image"
 						style="border: 0; margin: 0 0 -9px 5px;"
-						src="view/style/logo1.jpg" alt="Search" title="Search" />
+						src="view/style/logo1.jpg"width="500" height="300" alt="Search" title="Search" />
 				</p>
 
 
 
 
-				<p>
-					<input class="search" type="text" name="search_field"
-						value="Insira as palavras..." /> <input name="search"
-						type="image" style="border: 0; margin: 0 0 -9px 5px;"
-						src="view/style/search.png" alt="Search" title="Search" />
-				</p>
+				
 
 
 

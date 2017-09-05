@@ -19,6 +19,8 @@
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
 
 
+  
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
 			<div id="logo">
 				<div id="logo_text">
 
-					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
+					<a>Clean<span class="logo_colour">Max</span></a>
 
 
 					<h1>Lava Jato Clean Max</h1>
@@ -39,44 +41,68 @@
 			
 				<ul id="menu">
 
-					<li ><a href="apresentacao">Home</a></li>
-					<li><a href="agendar">Agendar lavagem</a></li>
+					<li ><a href="apresentacao">Tela Inicial</a></li>
 							<li><a href="#">Contato</a></li>
-							<li><a href="logout">Logout</a></li>
-							<li><p>Bem vindo, ${clienteLogado.nome}</p></li>
+							<li><a>Bem vindo, ${clienteLogado.nome} ${funcionarioLogado.nome}</a></li>
+							<li><a href="logout">Sair</a></li>
+							
 				</ul>
 			</div>
 		</div>
 		<div id="content_header"></div>
-		
+		<div class="container">
 		<br>
 		 <center  >
-                            
-                             <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
-                         <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
-                            
-						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
-					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;|&nbsp;
-						<a href="listarFuncao">Listar Funcão</a>&nbsp;&nbsp;|&nbsp;
-						<a href="servico">Listar Funcão</a>&nbsp;&nbsp;|&nbsp;
-						
-		
-		
-		<div id="site_content">
+                      
+<h1>Administrador</h1>
+  <form>
+    <div class="form-group">
+    <br>
+      <label for="sel1">Escolha Seu Serviço:</label>
+      <select class="form-control" id="sel1"  style="width: 200px" onchange="location = this.value;">     
+ 
+        <optgroup label="Alterações no Cliente">
+         <option value= # selected="selected">Nenhum</option>
+  <option  value= cadastro>Incluir Cliente  </option>
+  <option  value= listarCliente>Listar Todos Clientes  </option>
+ 
+  </optgroup>
+      
+        <optgroup label="Função de Funcionário">
+    <option  value= funcao >Cadastrar Funcão </a> </option>
+   <option  value= listarFuncao >Listar Todas Funções </a> </option>
+  </optgroup>
+  
+      <optgroup label="Alterações no Funcionário">
+     <option  value= cadastroFuncionario >Cadastrar Funcionario </a> </option>
+   <option  value= listarFuncionario >Listar Todos Funcionario </a> </option>
+  </optgroup>
+  
+      <optgroup label="Alterações no Serviço">
+    <option  value= servico >Cadastrar um Serviço </a> </option>
+   <option  value= listarServico >Listar Todos Serviços </a> </option>
+  </optgroup>
+  
+    <optgroup label="Alterações no Tipo de Serviço">
+    <option  value= tipoServico >Cadastrar Tipo de Serviço </a> </option>
+   <option  value= listarTipoServico >Listar Todos Tipos de Serviços </a> </option>
+  </optgroup>
+  
+   <optgroup label="Alterações no Tipo de Veiculo">
+    <option  value= veiculo >Cadastrar Tipo de Veiculo </a> </option>
+   <option  value= listarTipoVeiculo >Listar Todos Tipos de Veiculo </a> </option>
+  </optgroup>
+  
+        <optgroup label="Alterações na Lavagem">
+ <option  value= agendar >Agendar Lavagem </option>
+  <option value= # >Listar Lavagem</option>
+  </optgroup>
+ 
+ </select>
+					
 
-	
-
-				<center>
-					<p>Bem vindo, ${clienteLogado.nome}</p>
-
-
-    
-         <img src="<c:url value="view/style/ima.jpg"/>" alt="descrição da imagem" />
-
-
-
-	
-		
+	<br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br>
 		</form>
 		<div id="content_footer"></div>
 		<div id="footer">
@@ -95,5 +121,3 @@
 </body>
 </html>
 
-</body>
-</html>

@@ -47,14 +47,12 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="apresentacao">Home</a></li>
-
-
-					<li><a href="cadastro">Cadastro</a></li>
-
-					<li><a href="agendar">Agendar Serviço</a></li>
-
+					<li><a href="apresentacao">Pagina Inicial</a></li>
 					<li><a href="#">Contato</a></li>
+					<li><a href="telaIncial">Voltar</a></li>
+					
+					<li><a href="logout">Sair</a></li>
+							
 				</ul>
 			</div>
 		</div>
@@ -71,11 +69,13 @@
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
 
-						<h3>Últimas Notícias</h3>
-						<h4>Novo WebSite</h4>
-						<h5>27 de Junho de 2017</h5>
+						
+						<h3>Lave Seu Carro</h3>
+						<h4>Clean Max</h4>
+						<h5>Qualidade</h5>
 						<p>
-							Testando WebSite<br /> <a href="#">Leia Mais</a>
+							Conheça Nossos Produtos<br />
+							<a href="#">Leia Mais</a>
 						</p>
 					</div>
 					<div class="sidebar_base"></div>
@@ -83,12 +83,11 @@
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
 					<div class="sidebar_item">
-						<h3>Links</h3>
+						<h3>Conheça nossos Pacotes:</h3>
 						<ul>
-							<li><a href="servico">Incluir Serviço</a></li>
-							<li><a href="veiculo">Incluir tipo de veículo</a></li>
-							<li><a href="tipoServico">Incluir tipo de serviço</a></li>
-							<li><a href="funcao">Incluir Função</a></li>
+						
+							<li><a href="login">Agendar Lavagem</a></li>
+							<li><a href="#">Nossa Localização</a></li>
 
 						</ul>
 					</div>
@@ -96,20 +95,11 @@
 				</div>
 				<div class="sidebar">
 					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						<h3>Pesquisar</h3>
-						<form method="post" action="#" id="search_form">
-							<p>
-								<input class="search" type="text" name="search_field"
-									value="Insira as palavras..." /> <input name="search"
-									type="image" style="border: 0; margin: 0 0 -9px 5px;"
-									src="view/style/search.png" alt="Search" title="Search" />
-							</p>
-						</form>
-					</div>
+					<div class="sidebar_item"></div>
 					<div class="sidebar_base"></div>
 				</div>
 			</div>
+						
 			<div id="content">
 
 				<div style="text-align: center; color: green;">${cadastrar}</div>

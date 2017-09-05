@@ -37,7 +37,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li ><a href="apresentacao">Home</a></li>
+					<li><a href="apresentacao">Home</a></li>
 
 
 					<li><a href="cadastro">Cadastro</a></li>
@@ -54,26 +54,26 @@
 
 
 			<div id="content">
-<div style="text-align: center; color: red;"> ${msg} </div>
+				<div style="text-align: center; color: red;">${msg}</div>
 
 				<center>
 					<form action="efetuarLogin" method="post"
 						enctype="multipart/form-data">
-						
-						
+
+
 
 						<h3>Informe seu login e senha para acessar o sistema.</h3>
 
 
 						<h1>Login</h1>
-						<p>
+
 						<div class="form-group">
 							<label for="inputEmail">E-mail:</label> <input type="text"
 								id="inputEmail" class="form-control" name="email"
 								style="width: 500px;" maxlength="100" required="required" />
 						</div>
-						<p>
-						
+
+
 						<div class="form-group">
 							<label for="inputSenha">Senha:</label> <input type="password"
 								id="inputSenha" class="form-control" name="senha"
@@ -81,31 +81,38 @@
 						</div>
 
 						<p>
-						
-						<p>
-						
 
-
-							<button type="submit" class="btn btn-primary">&nbsp;
-								Entrar &nbsp;</button>
-								</center>
-								<p>
-						
-						<p>
+							<button type="reset" class="btn btn-default">&nbsp;
+								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
+								
+								<a href="apresentacao" class="btn btn-danger" 
+							role="button">Alterar Senha</a>
+							&nbsp;&nbsp;
+								
+								<button type="submit" class="btn btn-primary">&nbsp;
+								Entrar como Cliente &nbsp;</button>&nbsp;&nbsp;&nbsp;
+								
+							<a href="apresentacao">				
+			              <button type="submit" class="btn btn-danger" role="button">&nbsp;
+							 Entrar como Funcionário</a>
+							&nbsp;&nbsp;
+							
+				</center>
+				<p>
+				<p>
 			</div>
 		</div>
-		
-			<div id="content_footer"></div>
-			<div id="footer">
-				<p>
+
+		<div id="content_footer"></div>
+		<div id="footer">
+			<p>
 
 
-					<a href="apresentacao">Home</a> | <a
-						href="examples.html">Examples</a> | <a href="page.html">A Page</a>
-					| <a href="cadastro1.html">Another Page</a> | <a
-						href="contact.html">Contact Us</a> Copyright &copy; Clean Max
-		
-	</div>
+				<a href="apresentacao">Home</a> | <a href="examples.html">Examples</a>
+				| <a href="page.html">A Page</a> | <a href="cadastro1.html">Another
+					Page</a> | <a href="contact.html">Contact Us</a> Copyright &copy; Clean
+				Max
+		</div>
 	</div>
 </body>
 </html>

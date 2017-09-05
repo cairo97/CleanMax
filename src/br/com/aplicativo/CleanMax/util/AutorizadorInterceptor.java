@@ -12,12 +12,12 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 
 		String uri = request.getRequestURI();
 		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("img") || uri.contains("js")
-				|| uri.endsWith("CleanMax/home") || uri.endsWith("efetuarLogin") || uri.endsWith("cadastro")
+				|| uri.endsWith("CleanMax/home") || uri.endsWith("efetuarLogin") || uri.endsWith("efetuarLogin2")
+				|| uri.endsWith("cadastroFuncionario") || uri.endsWith("incluirFuncionario") || uri.endsWith("cadastro")
 				|| uri.endsWith("incluirCliente") || uri.endsWith("cadastro/cadastroCliente")
-
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao") 
-
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("servico")|| uri.endsWith("listarServico")) {
+				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao")
+				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("servico")
+				|| uri.endsWith("listarServico")) {
 
 			return true;
 		}

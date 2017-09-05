@@ -45,12 +45,10 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
-					
-					
-					<li class="selected"><a href="cadastro">Cadastro</a></li>
-					<li><a href="#">Contato</a></li>
-				</ul>
+						<li ><a href="apresentacao">Tela Inicial</a></li>
+							<li><a href="#">Contato</a></li>
+							<li><a>Bem vindo, ${clienteLogado.nome}</a></li>
+							<li><a href="logout">Sair</a></li>				</ul>
 			</div>
 		</div>
 		<div id="content_header"></div>
@@ -60,10 +58,7 @@
                       <center  >
                             
                              <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
-                         <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
-                            
-						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
-					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp;|&nbsp;
+                        <a href="telaIncial">Voltar</a>&nbsp; |&nbsp;
 						<a href="listarFuncao">Listar Funcão</a>
 						
 	<div style="text-align: center; color: red;">${funcao}</div>

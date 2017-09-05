@@ -19,7 +19,7 @@ import br.com.aplicativo.CleanMax.model.TipoVeiculoDao;
 @Controller
 public class ServicoController {
 
-	@RequestMapping("/servico")
+	@RequestMapping("servico")
 	public String servico(Model model) {
 
 		TipoVeiculoDao dao = new TipoVeiculoDao();

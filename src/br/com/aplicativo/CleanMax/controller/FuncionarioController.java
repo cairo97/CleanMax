@@ -1,5 +1,6 @@
 package br.com.aplicativo.CleanMax.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -24,11 +25,11 @@ public class FuncionarioController {
 		public String incluirFuncionario(@Valid Funcionario funcionario, BindingResult result, Model model) {
 
 			if (result.hasErrors()) {
-				return "forward:cadastro";
+				return "forward:cadastroFuncionario";
 			}
 
 			FuncionarioDao dao = new FuncionarioDao();
-			dao.salvar(funcionario);
+			dao.salvar (funcionario);
 			model.addAttribute("cadastrar", "Cadastro realizado com sucesso");
 
 			return "cadastro/cadastroFuncionario";
@@ -72,55 +73,32 @@ public class FuncionarioController {
 
 		}
 
-	/*	@RequestMapping("/login")
-		public String LoginCliente() {
+		@RequestMapping("/loginFuncionario")
+		public String loginFuncionario() {
 
 			return "login/login";
 		}
 
-		@RequestMapping("/home")
+		@RequestMapping("/homeFuncionario")
 		public String TelaInicial() {
 
 			return "telaInicial/Index";
 		}
 
-		@RequestMapping("efetuarLogin")
-		public String efetuarLogin(Cliente cliente, HttpSession session, Model model) {
+		@RequestMapping("efetuarLogin2")
+		public String efetuarLogin2(Funcionario funcionario, HttpSession session, Model model) {
 			
-			ClienteDao dao = new ClienteDao();
-			Cliente clienteLogado = dao.buscarCliente(cliente);
+			FuncionarioDao dao = new FuncionarioDao();
+			Funcionario funcionarioLogado = dao.buscarFuncionario(funcionario);
 			
-			if (clienteLogado != null) {
-				session.setAttribute("clienteLogado", clienteLogado);
+			if (funcionarioLogado != null) {
+				session.setAttribute("funcionarioLogado", funcionarioLogado);
 				return "telaInicial/home";
 			}
 			
-			model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+			model.addAttribute("msg", "N�o foi encontrado um usuario com o login e senha informados.");
 			return "telaInicial/Index";
 		}
 
-		@RequestMapping("/telaIncial")
-		public String Tela() {
-
-			return "telaInicial/home";
-		}
-
-		@RequestMapping("/tabelaPreco")
-		public String tabelaPreco() {
-
-			return "servico/tabelaPreco";
-		}
-
-		@RequestMapping("logout")
-		public String logout(HttpSession session) {
-			session.invalidate();
-			return "telaInicial/Index";
-		}
-		@RequestMapping("apresentacao")
-		public String apresentacao() {
-
-			return "telaInicial/TelaApresentacao";
-		}
 		
-		*/
 	}
