@@ -80,25 +80,20 @@
 								id="inputSenha" class="form-control" name="senha"
 								style="width: 500px;" maxlength="100" required="required" />
 						</div>
-
-						<p>
-
-							<button type="reset" class="btn btn-default">&nbsp;
-								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-								<a href="apresentacao" class="btn btn-danger" 
-							role="button">Alterar Senha</a>
-							&nbsp;&nbsp;
-								
-								<button type="submit" class="btn btn-primary">&nbsp;
+                                                     <a href="#" id="posicao2">Alterar Senha</a>    
+						<br><br>
+                             </center>
+															
+								<button type="submit" class="btn btn-primary" id="posicao1">&nbsp;
 								Entrar como Cliente &nbsp;</button>&nbsp;&nbsp;&nbsp;
 								
-							
+							<button type="reset" class="btn btn-default"  id="posicao" >&nbsp;
+								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
 								
 								
 							
 							
-				</center>
+				
 				<p>
 				<p>
 			</div>

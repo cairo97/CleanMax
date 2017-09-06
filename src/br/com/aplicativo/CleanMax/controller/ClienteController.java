@@ -22,10 +22,7 @@ public class ClienteController {
 
 	@RequestMapping("incluirCliente")
 	public String incluirCliente(@Valid Cliente cliente, BindingResult result, Model model) {
-
-		if (result.hasErrors()) {
-			return "forward:cadastro";
-		}
+	
 
 		ClienteDao dao = new ClienteDao();
 		dao.salvar(cliente);

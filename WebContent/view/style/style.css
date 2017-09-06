@@ -1,6 +1,27 @@
 html
 { height: 100%;}
 
+#posicao{
+    float:right;
+    display:block;
+    margin-right:4px;
+    clear:left;
+}
+
+#posicao1{
+    float:right;
+    display:block;
+    margin-right:60px;
+    clear:left;
+}
+
+#posicao2{
+    float:right;
+    display:block;
+    margin-right:60px;
+    clear:left;
+}
+
 *
 { margin: 0;
   padding: 0;}

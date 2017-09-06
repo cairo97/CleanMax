@@ -20,7 +20,14 @@
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
+ <script>
+                function validarSenha()
+                    NovaSenha = document.FormSenha.senha.value;
+                    NovaSenha = document.FormSenha.senha2.value;
 
+                    if (senha != senha2) 
+                        alert("SENHAS DIFERENTES!\\nFAVOR DIGITAR SENHAS IGUAIS");
+            </script>
 <script type="text/javascript">
 	jQuery(function($) {
 		$("#inputDataNascimento").mask("99/99/9999");
@@ -113,10 +120,9 @@
 
 
 				<div class="form_settings">
-					<form action="incluirCliente" method="post">
+					<form action="incluirCliente" method="post" id="FormSenha" name="FormSenha">
 
-						<form:errors path="cliente.nome" cssStyle="color:red" />
-						<form:errors path="cliente.senha" cssStyle="color:red" />
+						
 
 						<p>
 							<span>Nome</span><input class="contact" type="text" name="nome"
@@ -128,7 +134,7 @@
 						</p>
 						<p>
 							<span>Confirmar Senha</span><input class="contact"
-								type="password" name="" value="" required="required" />
+								type="password" name="senha2" value="" required="required" />
 						</p>
 						<p>
 							<span>Email</span><input class="contact" type="text" name="email"
@@ -159,7 +165,7 @@
 						<button type="reset" class="btn btn-default">&nbsp;
 							Limpar &nbsp;</button>
 						&nbsp;
-						<button type="submit" class="btn btn-primary">&nbsp;
+						<button type="submit" class="btn btn-primary" onClick="validarSenha()">&nbsp;
 							Salvar &nbsp;</button>
 					</form>
 				</div>
