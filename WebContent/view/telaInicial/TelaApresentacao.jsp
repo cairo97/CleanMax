@@ -39,6 +39,8 @@
 
 					<li><a href="apresentacao">Tela Inicial</a></li>
 					<li><a href="agendar">Agendar Lavagem</a></li>
+					
+
 					<li><a>Bem vindo, ${clienteLogado.nome} </a></li>
 					<li><a href="logout">Sair</a></li>
 
@@ -59,8 +61,7 @@
 						<h4>Clean Max</h4>
 						<h5>Qualidade</h5>
 						<p>
-							Conheça Nossos Produtos<br />
-							<a href="#">Leia Mais</a>
+							Conheça Nossos Produtos<br /> <a href="#">Leia Mais</a>
 						</p>
 					</div>
 					<div class="sidebar_base"></div>
@@ -71,7 +72,7 @@
 						<h3>Conheça nossos Pacotes:</h3>
 						<ul>
 							<li><a href="cadastro">Faça seu Cadastro</a></li>
-							
+
 							<li><a href="#">Nossa Localização</a></li>
 
 						</ul>
@@ -88,19 +89,21 @@
 
 
 
- 
-
-
-				<p>
-					<input name="search" type="image"
-						style="border: 0; margin: 0 0 -9px 5px;"
-						src="view/style/logo1.jpg"width="500" height="300" alt="Search" title="Search" />
-				</p>
 
 
 
 
-				
+				<input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+					left";"
+						src="view/style/Clean2.png" width="600" height="400"
+					alt="Search" title="Search" />
+
+
+
+
+
+
 
 
 

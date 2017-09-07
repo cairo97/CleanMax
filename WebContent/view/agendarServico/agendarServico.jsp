@@ -69,11 +69,11 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
 
+                     <li><a href="#">Contato</a></li>
+					<li><a href="apresentacao">Voltar</a></li>
 
-					<li class="selected"><a href="cadastro">Cadastro</a></li>
-					<li><a href="#">Contato</a></li>
+					
 				</ul>
 			</div>
 		</div>

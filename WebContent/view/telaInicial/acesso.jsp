@@ -54,10 +54,26 @@
 
 
 
-    <a href="home">Acesso Cliente</a>&nbsp;&nbsp; &nbsp; 
-     <a href="acesso2">Acesso Funcionário</a>&nbsp;&nbsp; &nbsp; 
+    <a href="home">
+                  
+				<input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+						src="view/style/cliente.jpg" width="350" height="300"
+					alt="Search" title="Search" />
+					
+					
+					</a>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  
+					    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+					    	
+    
+     <a href="acesso2">
+     
+        <input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+						src="view/style/funcionario.jpg" width="350" height="300"
+					alt="Search" title="Search" />
 
-
+</a>&nbsp;&nbsp; &nbsp;
 						
 
 

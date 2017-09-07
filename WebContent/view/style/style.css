@@ -117,7 +117,7 @@ ol li
   margin-right: auto;}
 
 #header
-{ background: #000000 url(logo1.jpg) repeat;
+{ background: #000000 url() repeat;
   border-bottom: 2px solid #6fa6e7;
   height: 177px;}
   
@@ -353,7 +353,7 @@ table tr td
   border-top: 1px solid #FFF;}
   
 #imagem1
-{ background: url(style/logo1.jgp) 
+{ background: url(style/Clean2.png) 
   width: 870px;
   height: 180px;
   margin-bottom: 20px;
