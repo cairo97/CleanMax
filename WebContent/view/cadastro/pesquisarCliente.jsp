@@ -55,7 +55,8 @@
 		 <center  >
 
 
-<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; 
+<a href="cadastro">Cadastro Cliente</a>&nbsp;&nbsp; &nbsp; |&nbsp;&nbsp;
+ <a href="telaIncial">Voltar</a>&nbsp; &nbsp;
 
 
 <div style="text-align: center; color: red;"> ${remover} </div>

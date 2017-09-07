@@ -38,14 +38,11 @@
 				<ul id="menu">
 
 					<li><a href="apresentacao">Home</a></li>
-
-
 					<li><a href="cadastro">Cadastro</a></li>
-
 					<li><a href="agendar">Agendar Serviço</a></li>
-
+                    <li><a href="acesso">Acesso</a></li>
 					<li><a href="tabelaPreco">Tabela de Preço</a></li>
-					<li><a href="#">Contato</a></li>
+					<li><a href="acesso">Voltar</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,9 +57,7 @@
 					<form action="efetuarLogin2" method="post"
 						enctype="multipart/form-data">
 
-
-
-						<h3>Informe seu login e senha para acessar o sistema.</h3>
+	<h3>Informe seu login e senha para acessar o sistema.</h3>
 
 
 						<h1>Login</h1>
@@ -79,18 +74,18 @@
 								id="inputSenha" class="form-control" name="senha"
 								style="width: 500px;" maxlength="100" required="required" />
 						</div>
-
-						<p>
-
-							<button type="reset" class="btn btn-default">&nbsp;
-								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
-									<a href="apresentacao" class="btn btn-danger" 
-						role="button">Alterar Senha</a>
-							&nbsp;&nbsp;
-								
-								
-								<button type="submit" class="btn btn-primary">&nbsp;
+                                                     <a href="manuntencao" id="posicao2">Alterar Senha</a>    
+						<br><br>
+                             </center>
+															
+								<button type="submit" class="btn btn-primary" id="posicao2">&nbsp;
 								Entrar como Funcionário &nbsp;</button>&nbsp;&nbsp;&nbsp;
+								
+							<button type="reset" class="btn btn-default"  id="posicao" >&nbsp;
+								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
+
+						
+								
 							
 							
 								

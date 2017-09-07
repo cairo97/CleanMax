@@ -54,9 +54,9 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Pagina Inicial</a></li>
+					<li><a href="home">Login</a></li>
 					<li><a href="#">Contato</a></li>
-					<li><a href="telaIncial">Voltar</a></li>
+					<li><a href="apresentacao">Pagina Inicial</a></li>
 					
 					<li><a href="logout">Sair</a></li>
 							
@@ -112,11 +112,6 @@
 				<div style="text-align: center; color: green;">${cadastrar}</div>
 
 				<h1>Cadastro de Cliente</h1>
-
-
-				<a href="listarCliente">Listar cliente</a>
-
-
 
 
 				<div class="form_settings">
@@ -180,15 +175,12 @@
 
 			<p>
 				<a href="apresentacao">Home</a> | <a
-					href="examples.html">Exemplos</a> | <a href="page.html">Pagina</a>
+					href="#">Exemplos</a> | <a href="apresentacao">Pagina</a>
 				| <a href="cadastroCliente.html">Cadastro</a> | <a
 					href="contact.html">Contato</a>
 			</p>
 			<p>
-				Copyright &copy; Clean Max | <a
-					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-		</div>
+				Copyright &copy; Clean Max 		</div>
 	</div>
 </body>
 </html>

@@ -54,8 +54,8 @@
 		<br>
 		 <center  >
 
-<a href="cadastroFuncionario">Cadastro Funcionario</a>&nbsp;&nbsp; &nbsp; 
-
+<a href="cadastroFuncionario">Cadastro Funcionario</a>&nbsp;&nbsp;| &nbsp; 
+                        <a href="telaIncial">Voltar</a>&nbsp; &nbsp;
 
 <div style="text-align: center; color: red;"> ${remover} </div>
 

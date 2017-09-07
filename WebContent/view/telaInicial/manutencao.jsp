@@ -37,15 +37,7 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
-
-
-					<li><a href="cadastro">Cadastro</a></li>
-
-					<li><a href="acesso">Acesso</a></li>
-
-					
-					<li><a href="#">Contato</a></li>
+					<li><a href="apresentacao">Voltar para Tela Inicial</a></li>
 				</ul>
 			</div>
 		</div>
@@ -56,44 +48,18 @@
 			<div id="content">
 				<div style="text-align: center; color: red;">${msg}</div>
 
-				
+				<center>
 					<form action="efetuarLogin" method="post"
 						enctype="multipart/form-data">
 
-<center>
-
-						<h3>Informe seu login e senha para acessar o sistema.</h3>
-
-
-						<h1>Login</h1>
-
-						<div class="form-group">
-							<label for="inputEmail">E-mail:</label> <input type="text"
-								id="inputEmail" class="form-control" name="email"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
+<input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+					left";"
+						src="view/style/manutencao.jpg" width="600" height="400"
+					alt="Search" title="Search" />
 
 
-						<div class="form-group">
-							<label for="inputSenha">Senha:</label> <input type="password"
-								id="inputSenha" class="form-control" name="senha"
-								style="width: 500px;" maxlength="100" required="required" />
-						</div>
-                                                     <a href="manuntencao" id="posicao2">Alterar Senha</a>    
-						<br><br>
-                             </center>
-															
-								<button type="submit" class="btn btn-primary" id="posicao1">&nbsp;
-								Entrar como Cliente &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-							<button type="reset" class="btn btn-default"  id="posicao" >&nbsp;
-								Limpar &nbsp;</button>&nbsp;&nbsp;&nbsp;
-								
-								
-							
-							
-				
-				<p>
+<p>
 				<p>
 			</div>
 		</div>

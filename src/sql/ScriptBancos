@@ -59,4 +59,14 @@ statusLav varchar(14),
 PRIMARY KEY (`id`)
 );
 
+CREATE TABLE agendamento (
+
+id int(11) NOT NULL AUTO_INCREMENT,
+data date,
+hora int (10),
+servico_id servico,
+placa varchar(8),
+status varchar(12),
+PRIMARY KEY (`id`)
+)
 

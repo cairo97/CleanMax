@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
-import br.com.aplicativo.CleanMax.model.ClienteDao;
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;

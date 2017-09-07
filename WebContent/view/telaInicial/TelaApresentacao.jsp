@@ -29,7 +29,7 @@
 				<div id="logo_text">
 					<!-- class="logo_colour", allows you to change the colour of the text -->
 					<h1>
-						<a href="index.html">Clean<span class="logo_colour">Max</span></a>
+						<a href="apresentacao">Lava <span class="logo_colour">Jato</span> Clean <span class="logo_colour"> Max</span></a>
 					</h1>
 					<h2>Clean Max</h2>
 				</div>
@@ -37,12 +37,12 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Tela Inicial</a></li>
-					<li><a href="agendar">Agendar Lavagem</a></li>
 					
+					<li><a href="agendar">Agendar Lavagem</a></li>
+                  <li><a href="tabelaPreco">Preços</a></li>
 
-					<li><a>Bem vindo, ${clienteLogado.nome} </a></li>
-					<li><a href="logout">Sair</a></li>
+					<li><a>Bem vindo ${clienteLogado.nome} </a></li>
+
 
 				</ul>
 			</div>
@@ -85,31 +85,18 @@
 					<div class="sidebar_base"></div>
 				</div>
 			</div>
-			<div id="content">
-
-
-
-
-
-
+			
+			
+			
 
 				<input name="search" type="image"
 					style="border: 0; margin: 0 0 -9px 5px;"
 					left";"
 						src="view/style/Clean2.png" width="600" height="400"
 					alt="Search" title="Search" />
-
-
-
-
-
-
-
-
-
-
-
-			</div>
+			
+			
+			
 		</div>
 		<div id="content_footer"></div>
 		<div id="footer">
@@ -119,10 +106,7 @@
 					href="cadastro1.html">Cadastro de Usuário</a> | <a
 					href="contato.html">Contato</a>
 			</p>
-			<p>
-				Copyright &copy; Clean Max | <a
-					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+			<p>Copyright &copy; Clean Max
 		</div>
 	</div>
 </body>

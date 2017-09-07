@@ -73,31 +73,47 @@
                      <li><a href="#">Contato</a></li>
 					<li><a href="apresentacao">Voltar</a></li>
 
-					
 				</ul>
 			</div>
+			
 		</div>
+		
+					
 			<div id="content_header"></div>
+			
 			<div id="site_content">
+		
 				<div id="sidebar_container">
+				
 					<div class="sidebar">
 					
 					
 					</div>
+					
 					<div id="sidebar_container">
 					
 	
 						
 					</div>
+						<div id="sidebar_container1">
+					<input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+					left";"
+						src="view/style/lava.jpg" width="600" height="400"
+					alt="Search" title="Search" />
 				</div>
+					
+					</div>
 			<div id="content">
+
 
 				<div style="text-align: center; color: green;">${agendar}</div>
 
             
-<a href="listarAgendamento">Listar Agendamento</a>
+
 
 				<h1>Agendar Lavagem</h1>
+
 
 
 
@@ -105,7 +121,6 @@
 				<div class="form_settings">
 					<form action="incluirAgendamento" method="post"
 						enctype="multipart/form-data">
-
 
 
 
@@ -119,6 +134,9 @@
 									<option value="${obj.id}">${obj.nome}</option>
 								</c:forEach>
 							</select>
+							
+							
+
 						</div>
 
 
@@ -136,6 +154,8 @@
 								style="width: 300px;" maxlength="100" class="form-control"
 								id="hora" name="hora">
 								
+									
+					
 								<option value="">Selecione</option>
 								<c:forEach items="${horarios}" var="obj">
 									<option value="${obj.codigo}">${obj.labelHorario}</option>
@@ -152,14 +172,20 @@
 						&nbsp;
 						<button type="submit" class="btn btn-primary">&nbsp;
 							Agendar Serviço &nbsp;</button>
+							
+						
 					</form>
 
 				</div>
+				
 			</div>
+			
+			
 		</div>
 
 
-<br><br><br>
+
+<br><br><br><br>
 
 		<div id="content_footer"></div>
 		<div id="footer">
@@ -170,10 +196,9 @@
 				| <a href="contact.html">Contato</a>
 			</p>
 			<p>
-				Copyright &copy; Clean Max | <a
-					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
-		</div>
-	</div>
+				Copyright &copy; Clean Max | 
+				
+		
+
 </body>
 </html>

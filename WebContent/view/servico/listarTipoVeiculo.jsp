@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista Veiculo</title>
 
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
 <link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />

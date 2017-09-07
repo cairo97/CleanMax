@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Cadastro de Veiculo</title>
 
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
 <link rel="stylesheet" type="text/css" href="view/bootstrap/css/bootstrap.min.css" />
@@ -34,16 +34,11 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li class="selected"><a href="apresentacao">Home</a></li>
-
-					
-						<li><a href="cadastro">Cadastro</a>
-									
-									</li>
-									
-									<li><a href="agendar">Agendar Serviço</a></li>
-
+					<li><a href="apresentacao">Pagina Inicial</a></li>
 					<li><a href="#">Contato</a></li>
+					<li><a href="telaIncial">Voltar</a></li>
+					
+					<li><a href="logout">Sair</a></li>
 				</ul>
 			</div>
 		</div>
@@ -54,12 +49,10 @@
 			
 
               <center>
-               <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
-               <a href="tipoServico">Incluir tipo Serviço</a>&nbsp;&nbsp; |&nbsp;
-                            
-						<a href="veiculo">Incluir tipo Veículo</a>&nbsp;&nbsp; |&nbsp;
-					    <a href="funcao">Incluir Funcão</a>&nbsp;&nbsp; |&nbsp;
-					    <a href="listarTipoVeiculo">Listar Veiculo</a>
+             
+                 <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
+                        <a href="telaIncial">Voltar</a>&nbsp; |&nbsp;
+						<a href="listarTipoVeiculo">Listar Tipo de Veiculo</a>
               
               
               <div style="text-align: center; color: red;"> ${veiculoMensagem} </div>

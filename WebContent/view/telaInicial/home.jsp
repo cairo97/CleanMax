@@ -43,7 +43,7 @@
 
 					<li ><a href="apresentacao">Tela Inicial</a></li>
 							<li><a href="#">Contato</a></li>
-							<li><a>Bem vindo, ${clienteLogado.nome} ${funcionarioLogado.nome}</a></li>
+							<li><a>Bem Vindo Funcionário,  ${funcionarioLogado.nome}</a></li>
 							<li><a href="logout">Sair</a></li>
 							
 				</ul>
@@ -57,6 +57,9 @@
 
   <form>
     <div class="form-group">
+    
+    
+    <h3>Administrador</h3>
     <br>
       <label for="sel1">Escolha Seu Serviço:</label>
       <select class="form-control" id="sel1"  style="width: 200px" onchange="location = this.value;">     
