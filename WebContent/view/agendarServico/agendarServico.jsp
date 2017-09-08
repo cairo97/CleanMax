@@ -72,6 +72,7 @@
 
                      <li><a href="#">Contato</a></li>
 					<li><a href="apresentacao">Voltar</a></li>
+					<li><a href="logout">Sair</a></li>
 
 				</ul>
 			</div>

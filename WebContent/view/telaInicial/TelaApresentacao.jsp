@@ -42,7 +42,7 @@
                   <li><a href="tabelaPreco">Preços</a></li>
 
 					<li><a>Bem vindo ${clienteLogado.nome} </a></li>
-
+<li><a href="logout">Sair</a></li>
 
 				</ul>
 			</div>
