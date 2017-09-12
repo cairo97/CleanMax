@@ -45,7 +45,7 @@
 					<li><a href="acesso">Acesso</a></li>
 
 					
-					<li><a href="#">Contato</a></li>
+					<li><a href="contato">Contato</a></li>
 				</ul>
 			</div>
 		</div>

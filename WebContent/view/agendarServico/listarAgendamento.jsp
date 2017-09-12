@@ -24,9 +24,70 @@
 
 </head>
 <body>
+<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
+
+
+					<a href="telaIncial">Clean<span class="logo_colour">Max</span></a>
+
+
+					<h1>Lava Jato Clean Max</h1>
+				</div>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+
+
+                     <li><a href="#">Contato</a></li>
+					<li><a href="apresentacao">Voltar</a></li>
+					<li><a href="logout">Sair</a></li>
+
+				</ul>
+			</div>
+			
+		</div>
+		
+					
+			<div id="content_header"></div>
+			
+			<div id="site_content">
+		
+				<div id="sidebar_container">
+				
+					<div class="sidebar">
+					
+					
+					</div>
+					
+					<div id="sidebar_container">
+					
+	
+						
+					</div>
+						<div id="sidebar_container1">
+					<input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+					left";"
+						src="view/style/lava.jpg" width="600" height="400"
+					alt="Search" title="Search" />
+				</div>
+					
+					</div>
+			<div id="content">
+
+
+				<div style="text-align: center; color: green;">${agendar}</div>
+
+            
 
 
 
+
+<center>
+<h1>Listar Lavagens</h1>
+</center>
 <table border='1' style='width: 100%;'>
 		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			<td>Serviço</td>

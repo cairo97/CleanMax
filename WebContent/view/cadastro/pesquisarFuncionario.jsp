@@ -58,7 +58,7 @@
                         <a href="telaIncial">Voltar</a>&nbsp; &nbsp;
 
 <div style="text-align: center; color: red;"> ${remover} </div>
-
+<div style="text-align: center; color: green;">${mensagem1}</div>
 <table border='1' style='width: 100%;'>
 		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			<td>ID</td>

@@ -22,7 +22,7 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 			return true;
 		}
 
-		if (request.getSession().getAttribute("clienteLogado") != null) {
+		if (request.getSession().getAttribute("clienteLogado")!= null || (request.getSession().getAttribute("funcionarioLogado")!= null)) {
 			return true;
 		}
 		response.sendRedirect("/CleanMax/home");

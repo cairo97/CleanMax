@@ -51,8 +51,8 @@
 				
 <center  >
                             
-                    <a href="apresentacao">Home</a>&nbsp;&nbsp; |&nbsp;
-                   <a href="telaIncial">Voltar</a>&nbsp; &nbsp;
+                    <a href="home">Home</a>&nbsp;&nbsp; |&nbsp;
+                   <a href="telaInicial">Voltar</a>&nbsp; &nbsp;
 						
 			     
 	<div  style="margin-right: 0%;">

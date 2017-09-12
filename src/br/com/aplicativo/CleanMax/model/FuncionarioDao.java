@@ -74,18 +74,23 @@ public class FuncionarioDao {
 
 	public void alterarFuncionario(Funcionario funcionario) {
 		try {
-			String sql = "UPDATE funcionario set (nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=?, where id=?)";
+			String sql = "UPDATE funcionario set nome=?, senha=?, email=?, dataNascimento=?, celular=?, telefone=?, cpf=? where id=?";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 
 			stmt.setString(1, funcionario.getNome());
 			stmt.setString(2, funcionario.getSenha());
 			stmt.setString(3, funcionario.getEmail());
-			stmt.setDate(4, new java.sql.Date(funcionario.getDataNascimento().getTime()));
+
+			if (funcionario.getDataNascimento() != null) {
+				stmt.setDate(4, new java.sql.Date(funcionario.getDataNascimento().getTime()));
+			} else {
+				stmt.setDate(4, null);
+			}
+
 			stmt.setString(5, funcionario.getCelular());
 			stmt.setString(6, funcionario.getTelefone());
 			stmt.setString(7, funcionario.getCpf());
 			stmt.setInt(8, funcionario.getId());
-			
 
 			stmt.execute();
 			connection.close();
@@ -94,7 +99,6 @@ public class FuncionarioDao {
 			throw new RuntimeException(e);
 		}
 	}
-
 	public Funcionario buscarPorId(int id) {
 
 		try {

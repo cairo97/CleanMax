@@ -137,5 +137,11 @@ public class ClienteController {
 		return "telaInicial/manutencao";
 	}
 
+	@RequestMapping("/contato")
+	public String contato() {
+
+		return "telaInicial/contato";
+	}
+	 
 	
 }

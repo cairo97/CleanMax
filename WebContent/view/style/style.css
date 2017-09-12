@@ -450,3 +450,10 @@ td, th {
 tr:nth-child(even) {
 	background-color: #dddddd;
 }
+
+#imagem2 {
+	background: url(style/apresentacao.png) width: 600px;
+	height: 100px;
+	margin-bottom: 10px;
+	border: 5px solid #6fa6e7;
+}

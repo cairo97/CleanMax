@@ -42,7 +42,7 @@
 				<ul id="menu">
 
 					<li ><a href="apresentacao">Tela Inicial</a></li>
-							<li><a href="#">Contato</a></li>
+							<li><a href="contato">Contato</a></li>
 							<li><a>Bem Vindo Funcionário,  ${funcionarioLogado.nome}</a></li>
 							<li><a href="logout">Sair</a></li>
 							
@@ -60,6 +60,15 @@
     
     
     <h3>Administrador</h3>
+    
+    
+    
+    <input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+						src="view/style/administrador.png" width="150" height="150"
+					alt="Search" title="Search" />
+					
+					
     <br>
       <label for="sel1">Escolha Seu Serviço:</label>
       <select class="form-control" id="sel1"  style="width: 200px" onchange="location = this.value;">     
@@ -98,7 +107,7 @@
   
         <optgroup label="Alterações na Lavagem">
  <option  value= agendar >Agendar Lavagem </option>
-  <option value= # >Listar Lavagem</option>
+  <option value= listarAgendamento >Listar Lavagem</option>
   </optgroup>
  
  </select>

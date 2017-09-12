@@ -55,7 +55,7 @@
 				<ul id="menu">
 
 					<li><a href="home">Login</a></li>
-					<li><a href="#">Contato</a></li>
+					<li><a href="contato">Contato</a></li>
 					<li><a href="apresentacao">Pagina Inicial</a></li>
 					
 					<li><a href="logout">Sair</a></li>

@@ -45,12 +45,14 @@
 					<li><a href="agendar">Agendar Serviço</a></li>
 
 					<li><a href="tabelaPreco">Tabela de Preço</a></li>
-					<li><a href="#">Contato</a></li>
+					<li><a href="contato">Contato</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="content_header"></div>
 		<div id="site_content">
+		
+		
 
 
 
@@ -63,7 +65,8 @@
 					
 					
 					</a>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  
-					    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+		
+				    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
 					    	
     
      <a href="acesso2">

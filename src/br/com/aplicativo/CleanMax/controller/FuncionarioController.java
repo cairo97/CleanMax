@@ -67,7 +67,7 @@ public class FuncionarioController {
 
 			FuncionarioDao dao = new FuncionarioDao();
 			dao.alterarFuncionario(funcionario);
-			model.addAttribute("mensagem", "Funcionario Alterado com Sucesso!");
+			model.addAttribute("mensagem1", "Funcionario Alterado com Sucesso!");
 
 			return "forward:listarFuncionario";
 

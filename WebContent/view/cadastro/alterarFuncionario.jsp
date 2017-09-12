@@ -26,20 +26,52 @@
 	jQuery(function($) {
 		$("#inputDataNascimento").mask("99/99/9999");
 		$("#inputCpf").mask("999.999.999-99");
-	//	$("#inputCelular").mask("(99)9999-9999");
-	//	$("#inputTelefone").mask("(99) 9999-9999");
+	    $("#inputCelular").mask("(99)9999-9999");
+		$("#inputTelefone").mask("(99) 9999-9999");
 	});
 </script>
 <title>Alterar Dados do Funcionario</title>
 </head>
 <body>
-	
-	<div style="text-align: center; color: green;">${mensagem}</div>
+<div id="main">
+		<div id="header">
+			<div id="logo">
+				<div id="logo_text">
 
+					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
+
+
+					<h1>Lava Jato Clean Max</h1>
+
+				</div>
+			</div>
+			<div id="menubar">
+				<ul id="menu">
+
+					<li class="selected"><a href="apresentacao">Home</a></li>
+
+					
+						
+							
+
+					<li><a href="listarFuncionario">Voltar</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content_header"></div>
+		
+
+
+
+	
+	<div style="text-align: center; color: green;">${mensagem1}</div>
+     
+     
+     <div  style="margin-left: 20%;">
 	<hr>
 	<h3>Alterar Dados do Funcionario</h3>
 	<hr>
-
+    
 	<form action="alterarFuncionario" method="post">
 
 		<input type="hidden" name="id" value="${cadastro.id}" />
@@ -103,5 +135,6 @@
 				&nbsp;</button>
 		</p>
 		</form>
+		</div>
 </body>
 </html>

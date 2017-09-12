@@ -91,7 +91,6 @@
 
 				<input name="search" type="image"
 					style="border: 0; margin: 0 0 -9px 5px;"
-					left";"
 						src="view/style/Clean2.png" width="600" height="400"
 					alt="Search" title="Search" />
 			

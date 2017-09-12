@@ -70,7 +70,7 @@
 				<ul id="menu">
 
 
-                     <li><a href="#">Contato</a></li>
+                     <li><a href="contato">Contato</a></li>
 					<li><a href="apresentacao">Voltar</a></li>
 					<li><a href="logout">Sair</a></li>
 
