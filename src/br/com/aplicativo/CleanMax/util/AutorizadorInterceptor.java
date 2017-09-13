@@ -11,20 +11,21 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 			throws Exception {
 
 		String uri = request.getRequestURI();
-		if (uri.contains("bootstrap") || uri.contains("css")|| uri.contains("view/style") || uri.contains("img") || uri.contains("js")
-				|| uri.endsWith("CleanMax/home") || uri.endsWith("efetuarLogin") || uri.endsWith("efetuarLogin2")
-				|| uri.endsWith("cadastroFuncionario") || uri.endsWith("incluirFuncionario") || uri.endsWith("cadastro")
-				|| uri.endsWith("incluirCliente") || uri.endsWith("cadastro/cadastroCliente")
-				|| uri.endsWith("telaInicial/index") || uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao")
-				|| uri.endsWith("acesso") || uri.endsWith("acesso2") || uri.endsWith("servico")
-				|| uri.endsWith("listarServico")|| uri.endsWith("manuntencao")|| uri.endsWith("TelaApresentacao")) {
+		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("view/style") || uri.contains("img")
+				|| uri.contains("js") || uri.endsWith("CleanMax/home") || uri.endsWith("efetuarLogin")
+				|| uri.endsWith("efetuarLogin2") || uri.endsWith("cadastro") || uri.endsWith("incluirCliente")
+				|| uri.endsWith("cadastro/cadastroCliente") || uri.endsWith("telaInicial/index")
+				|| uri.endsWith("tabelaPreco") || uri.endsWith("apresentacao") || uri.endsWith("acesso")
+				|| uri.endsWith("acesso2") || uri.endsWith("manuntencao") || uri.endsWith("TelaApresentacao")) {
 
 			return true;
 		}
 
-		if (request.getSession().getAttribute("clienteLogado")!= null || (request.getSession().getAttribute("funcionarioLogado")!= null)) {
+		if (request.getSession().getAttribute("clienteLogado") != null
+				|| (request.getSession().getAttribute("funcionarioLogado") != null)) {
 			return true;
 		}
+
 		response.sendRedirect("/CleanMax/home");
 		return false;
 	}

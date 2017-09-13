@@ -41,7 +41,7 @@
 					<li><a href="agendar">Agendar Lavagem</a></li>
                   <li><a href="tabelaPreco">Preços</a></li>
 
-					<li><a>Bem vindo ${clienteLogado.nome} </a></li>
+					<li><a>Bem vindo ${clienteLogado.nome} ${funcionarioLogado.nome}</a></li>
 <li><a href="logout">Sair</a></li>
 
 				</ul>
@@ -101,9 +101,9 @@
 		<div id="footer">
 			<p>
 				<a href="apresentacao">Home</a> | <a href="#">Acesso</a> | <a
-					href="tabeladeprecos.html">Tabela De Preços</a> | <a
-					href="cadastro1.html">Cadastro de Usuário</a> | <a
-					href="contato.html">Contato</a>
+					href="">Tabela De Preços</a> | <a
+					href="">Cadastro de Usuário</a> | <a
+					href="">Contato</a>
 			</p>
 			<p>Copyright &copy; Clean Max
 		</div>
