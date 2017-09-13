@@ -142,6 +142,11 @@ public class ClienteController {
 
 		return "telaInicial/contato";
 	}
-	 
+	
+	@RequestMapping("/acessoNegado")
+	public String acessoNegado() {
+
+		return "telaInicial/acessoNegado";
+	}
 	
 }

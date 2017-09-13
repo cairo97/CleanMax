@@ -21,8 +21,9 @@
 </head>
 <body>
 	<c:import url="../Index.jsp" />
+	<center>
 	<div style="text-align: center; color: green;">${mensagem}</div>
-
+</center>
 	<hr>
 	<h3>Alterar Cliente</h3>
 	<hr>

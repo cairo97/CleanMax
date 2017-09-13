@@ -23,9 +23,9 @@
 <body>
 
 <c:import url="../Index.jsp"/>
-
+<center>
 <div style="text-align: center; color: red;"> ${remover} </div>
-
+</center>
 <table border='1' style='width: 100%;'>
 		<tr style='background-color: #E6E6E6; font-weight: bold;'>
 			<td>ID</td>

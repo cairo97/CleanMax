@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
+import br.com.aplicativo.CleanMax.model.Funcao;
+import br.com.aplicativo.CleanMax.model.FuncaoDao;
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -77,6 +79,21 @@ public class AgendamentoController {
 		return "agendarServico/listarAgendamento";
 	}
 
+	
+	@RequestMapping("removerAgendamento")
+	public String removerAgendamento(Agendamento agendamento, Model model) {
+	 AgendamentoDao dao = new AgendamentoDao();
+		dao.remover(agendamento);
+		model.addAttribute("agendamento", "Agendamento removido com Sucesso");
+		return "forward:listarAgendamento";
+	}
+	
+	@RequestMapping("lavagemCliente")
+	public String lavagemCliente(Model model) {
+		AgendamentoDao dao = new AgendamentoDao();
+		model.addAttribute("lavagemCliente", dao.listar());
+		return "servico/listarFuncao";
+	}
 	
 /*	@RequestMapping("incluirAgenda")
 //	public String incluirAgenda(Agendar agendar, Model model) {

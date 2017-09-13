@@ -128,6 +128,54 @@ public class AgendamentoDao {
 	
 	
 	
+	public void remover(Agendamento agendamento) {
+
+		try {
+
+		    String sql = "DELETE FROM agendamento WHERE id = ?";
+		    PreparedStatement stmt = connection.prepareStatement(sql);
+		    
+		    stmt.setInt(1, agendamento.getId());
+		    
+		    stmt.execute();
+		    stmt.close();
+		    connection.close();
+
+		} catch (SQLException e) {
+		    throw new RuntimeException(e);
+		}
+	    }
+	
+	public Agendamento buscarPorIda(int id) {
+
+		try {
+
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM funcao WHERE id = ?");
+			stmt.setInt(1, id);
+			ResultSet rs = stmt.executeQuery();
+
+			Agendamento agendamento = new Agendamento();
+
+			while (rs.next()) {
+                
+				agendamento.setId(rs.getInt("id"));
+				agendamento.setDescricao(rs.getString("descricao"));
+
+			}
+
+			rs.close();
+			stmt.close();
+			connection.close();
+
+			return agendamento;
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	
 	}
 
 
