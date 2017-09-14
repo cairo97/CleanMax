@@ -12,18 +12,33 @@
 <meta http-equiv="content-type"
 	content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="view/style/style.css" />
+<link rel="stylesheet" type="text/css" href="view/style/cascata.css" />
 <link rel="stylesheet" type="text/css"
 	href="view/bootstrap/css/bootstrap.min.css" />
 <script type="text/javascript" src="view/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="view/js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="view/js/jquery.maskedinput.js"></script>
-
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+ 
+   
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 
   
 
 </head>
 
 <body>
+
+
+
+
+
+
+
 
 		<div id="header">
 			<div id="logo">
@@ -37,21 +52,38 @@
 				</div>
 			</div>
 			<div id="menubar">
-			
-			
-				<ul id="menu">
 
-					<li ><a href="apresentacao">Tela Inicial</a></li>
-							<li><a href="contato">Contato</a></li>
-							<li><a>Bem Vindo Funcionário,  ${funcionarioLogado.nome}</a></li>
-							<li><a href="logout">Sair</a></li>
-							
-				</ul>
+				
 			</div>
 		</div>
 		<div id="content_header"></div>
 		<div class="container">
 		<br>
+		
+		
+		    <div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
 		 <center  >
                       
 
@@ -61,13 +93,16 @@
     
     <h3>Administrador</h3>
     
-    
-    
+
+
     <input name="search" type="image"
 					style="border: 0; margin: 0 0 -9px 5px;"
 						src="view/style/administrador.png" width="150" height="150"
 					alt="Search" title="Search" />
 					
+
+
+
 					
     <br>
       <label for="sel1">Escolha Seu Serviço:</label>
@@ -118,6 +153,10 @@
 		</form>
 		<div id="content_footer"></div>
 		<div id="footer">
+		
+		
+
+		
 			<p>
 				<a href="apresentacao">Home</a> | <a
 					href="examples.html">Examples</a> | <a href="page.html">A Page</a>
