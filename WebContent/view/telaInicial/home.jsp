@@ -52,6 +52,17 @@
 				</div>
 			</div>
 			<div id="menubar">
+			
+			<ul id="menu">
+
+					
+					
+                  <li><a href="tabelaPreco">Preços</a></li>
+
+					<li><a>Bem vindo  ${funcionarioLogado.nome}</a></li>
+                    <li><a href="logout">Sair</a></li>
+
+				</ul>
 
 				
 			</div>
@@ -61,29 +72,7 @@
 		<br>
 		
 		
-		    <div id='cssmenu'>
-<ul>
-   <li><a href='#'><span>Home</span></a></li>
-   <li class='active has-sub'><a href='#'><span>Products</span></a>
-      <ul>
-         <li class='has-sub'><a href='#'><span>Product 1</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-         <li class='has-sub'><a href='#'><span>Product 2</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li><a href='#'><span>About</span></a></li>
-   <li class='last'><a href='#'><span>Contact</span></a></li>
-</ul>
-</div>
+		   
 		 <center  >
                       
 
@@ -148,27 +137,26 @@
  </select>
 					
 
-	<br><br><br><br><br><br><br><br>
-			<br><br><br><br><br><br>
+	
+		
 		</form>
+		<p>
+				<p>
+			</div>
+		</div>
+
 		<div id="content_footer"></div>
 		<div id="footer">
-		
-		
-
-		
 			<p>
-				<a href="apresentacao">Home</a> | <a
-					href="examples.html">Examples</a> | <a href="page.html">A Page</a>
-				| <a href="cadastro1.html">Another Page</a> | <a href="contact.html">Contact
-					Us</a>
+				<a href="apresentacao">Home</a> | <a href="#">Acesso</a> | <a
+					href="">Tabela De Preços</a> | <a
+					href="">Cadastro de Usuário</a> | <a
+					href="">Contato</a>
 			</p>
-			<p>
-				Copyright &copy; Clean Max | <a
-					href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a
-					href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+			<p>Copyright &copy; Clean Max
 		</div>
 	</div>
 </body>
 </html>
 
+		
