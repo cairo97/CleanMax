@@ -66,7 +66,7 @@
 
 
 			<center>
-				<div style="text-align: center; color: green;">${agendamento}</div>
+				<div style="text-align: center; color: green;">${agendamento1}</div>
 				<h1>Listar Lavagens</h1>
 			</center>
 			<table border='1' style='width: 100%;'>
@@ -80,7 +80,7 @@
 					<td>Acões</td>
 
 
-					<c:forEach var="agendar" items="${listarAgendamento}">
+					<c:forEach var="agendar" items="${lavagemCliente}">
 						<tr>
 
 
@@ -92,7 +92,7 @@
 							<td>${agendar.placa}</td>
 							<td>${agendar.status}</td>
 
-							<td>&nbsp;<a href="removerAgendamento?id=${agendar.id}">Remover</a>
+							<td>&nbsp;<a href="removerAgendamentoCli?id=${agendar.id}">Remover</a>
 								&nbsp;<a href="exibirAlterarCliente?id=${agendar.id}">Alterar</a>
 							</td>
 					</c:forEach>

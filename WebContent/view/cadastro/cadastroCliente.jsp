@@ -88,8 +88,10 @@
 
 
                   <div>
-				<h1>Cadastro de Cliente</h1>
-
+				<input name="search" type="image"
+							style="border: 0; margin: 0 0 -9px 5px;"
+							src="view/style/cadastro.png" width="400" height="150" alt="Search"
+							title="Search" /><br> <br>
 
 				<div class="form_settings">
 					<form action="incluirCliente" method="post" id="FormSenha" name="FormSenha">

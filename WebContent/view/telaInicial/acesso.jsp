@@ -25,6 +25,7 @@
 	<div id="main">
 		<div id="header">
 			<div id="logo">
+			
 				<div id="logo_text">
 
 					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
@@ -37,15 +38,15 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
+					<li><a href="index">Home</a></li>
+                    <li><a href="home">Voltar</a></li>
 
+		
+           
+				
 
-					<li><a href="cadastro">Cadastro</a></li>
-
-					<li><a href="agendar">Agendar Serviço</a></li>
-
-					<li><a href="tabelaPreco">Tabela de Preço</a></li>
-					<li><a href="contato">Contato</a></li>
+			
+				
 				</ul>
 			</div>
 		</div>
@@ -78,9 +79,12 @@
 
 </a>&nbsp;&nbsp; &nbsp;
 						
-
-
-				
+             <div style="margin-left: 20%;">
+	       <input name="search" type="image"
+							style="border: 0; margin: 0 0 -9px 5px;"
+							src="view/style/carro12.png" width="400" height="200" alt="Search"
+							title="Search" /><br> <br>
+				</div>
 </body>
 </html>
 

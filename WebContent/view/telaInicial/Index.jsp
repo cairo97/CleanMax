@@ -30,7 +30,10 @@
 					<a href="apresentacao">Clean<span class="logo_colour">Max</span></a>
 
 
-					<h1>Lava Jato Clean Max</h1>
+					<input name="search" type="image"
+							style="border: 0; margin: 0 0 -9px 5px;"
+							src="view/style/cleanMax12.jpg" width="150" height="180" alt="Search"
+							title="Search" />
 
 				</div>
 			</div>
@@ -65,7 +68,7 @@
 					<center>
 						<input name="search" type="image"
 							style="border: 0; margin: 0 0 -9px 5px;"
-							src="view/style/login.png" width="140" height="150" alt="Search"
+							src="view/style/clean12.png" width="150" height="180" alt="Search"
 							title="Search" />
 
 

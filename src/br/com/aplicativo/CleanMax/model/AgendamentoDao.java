@@ -24,7 +24,7 @@ public class AgendamentoDao {
 	
 	public void salvar(Agendamento agendamento) {
 		try {
-			String sql = "INSERT INTO agendamento (data,hora,servico_id,placa,status) VALUES (?,?,?,?,?)";
+			String sql = "INSERT INTO agendamento (data,hora,servico_id,placa,status,cliente_id) VALUES (?,?,?,?,?,?)";
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 			if (agendamento.getData() != null) {
 				stmt.setDate(1, new java.sql.Date(agendamento.getData().getTime()));
@@ -36,6 +36,7 @@ public class AgendamentoDao {
 			
 			stmt.setString(4, agendamento.getPlaca());
 			stmt.setString(5, agendamento.getStatus());
+			stmt.setInt(6, agendamento.getCliente().getId());
 			
 			stmt.execute();
 			connection.close();
@@ -69,7 +70,11 @@ public class AgendamentoDao {
 				
 				agendamento.setPlaca(rs.getString("placa"));
 				agendamento.setStatus(rs.getString("status"));
-
+                 
+				
+				ClienteDao dao1 = new ClienteDao();
+				Cliente cliente = dao1.buscarPorId(rs.getInt("cliente_id"));
+				agendamento.setCliente(cliente);
 				
 			}
 
@@ -110,7 +115,9 @@ public class AgendamentoDao {
 				agendamento.setPlaca(rs.getString("placa"));
 				agendamento.setStatus(rs.getString("status"));
 			
-				
+				ClienteDao dao1 = new ClienteDao();
+				Cliente cliente = dao1.buscarPorId(rs.getInt("cliente_id"));
+				agendamento.setCliente(cliente);
 				
 				listarAgendamento.add(agendamento);
 			}
@@ -146,18 +153,21 @@ public class AgendamentoDao {
 		}
 	    }
 	
-	public Agendamento buscarPorIda(int id) {
+	public List<Agendamento> buscarPorIda(int id) {
 
 		try {
-
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM agendamento WHERE id = ?");
+  
+			List<Agendamento> listarAgendamento = new ArrayList<Agendamento>();
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM agendamento WHERE cliente_id = ?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
-			Agendamento agendamento = new Agendamento();
+			
 
 			while (rs.next()) {
                 
+				
+				Agendamento agendamento = new Agendamento();
 				agendamento.setId(rs.getInt("id"));
 				agendamento.setData(rs.getDate("data"));
 				agendamento.setHora(rs.getInt("hora"));
@@ -169,14 +179,18 @@ public class AgendamentoDao {
 				agendamento.setPlaca(rs.getString("placa"));
 				agendamento.setStatus(rs.getString("status"));
 				
-
+			    ClienteDao dao1 = new ClienteDao();
+				Cliente cliente = dao1.buscarPorId(rs.getInt("cliente_id"));
+				agendamento.setCliente(cliente);
+				
+				listarAgendamento.add(agendamento);
 			}
 
 			rs.close();
 			stmt.close();
 			connection.close();
 
-			return agendamento;
+			return listarAgendamento;
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

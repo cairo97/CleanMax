@@ -129,10 +129,10 @@
 						<div class="form-group">
 							<label for="servico">Serviço:</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
-								id="servico" name="servico">
-								<option value="">Selecione</option>
+								id="servico" name="servico" required="required">
+								<option value="" required="required">Selecione</option>
 								<c:forEach items="${listarServico}" var="obj">
-									<option value="${obj.id}">${obj.nome}</option>
+									<option value="${obj.id}"  required="required">${obj.nome}</option>
 								</c:forEach>
 							</select>
 							
@@ -142,18 +142,18 @@
 
 
 						<label>Preço:</label> <br> <input type="text"
-							style="width: 100px;" id="inputPreco" name="preco" value="" /><br>
+							style="width: 100px;" id="inputPreco" name="preco" value=""  required="required"/><br>
 
 
 
 						<label>Data:</label> <br> <input type="text"
-							style="width: 150px;" id="inputData" name="data" value="" />
+							style="width: 150px;" id="inputData" name="data" value=""  required="required"/>
 
 
 						<div class="form-group">
 							<label for="hora">Horario de Agendamento</label> <select
 								style="width: 300px;" maxlength="100" class="form-control"
-								id="hora" name="hora">
+								id="hora" name="hora" required="required">
 								
 									
 					

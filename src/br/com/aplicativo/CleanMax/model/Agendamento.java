@@ -13,6 +13,7 @@ public class Agendamento {
 	private  Servico servico;
 	private  String placa;
 	private String status;
+	private Cliente cliente;
 	
 	public int getId() {
 		return id;
@@ -49,6 +50,12 @@ public class Agendamento {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 	
 	

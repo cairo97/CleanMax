@@ -4,6 +4,7 @@ package br.com.aplicativo.CleanMax.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
-
+import br.com.aplicativo.CleanMax.model.Cliente;
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -59,10 +60,14 @@ public class AgendamentoController {
 
 	
 	@RequestMapping("incluirAgendamento")
-	public String incluirAgendamento(Agendamento agendamento, Model model) {
+	public String incluirAgendamento(Agendamento agendamento,HttpSession session, Model model) {
 		
 		AgendamentoDao dao = new AgendamentoDao();
 	    agendamento.setStatus("Pendente");
+	    
+	    Cliente cliente = (Cliente)session.getAttribute("clienteLogado");
+        agendamento.setCliente(cliente);
+	    
 		dao.salvar(agendamento);
 		model.addAttribute("agendar", "Agendamento cadastrado com sucesso");
 
@@ -87,12 +92,24 @@ public class AgendamentoController {
 		return "forward:listarAgendamento";
 	}
 	
+	
+	@RequestMapping("removerAgendamentoCli")
+	public String removerAgendamentoCli(Agendamento agendamento, Model model) {
+	 AgendamentoDao dao = new AgendamentoDao();
+		dao.remover(agendamento);
+		model.addAttribute("agendamento1", "Agendamento removido com Sucesso");
+		return "forward:lavagemCliente";
+	}
+	
 	@RequestMapping("lavagemCliente")
-	public String lavagemCliente(Agendamento agendamento,Model model) {
+	public String lavagemCliente(Agendamento agendamento,HttpSession session,Model model) {
 		AgendamentoDao dao = new AgendamentoDao();
-		Agendamento agendamentoCompleto = dao.buscarPorIda(agendamento.getId());
-		model.addAttribute("lavagemCliente",agendamentoCompleto);
-		return "servico/listarAgendamento";
+			
+		Cliente cliente = (Cliente)session.getAttribute("clienteLogado");
+        
+	
+		model.addAttribute("lavagemCliente", dao.buscarPorIda(cliente.getId()));
+		return "agendarServico/lavagemCliente";
 	}
 	
 	

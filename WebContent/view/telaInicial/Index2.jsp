@@ -37,11 +37,10 @@
 			<div id="menubar">
 				<ul id="menu">
 
-					<li><a href="apresentacao">Home</a></li>
-					<li><a href="cadastro">Cadastro</a></li>
-					<li><a href="agendar">Agendar Serviço</a></li>
+		
+				
                     <li><a href="acesso">Acesso</a></li>
-					<li><a href="tabelaPreco">Tabela de Preço</a></li>
+			
 					<li><a href="acesso">Voltar</a></li>
 				</ul>
 			</div>
@@ -57,10 +56,11 @@
 					<form action="efetuarLogin2" method="post"
 						enctype="multipart/form-data">
 
-	<h3>Informe seu login e senha para acessar o sistema.</h3>
 
-
-						<h1>Login</h1>
+						<input name="search" type="image"
+							style="border: 0; margin: 0 0 -9px 5px;"
+							src="view/style/clean12.png" width="150" height="180" alt="Search"
+							title="Search" />
 
 						<div class="form-group">
 							<label for="inputEmail">E-mail:</label> <input type="text"

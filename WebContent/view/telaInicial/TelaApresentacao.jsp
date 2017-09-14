@@ -40,6 +40,7 @@
 					
 					<li><a href="agendar">Agendar Lavagem</a></li>
                   <li><a href="tabelaPreco">Preços</a></li>
+                  	<li><a href="lavagemCliente">Minhas Lavagens</a></li>
 
 					<li><a>Bem vindo ${clienteLogado.nome} ${funcionarioLogado.nome}</a></li>
 <li><a href="logout">Sair</a></li>
@@ -71,7 +72,7 @@
 					<div class="sidebar_item">
 						<h3>Conheça nossos Pacotes:</h3>
 						<ul>
-							<li><a href="cadastro">Faça seu Cadastro</a></li>
+							<li><a href="#">Faça seu Cadastro</a></li>
 
 							<li><a href="#">Nossa Localização</a></li>
 
