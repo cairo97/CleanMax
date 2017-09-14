@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.com.aplicativo.CleanMax.model.Agendamento;
 import br.com.aplicativo.CleanMax.model.AgendamentoDao;
-import br.com.aplicativo.CleanMax.model.Funcao;
-import br.com.aplicativo.CleanMax.model.FuncaoDao;
+
 import br.com.aplicativo.CleanMax.model.Horario;
 import br.com.aplicativo.CleanMax.model.Servico;
 import br.com.aplicativo.CleanMax.model.ServicoDao;
@@ -89,59 +88,62 @@ public class AgendamentoController {
 	}
 	
 	@RequestMapping("lavagemCliente")
-	public String lavagemCliente(Model model) {
+	public String lavagemCliente(Agendamento agendamento,Model model) {
 		AgendamentoDao dao = new AgendamentoDao();
-		model.addAttribute("lavagemCliente", dao.listar());
-		return "servico/listarFuncao";
+		Agendamento agendamentoCompleto = dao.buscarPorIda(agendamento.getId());
+		model.addAttribute("lavagemCliente",agendamentoCompleto);
+		return "servico/listarAgendamento";
 	}
 	
-/*	@RequestMapping("incluirAgenda")
-//	public String incluirAgenda(Agendar agendar, Model model) {
-
-//		AgendarDao dao = new AgendarDao();
-		dao.salvar(agendar);
-		model.addAttribute("Agendamento", "Cadastro realizado com sucesso");
-
-		return "agendarServico/agendamento";
-
-	}
-
-	@RequestMapping("listarAgendamento")  
-	public String listarAgendamento(Model model) {
-		AgendarDao dao = new AgendarDao();
-		model.addAttribute("listarAgendamento", dao.listar());
-		return "agendarServico/pesquisarAgendamento";
-	}
-
-	@RequestMapping("removerAgendamento")
-	public String removerAgendamento(Agendar agendar, Model model) {
-		AgendarDao dao = new AgendarDao();
-		dao.remover(agendar);
-		model.addAttribute("remover", "Agendamento Removido com Sucesso");
-		return "forward:listarAgendamento";
-	}	
-		
-		@RequestMapping("exibirAlterarAgendamento")
-		public String alterarAgendamento(Agendar agendar, Model model) {
-
-			AgendarDao dao = new AgendarDao();
-			Agendar AgendarCompleto = dao.buscarPorId(agendar.getId());
-
-			model.addAttribute("agendarServico", agendarCompleto);
-
-			return "agendarServico/alterarAgendamento";
-	    }
-	    
-	    @RequestMapping("alterarAgendamento")
-	    public String alteraAgendamento(Agendar agendar, Model model) {
-
-	    	AgendarDao dao = new AgendarDao();
-		dao.alterarAgendamento(Agendar);
-		model.addAttribute("mensagem", "Agendamento Alterado com Sucesso!");
-
-		return "forward:listarAgendamento";*/
-		
-		
-	}
 	
+//	
+//	@RequestMapping("incluirAgenda")
+//	public String incluirAgenda(Agendamento agendamento, Model model) {
+//
+//		AgendamentoDao dao = new AgendamentoDao();
+//		dao.salvar(agendar);
+//		model.addAttribute("Agendamento", "Cadastro realizado com sucesso");
+//
+//		return "agendarServico/agendamento";
+//
+//	}
+//
+//	@RequestMapping("listarAgendamento")  
+//	public String listarAgendamento(Model model) {
+//		AgendamentoDao dao = new AgendamentoDao();
+//		model.addAttribute("listarAgendamento", dao.listar());
+//		return "agendarServico/pesquisarAgendamento";
+//	}
+//
+//	@RequestMapping("removerAgendamento")
+//	public String removerAgendamento(Agendamento agendamento, Model model) {
+//		AgendamentoDao dao = new AgendamentoDao();
+//		dao.remover(agendar);
+//		model.addAttribute("remover", "Agendamento Removido com Sucesso");
+//		return "forward:listarAgendamento";
+//	}	
+//		
+//		@RequestMapping("exibirAlterarAgendamento")
+//		public String alterarAgendamento(Agendamento agendamento, Model model) {
+//
+//			AgendamentoDao dao = new AgendamentoDao();
+//			Agendar AgendarCompleto = dao.buscarPorId(agendar.getId());
+//
+//			model.addAttribute("agendarServico", agendarCompleto);
+//
+//			return "agendarServico/alterarAgendamento";
+//	    }
+//	    
+//	    @RequestMapping("alterarAgendamento")
+//	    public String alteraAgendamento(Agendamento agendamento, Model model) {
+//
+//	    	AgendamentoDao dao = new AgendamentoDao();
+//		dao.alterarAgendamento(agendamento);
+//		model.addAttribute("mensagem", "Agendamento Alterado com Sucesso!");
+//
+//		return "forward:listarAgendamento";
+		
+		
+	}
+
 

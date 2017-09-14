@@ -97,7 +97,10 @@
 
 <form action="login" method="post" enctype="multipart/form-data">
 
-<h1>Login</h1>
+<h1><input name="search" type="image"
+					style="border: 0; margin: 0 0 -9px 5px;"
+						src="view/style/login.png" width="600" height="400"
+					alt="Search" title="Search" /></h1>
 <p>
 <div class="form-group">
 <label for="inputNome">Usuário:</label>
@@ -111,12 +114,9 @@
 <input type="text" id="inputSenha" class="form-control" name="senha" style="width: 500px;" maxlength="100" required="required" />
 </div>
 
-</p>
-
-
 <button type="submit" class="btn btn-primary"> &nbsp; Entrar &nbsp;
 </button>
-  </center>
-
+ 
+</form>
 </body>
 </html>

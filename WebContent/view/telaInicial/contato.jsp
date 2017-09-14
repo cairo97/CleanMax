@@ -82,10 +82,7 @@
             <div  style="margin-left: 60%;">
             <div id="sidebar_container">
             <div id="sidebar_container1">
-            <input name="search" type="image"
-					style="border: 0; margin: 0 0 -9px 5px;"
-						src="view/style/contato.png" width="150" height="150"
-					alt="Search" title="Search" />
+            
             </div>
             </div>
             </div>

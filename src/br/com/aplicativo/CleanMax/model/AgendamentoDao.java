@@ -150,7 +150,7 @@ public class AgendamentoDao {
 
 		try {
 
-			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM funcao WHERE id = ?");
+			PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM agendamento WHERE id = ?");
 			stmt.setInt(1, id);
 			ResultSet rs = stmt.executeQuery();
 
@@ -159,7 +159,16 @@ public class AgendamentoDao {
 			while (rs.next()) {
                 
 				agendamento.setId(rs.getInt("id"));
-				agendamento.setDescricao(rs.getString("descricao"));
+				agendamento.setData(rs.getDate("data"));
+				agendamento.setHora(rs.getInt("hora"));
+				
+				ServicoDao dao = new  ServicoDao();
+				Servico Servico = dao.buscarPorId(rs.getInt("Servico_id"));
+				agendamento.setServico(Servico);
+				
+				agendamento.setPlaca(rs.getString("placa"));
+				agendamento.setStatus(rs.getString("status"));
+				
 
 			}
 

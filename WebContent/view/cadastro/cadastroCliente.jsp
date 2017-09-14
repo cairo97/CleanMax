@@ -63,47 +63,21 @@
 				</ul>
 			</div>
 		</div>
+		
+		
 		<div id="content_header"></div>
+		
 		<div id="site_content">
+		
+		
 
 			<div id="sidebar_container">
+				
+				
+				
 				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item"></div>
-					<div class="sidebar_base"></div>
-				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-
-						
-						<h3>Lave Seu Carro</h3>
-						<h4>Clean Max</h4>
-						<h5>Qualidade</h5>
-						<p>
-							Conheça Nossos Produtos<br />
-							<a href="#">Leia Mais</a>
-						</p>
-					</div>
-					<div class="sidebar_base"></div>
-				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item">
-						<h3>Conheça nossos Pacotes:</h3>
-						<ul>
-						
-							<li><a href="login">Agendar Lavagem</a></li>
-							<li><a href="#">Nossa Localização</a></li>
-
-						</ul>
-					</div>
-					<div class="sidebar_base"></div>
-				</div>
-				<div class="sidebar">
-					<div class="sidebar_top"></div>
-					<div class="sidebar_item"></div>
-					<div class="sidebar_base"></div>
+					
+					
 				</div>
 			</div>
 						
@@ -111,6 +85,9 @@
 
 				<div style="text-align: center; color: green;">${cadastrar}</div>
 
+
+
+                  <div>
 				<h1>Cadastro de Cliente</h1>
 
 
@@ -162,17 +139,25 @@
 						&nbsp;
 						<button type="submit" class="btn btn-primary" onClick="validarSenha()">&nbsp;
 							Salvar &nbsp;</button>
+							
+							
 					</form>
+					</div>
+					
+					</div>
 				</div>
 			</div>
+			
 		</div>
 
 
+					
 
 
 		<div id="content_footer"></div>
+		
 		<div id="footer">
-
+    
 			<p>
 				<a href="apresentacao">Home</a> | <a
 					href="#">Exemplos</a> | <a href="apresentacao">Pagina</a>
